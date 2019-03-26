@@ -22,10 +22,11 @@ $(window).load(function() {
 $(document).ready(function() {
     (function() {
         var navigation = $('header #navbar'),
+
             toggleNavigationButton = $('header .tog-nav'),
             openBtn = $('header .open'),
             closeBtn = $('header .close');
-
+            navigation.toggleClass('show-hide-nav');
             navigation.css({
                 'opacity': 0,
                 'visibility': 'hidden'

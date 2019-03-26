@@ -115,7 +115,7 @@
                 <div class="search pull-left">
                     <form dir="rtl">
                         <div class="form-group" dir="rtl">
-                            <input type="text" class="form-control" placeholder="اختر مدينتك">
+                            <input type="text" class="form-control" placeholder="اختر مدينتك" style="background: #ffffff !important;">
                         </div>
                         <button type="submit" class="btn btn-default"><span> ابحث الان&nbsp;&nbsp; </span> <i class="fa fa-search"></i></button>
                     </form>
@@ -130,28 +130,28 @@
 <section class="couple" id="couple">
     <div class="container">
         <div class="section-title row" >
-            <div class="col col-md-4 col-md-offset-5" dir="rtl">
+            <div class="col col-md-4 col-md-offset-5" dir="rtl" style="text-align: center">
                 <h2>خدماتنا</h2>
                 <p>قصور الافراح و القاعات متاحة عبر موقعنا</p>
             </div>
         </div> <!-- end of section-title -->
 
         <div class="content row">
-            <div class="col col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="col col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" dir="rtl">
                 <div class="groom col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="images/couple/jhon.jpg" alt>
+                            <img src="{{asset('assets/images/slider2.jpg')}}" alt>
                         </div>
-                        <a href="images/couple/big-img/jhon.jpg" class="btn btn-default" data-lightbox-gallery="gallery1">Jhon (Groom)</a>
+                        <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">ننظم لك فرحك</a>
                     </div>
                 </div>
                 <div class="bride col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="images/couple/alisa.jpg" alt>
+                            <img src="{{asset('assets/images/slider2.jpg')}}" alt>
                         </div>
-                        <a href="images/couple/big-img/alisa.jpg" class="btn btn-default" data-lightbox-gallery="gallery1">Alisa (Bride)</a>
+                        <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">احجز عن بعد</a>
                     </div>
                 </div>
                 <div class="heart">
@@ -162,11 +162,161 @@
             </div>
         </div> <!-- end of content -->
 
-        <div class="para col col-md-8 col-md-offset-2">
-            <p class="para-with-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat, vel ornare quam sem ut nisi. </p>
+        <div class="para col col-md-8 col-md-offset-2" dir="rtl">
+            <p class="para-with-bg">اختر من بين آلاف قاعات الزفاف و خدمات الافراح المنتشرة  بجميع مناطق المملكة العربية السعودية...موقعنا يقترح عليك قاعات باسعار خيالية مع حجز فوري و دفع اونلاين و نحن نستكلف بما تبقى من تنظيمات تخصك  </p>
         </div> <!-- end of para -->
     </div> <!-- end of container -->
 </section> <!-- end of couple -->
+
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="section-title row">
+            <div class="col col-md-4 col-md-offset-5" dir="rtl" style="text-align: center">
+                <h2 >قاعاتنا</h2>
+                <p>اليك باقة من قاعات الافراح المتوافد عليها من زبائننا</p>
+            </div>
+        </div> <!-- end of section-title -->
+
+        <div class="gallery-content row">
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-2.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-2.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-3.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-3.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-4.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-4.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-5.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-5.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-6.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-6.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-7.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-7.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-8.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-8.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 col-md-4">
+                <div>
+                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
+                    <img src="images/gallery/thumb/img-1.jpg" alt class="thumb img img-responsive">
+                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+
+                    <div class="hover-content">
+                        <div>
+                            <h4>First Meet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <a href="images/gallery/gallery-img/img-1.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-default">View all Images</a>
+        </div> <!-- end of gallery-content -->
+    </div> <!-- end of container -->
+</section> <!-- end of gallery -->
 
 <section class="our-story">
     <div class="container">
@@ -331,156 +481,7 @@
     </div> <!-- end of container -->
 </section> <!-- wedding-reciption -->
 
-<section class="gallery" id="gallery">
-    <div class="container">
-        <div class="section-title row">
-            <div class="col col-md-4 col-md-offset-5">
-                <span>We Meet A Beautiful Day!</span>
-                <h2>Our Gallery</h2>
-                <p>Thanks For Your Valuable Gift</p>
-            </div>
-        </div> <!-- end of section-title -->
 
-        <div class="gallery-content row">
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-1.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-1.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-2.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-2.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-3.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-3.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-4.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-4.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-5.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-5.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-6.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-6.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-7.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-7.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-8.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-8.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-1.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-1.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn btn-default">View all Images</a>
-        </div> <!-- end of gallery-content -->
-    </div> <!-- end of container -->
-</section> <!-- end of gallery -->
 
 <section class="gift-registry" id="gift-registry">
     <div class="container">
@@ -531,36 +532,32 @@
     <div class="container">
         <div class="title row">
             <div class="col col-md-8 col-md-offset-2">
-                <h2>Thanks For Your Attendance!</h2>
-                <p class="para-with-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat, vel ornare quam sem ut nisi. </p>
+                <h2>اترك لنا رسالة</h2>
+                <p class="para-with-bg"> مبارك عليك اخي و اختي الكريمين لاجل زواجكما، الان مهمتنا لتوفير حجز قاعة لعرسكما</p>
             </div>
         </div>
 
-        <div class="form row">
+        <div class="form row" dir="rtl">
             <div class="col col-md-10 col-md-offset-1">
                 <form method="post" action="sendemail.php" id="rsvp-form">
                     <div class="form-group col col-sm-6">
-                        <label for="name">Your name ..</label>
-                        <input type="text" class="form-control" name="username" id="name">
-                    </div>
-                    <div class="form-group col col-sm-6">
-                        <label for="email">Your mail ..</label>
+                        <label for="email">العنوان البريدي</label>
                         <input type="email" class="form-control" name="email" id="email">
                     </div>
+                    <div class="form-group col col-sm-6">
+                        <label for="name">الاسم</label>
+                        <input type="text" class="form-control" name="username" id="name">
+                    </div>
                     <div class="form-group col col-sm-12">
-                        <label for="events">Events</label>
+                        <label for="events">الموضوع</label>
                         <input type="text" class="form-control" name="events" id="events">
                     </div>
                     <div class="form-group col col-sm-12">
-                        <label for="guests">Guests</label>
-                        <input type="text" class="form-control" name="guests" id="guests">
-                    </div>
-                    <div class="form-group col col-sm-12">
-                        <label for="description">Description</label>
+                        <label for="description">الرسالة</label>
                         <textarea class="form-control" id="description" name="description"></textarea>
                     </div>
-                    <div class="form-group submit col col-sm-12">
-                        <button class="btn btn-default" type="submit"> I am attending</button>
+                    <div class="form-group submit col col-sm-12" dir="ltr">
+                        <button class="btn btn-default" type="submit">ارسال</button>
                     </div>
                     <div class="clearfix"></div>
                 </form>
@@ -573,9 +570,9 @@
 <footer>
     <div class="footer-wrapper">
         <div class="container">
-            <div class="title">
-                <h2>Alisa &amp; Jhon</h2>
-                <p>We are in love and getting married</p>
+            <div class="title" dir="rtl">
+                <h2>موقع زواجي</h2>
+                <p>معا لنحجز لك احسن قاعات الافراح في المملكة</p>
             </div>
             <div class="social-links">
                 <ul class="nav">

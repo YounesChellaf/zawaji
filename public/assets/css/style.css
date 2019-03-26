@@ -433,12 +433,12 @@ header.fixed-header {
 }
 
 .hero .slider-1 {
-	background: url(../images/slider/slider-1.jpg) no-repeat 50% 50%;
+	background: url(../images/slider2.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 
 .hero .slider-2 {
-	background: url(../images/slider/slider-2.jpg) no-repeat 50% 50%;
+	background: url(../images/landing.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 
@@ -448,6 +448,8 @@ header.fixed-header {
 	position: relative;
 	height: 100%;
 	bottom: 65%;
+	margin-top: 7%;
+	margin-left: 15%;
 }
 
 .hero .button-group {

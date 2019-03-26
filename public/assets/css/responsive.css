@@ -271,7 +271,7 @@
 	}
 
 	.navbar-header button {
-		background-color: #0dd0e2;
+		background-color: #c74b6f;
 	}
 	
 	.main-header .navbar-toggle{
@@ -340,14 +340,14 @@
 
 	.hero .button-group:before {
 		border: 43px solid transparent;
-		border-bottom: 43px solid rgba(13,208,226, 0.5);
+		border-bottom: 43px solid #c74b6f;
 		position: absolute;
 		top: -86px;
 	}
 
 	.hero .button-group:after {
 		border: 43px solid transparent;
-		border-top: 43px solid rgba(13,208,226, 0.5);
+		border-top: 43px solid #c74b6f;
 		bottom: -86px;
 	}
 
@@ -383,7 +383,7 @@
 	.hero .search input {
 		height: 50px;
 		font-size: 15px;
-		border-bottom: 2px solid #0dd0e2;
+		border-bottom: 2px solid #c74b6f;
 	}
 
 	.hero .search .btn {
@@ -420,13 +420,13 @@
 
 	.hero .button-group:before {
 		border: 25px solid transparent;
-		border-bottom: 25px solid rgba(13,208,226, 0.5);
+		border-bottom: 25px solid #c74b6f;
 		top: -50px;
 	}
 
 	.hero .button-group:after {
 		border: 25px solid transparent;
-		border-top: 25px solid rgba(13,208,226, 0.5);
+		border-top: 25px solid #c74b6f;
 		bottom: -50px;
 	}
 
@@ -460,7 +460,7 @@
 	.hero .search input {
 		height: 40px;
 		font-size: 12px;
-		border-bottom: 1px solid #0dd0e2;
+		border-bottom: 1px solid #c74b6f;
 		padding-right: 10px;
 	}
 

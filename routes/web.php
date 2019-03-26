@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('zawaji.home');
 });
+
+Route::get('/admin', function () {
+    return view('dashboard.master');
+});

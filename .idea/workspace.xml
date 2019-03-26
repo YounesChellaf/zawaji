@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="" />
+    <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/css/dashboard1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/jquery.toast.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/morris.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/theme-style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/22876-gen01.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/ceremony/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/dashboard1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.sparkline.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.toast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/morris.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/perfect-scrollbar.jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/raphael-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/sidebarmenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/waves.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/common-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/common-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +41,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="435" column="36" selection-start-line="435" selection-start-column="36" selection-end-line="435" selection-end-column="36" />
+            <state relative-caret-position="215">
+              <caret line="260" column="29" selection-start-line="260" selection-start-column="29" selection-end-line="260" selection-end-column="29" />
+              <folding>
+                <element signature="n#aside#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,32 +56,70 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+            <state relative-caret-position="223">
+              <caret line="117" column="120" selection-start-line="117" selection-start-column="120" selection-end-line="117" selection-end-column="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="7" column="18547" lean-forward="true" selection-start-line="7" selection-start-column="18547" selection-end-line="7" selection-end-column="18547" />
               <folding>
-                <element signature="e#5337#5343#0#HTML" expanded="true" />
-                <element signature="e#5343#5349#0#HTML" expanded="true" />
+                <element signature="e#53480#53680#2" expanded="true" />
+                <element signature="e#53886#54035#2" expanded="true" />
+                <element signature="e#54534#54680#2" expanded="true" />
+                <element signature="e#54981#55147#1" expanded="true" />
+                <element signature="e#65468#65711#2" expanded="true" />
+                <element signature="e#66536#66785#2" expanded="true" />
+                <element signature="e#92436#92626#2" expanded="true" />
+                <element signature="e#92672#92862#2" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/responsive.css">
+      <file leaf-file-name="perfect-scrollbar.jquery.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/perfect-scrollbar.jquery.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="406" column="5" selection-start-line="406" selection-start-column="5" selection-end-line="406" selection-end-column="5" />
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-            </state>
-          </provider>
+      <file leaf-file-name="dashboard1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/dashboard1.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.toast.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/jquery.toast.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.sparkline.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/jquery.sparkline.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="morris.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/morris.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="raphael-min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/raphael-min.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="popper.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/popper.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -62,6 +130,10 @@
       <find>#07bccd</find>
       <find>I lo</find>
       <find>fa-sea</find>
+      <find>OUR Gal</find>
+      <find>Thanks For Your Valuable</find>
+      <find>.hero .button-group:before</find>
+      <find>اختر</find>
     </findStrings>
     <replaceStrings>
       <replace>#c74b6f</replace>
@@ -73,8 +145,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/responsive.css" />
+        <option value="$PROJECT_DIR$/public/assets/font-awesome/css/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/public/assets/js/common-script.js" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" />
       </list>
     </option>
@@ -193,6 +270,17 @@
             <path>
               <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
               <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -200,6 +288,13 @@
               <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
@@ -216,7 +311,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="sty&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css&#10;web&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/zawaji/home.blade.php&#10;master&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/master.blade.php&#10;web&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;res&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/responsive.css&#10;sty&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -225,7 +320,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/public/assets/js" />
+      <recent name="$PROJECT_DIR$/public/assets/css" />
+      <recent name="$PROJECT_DIR$/public/assets/images" />
+      <recent name="$PROJECT_DIR$/public/assets/images/ceremony" />
+      <recent name="$PROJECT_DIR$/public/assets/fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,36 +349,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553272195916</updated>
-      <workItem from="1553272197142" duration="3388000" />
+      <workItem from="1553272197142" duration="14411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3388000" />
+    <option name="totallyTimeSpent" value="14411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="npm" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32880098" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32880098" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24964234" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,16 +389,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/images/footer-bg.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/WebProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1726">
@@ -306,28 +396,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/hearts.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/footer-para-bg-sm.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/footer-para-bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/clock-bg-md.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/clock-bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/circle-shape-sm.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/butterfly-2.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/butterfly-1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/bird.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/clock-bg-sm.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/common-bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/footer-bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="406" column="5" selection-start-line="406" selection-start-column="5" selection-end-line="406" selection-end-column="5" />
+        <state relative-caret-position="84">
+          <caret line="1280" column="22" lean-forward="true" selection-start-line="1280" selection-start-column="22" selection-end-line="1280" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="3" column="1315" lean-forward="true" selection-start-line="3" selection-start-column="1311" selection-end-line="3" selection-end-column="1315" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="435" column="36" selection-start-line="435" selection-start-column="36" selection-end-line="435" selection-end-column="36" />
+        <state relative-caret-position="150">
+          <caret line="382" column="10" selection-start-line="382" selection-start-column="10" selection-end-line="382" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/common-script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/classie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/morris.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/jquery.toast.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/theme-style.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/dashboard1.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/waves.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/sidebarmenu.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/custom.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/popper.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/raphael-min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/morris.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/jquery.sparkline.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/jquery.toast.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/dashboard1.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="260" column="29" selection-start-line="260" selection-start-column="29" selection-end-line="260" selection-end-column="29" />
+          <folding>
+            <element signature="n#aside#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/perfect-scrollbar.jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="4" column="37169" lean-forward="true" selection-start-line="4" selection-start-column="37169" selection-end-line="4" selection-end-column="37169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="7" column="18547" lean-forward="true" selection-start-line="7" selection-start-column="18547" selection-end-line="7" selection-end-column="18547" />
+          <folding>
+            <element signature="e#53480#53680#2" expanded="true" />
+            <element signature="e#53886#54035#2" expanded="true" />
+            <element signature="e#54534#54680#2" expanded="true" />
+            <element signature="e#54981#55147#1" expanded="true" />
+            <element signature="e#65468#65711#2" expanded="true" />
+            <element signature="e#66536#66785#2" expanded="true" />
+            <element signature="e#92436#92626#2" expanded="true" />
+            <element signature="e#92672#92862#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
-          <folding>
-            <element signature="e#5337#5343#0#HTML" expanded="true" />
-            <element signature="e#5343#5349#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="223">
+          <caret line="117" column="120" selection-start-line="117" selection-start-column="120" selection-end-line="117" selection-end-column="120" />
         </state>
       </provider>
     </entry>
