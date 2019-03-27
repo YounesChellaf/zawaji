@@ -15,7 +15,14 @@ class CreateInvitationsTable extends Migration
     {
         Schema::create('invitations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('city');
+            $table->integer('inviter_id');
+            $table->string('slogan')->nullable();
+            $table->string('party_room');
+            $table->string('location');
+            $table->date('date');
+            $table->time('time');
+            $table->boolean('broadcast')->nullable()->default(false);
+            $table->string('destination')->nullable();
             $table->timestamps();
         });
     }

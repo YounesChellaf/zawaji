@@ -23,3 +23,5 @@ Route::get('/reserve', function () {
 Route::get('/admin', function () {
     return view('dashboard.master');
 });
+
+Route::resource('invitations','InvitationController');
