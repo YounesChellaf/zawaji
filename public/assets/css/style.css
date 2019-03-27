@@ -74,13 +74,15 @@ a:hover {
     margin-bottom: -1%
 }
 .slogan h1 {
-    font-size: 50px;background: -webkit-linear-gradient(#FDF,#EBE);
+	background-image: linear-gradient(to left, #780b9c, #9d5e9f, #6fbfb5, #33d88b, #eb1269);
+    font-size: 50px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-right: 7%
 }
 .slogan h4 {
     background: -webkit-linear-gradient(#FDF,#EBE);
+	font-size: 28px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-right: 15%;

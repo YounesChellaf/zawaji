@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/invitation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/event_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/evnt01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/flip_hrt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/frame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/landing2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/salle1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/salle2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/salle3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/zawaji-responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/zawaji-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/landing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/landing.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +26,9 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="126" column="10" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
+            <state relative-caret-position="192">
+              <caret line="142" column="151" selection-start-line="142" selection-start-column="151" selection-end-line="142" selection-end-column="151" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#i#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#5380#5386#0#HTML" expanded="true" />
                 <element signature="e#5386#5392#0#HTML" expanded="true" />
@@ -51,29 +44,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invitation.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/invitation.css">
+      <file leaf-file-name="zawaji-master.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="140" column="1" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
+            <state relative-caret-position="863">
+              <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+      <file leaf-file-name="theme-style.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/theme-style.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-1534">
+              <caret line="34" column="76914" selection-start-line="34" selection-start-column="76914" selection-end-line="34" selection-end-column="76914" />
+              <folding>
+                <element signature="e#217295#217529#2" expanded="true" />
+                <element signature="e#218206#218440#1" expanded="true" />
+                <element signature="e#221621#221897#2" expanded="true" />
+                <element signature="e#222588#222864#1" expanded="true" />
+                <element signature="e#251390#251577#2" expanded="true" />
+                <element signature="e#252105#252241#2" expanded="true" />
+                <element signature="e#252394#252527#2" expanded="true" />
+                <element signature="e#263744#263974#2" expanded="true" />
+                <element signature="e#264809#265045#2" expanded="true" />
+                <element signature="e#292984#293161#2" expanded="true" />
+                <element signature="e#293207#293384#2" expanded="true" />
+                <element signature="e#417519#417766#2" expanded="true" />
+                <element signature="e#418106#418426#2" expanded="true" />
+                <element signature="e#418757#419046#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019_03_27_162033_create_party_rooms_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_27_162033_create_party_rooms_table.php">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="32" column="50" lean-forward="true" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+            <state relative-caret-position="150">
+              <caret line="4" column="36958" selection-start-line="4" selection-start-column="36958" selection-end-line="4" selection-end-column="36958" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28701">
+              <caret line="1280" column="22" lean-forward="true" selection-start-line="1280" selection-start-column="22" selection-end-line="1280" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zawaji-responsive.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/zawaji-responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="910" column="1" selection-start-line="910" selection-start-column="1" selection-end-line="910" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -83,15 +128,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
               <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_10_12_100000_create_password_resets_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -115,6 +151,7 @@
       <find>قاعاتنا</find>
       <find>sli</find>
       <find>wedding</find>
+      <find>#DB4766</find>
       <find>icons</find>
     </findStrings>
     <replaceStrings>
@@ -130,14 +167,17 @@
         <option value="$PROJECT_DIR$/public/assets/css/responsive.css" />
         <option value="$PROJECT_DIR$/public/assets/font-awesome/css/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/public/assets/js/common-script.js" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/public/assets/css/style.css" />
         <option value="$PROJECT_DIR$/public/assets/css/invitation.css" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_27_162033_create_party_rooms_table.php" />
         <option value="$PROJECT_DIR$/app/party_room.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/zawaji-style.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/zawaji-responsive.css" />
+        <option value="$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" />
       </list>
     </option>
@@ -256,13 +296,45 @@
             <path>
               <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
               <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
               <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -272,7 +344,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="pa&#9;null&#9;null&#10;.en&#9;FILE&#9;file:///Users/issam/dev/zawaji/.env&#10;sty&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css&#10;styl&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css&#10;master&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/master.blade.php&#10;web&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;res&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/responsive.css" />
+    <property name="SearchEverywhereHistoryKey" value="st&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css&#10;web&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;pa&#9;null&#9;null&#10;.en&#9;FILE&#9;file:///Users/issam/dev/zawaji/.env&#10;sty&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css&#10;styl&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/style.css&#10;master&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/master.blade.php&#10;res&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/responsive.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -314,12 +386,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553272195916</updated>
       <workItem from="1553272197142" duration="14647000" />
-      <workItem from="1553603792035" duration="14838000" />
+      <workItem from="1553603792035" duration="20173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29485000" />
+    <option name="totallyTimeSpent" value="34820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -392,8 +464,6 @@
         <state relative-caret-position="2691">
           <caret line="117" column="120" selection-start-line="117" selection-start-column="120" selection-end-line="117" selection-end-column="120" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#i#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#5380#5386#0#HTML" expanded="true" />
             <element signature="e#5386#5392#0#HTML" expanded="true" />
@@ -415,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="1280" column="22" lean-forward="true" selection-start-line="1280" selection-start-column="22" selection-end-line="1280" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/font-awesome/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -439,42 +502,11 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/classie.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/perfect-scrollbar.jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="4" column="37169" lean-forward="true" selection-start-line="4" selection-start-column="37169" selection-end-line="4" selection-end-column="37169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="7" column="18547" selection-start-line="7" selection-start-column="18547" selection-end-line="7" selection-end-column="18547" />
-          <folding>
-            <element signature="e#53480#53680#2" expanded="true" />
-            <element signature="e#53886#54035#2" expanded="true" />
-            <element signature="e#54534#54680#2" expanded="true" />
-            <element signature="e#54981#55147#1" expanded="true" />
-            <element signature="e#65468#65711#2" expanded="true" />
-            <element signature="e#66536#66785#2" expanded="true" />
-            <element signature="e#92436#92626#2" expanded="true" />
-            <element signature="e#92672#92862#2" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -496,27 +528,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/theme-style.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="34" column="120120" selection-start-line="34" selection-start-column="120120" selection-end-line="34" selection-end-column="120120" />
-          <folding>
-            <element signature="e#417519#417766#2" expanded="true" />
-            <element signature="e#418106#418426#2" expanded="true" />
-            <element signature="e#418757#419046#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/images/footer-para-bg.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="462" column="10" selection-start-line="462" selection-start-column="7" selection-end-line="462" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/images/footer-para-bg-sm.png">
       <provider selected="true" editor-type-id="images" />
@@ -559,13 +572,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/zawaji-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69669">
+          <caret line="3151" column="26" selection-start-line="3151" selection-start-column="26" selection-end-line="3151" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28701">
+          <caret line="1280" column="22" lean-forward="true" selection-start-line="1280" selection-start-column="22" selection-end-line="1280" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/zawaji-responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="910" column="1" selection-start-line="910" selection-start-column="1" selection-end-line="910" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/theme-style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1534">
+          <caret line="34" column="76914" selection-start-line="34" selection-start-column="76914" selection-end-line="34" selection-end-column="76914" />
+          <folding>
+            <element signature="e#217295#217529#2" expanded="true" />
+            <element signature="e#218206#218440#1" expanded="true" />
+            <element signature="e#221621#221897#2" expanded="true" />
+            <element signature="e#222588#222864#1" expanded="true" />
+            <element signature="e#251390#251577#2" expanded="true" />
+            <element signature="e#252105#252241#2" expanded="true" />
+            <element signature="e#252394#252527#2" expanded="true" />
+            <element signature="e#263744#263974#2" expanded="true" />
+            <element signature="e#264809#265045#2" expanded="true" />
+            <element signature="e#292984#293161#2" expanded="true" />
+            <element signature="e#293207#293384#2" expanded="true" />
+            <element signature="e#417519#417766#2" expanded="true" />
+            <element signature="e#418106#418426#2" expanded="true" />
+            <element signature="e#418757#419046#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="4" column="36958" selection-start-line="4" selection-start-column="36958" selection-end-line="4" selection-end-column="36958" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2252">
+          <caret line="7" column="19182" selection-start-line="7" selection-start-column="19182" selection-end-line="7" selection-end-column="19182" />
+          <folding>
+            <element signature="e#53480#53680#2" expanded="true" />
+            <element signature="e#53886#54035#2" expanded="true" />
+            <element signature="e#54534#54680#2" expanded="true" />
+            <element signature="e#54981#55147#1" expanded="true" />
+            <element signature="e#65468#65711#2" expanded="true" />
+            <element signature="e#66536#66785#2" expanded="true" />
+            <element signature="e#92436#92626#2" expanded="true" />
+            <element signature="e#92672#92862#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="126" column="10" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
+        <state relative-caret-position="192">
+          <caret line="142" column="151" selection-start-line="142" selection-start-column="151" selection-end-line="142" selection-end-column="151" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#i#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#5380#5386#0#HTML" expanded="true" />
             <element signature="e#5386#5392#0#HTML" expanded="true" />

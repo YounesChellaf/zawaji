@@ -90,7 +90,7 @@
                     <ul class="nav navbar-nav" dir="rtl">
                         <li><a href="index.html">التسجيل</a></li>
                         <li><a href="#couple">تسجيل الدخول</a></li>
-                        <li><a href="#coming">Coming</a></li>
+                        <li><a href="#coming">ارسل دعوة</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#gift-registry">Gift Registry</a></li>
                         <li><a href="#rsvp">RSVP</a></li>
@@ -128,7 +128,7 @@
     <div class="button-search container">
         <div class="row slogan"  dir="rtl">
             <h1>لنحجز معاً مكاناً لإقامة حفل زفافك في السعودية</h1>
-            <h4>اختر من بين آلاف قاعات الزفاف و خدمات الافراح المنتشرة  بجميع مناطق المملكة العربية السعودية...</h4>
+            <h4>اختر من بين آلاف قاعات الزفاف المنتشرة  بجميع مناطق المملكة العربية </h4>
         </div>
         <div class="row">
             <div class="col col-md-9">
@@ -138,9 +138,9 @@
                     <a href="#wedding-reciption"><i class="fa fa-heart"></i></a>
                 </div>
                 <div class="search pull-left">
-                    <form dir="rtl">
+                    <form dir="rtl" action="/reserve">
                         <div class="form-group" dir="rtl" >
-                            <input type="text" class="form-control" placeholder="اختر مدينتك">
+                            <input type="text" class="form-control" placeholder="اختر مدينتك" style="background-color: #393939;opacity:0.5;color: white; ::placeholder:{color: #1b1e21 !important;} ">
                         </div>
                         <button type="submit" class="btn btn-default"><span> ابحث الان&nbsp;&nbsp; </span> <i class="fa fa-search"></i></button>
                     </form>
