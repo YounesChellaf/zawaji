@@ -62,13 +62,41 @@ a:hover {
 	text-decoration: none;
 }
 
+::placeholder{
+	color: red;
+}
 
 
 /*--------------------------------------------------------------
 #0.2	Global Elements 
 --------------------------------------------------------------*/
+.slogan{
+    margin-bottom: -1%
+}
+.slogan h1 {
+    font-size: 50px;background: -webkit-linear-gradient(#FDF,#EBE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 7%
+}
+.slogan h4 {
+    background: -webkit-linear-gradient(#FDF,#EBE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+.evnt_card_container {
+	position: relative;
+	margin: 0px auto 90px;
+	height: 270px;
+	z-index: 1;
+	width: 100%;
+	max-width:370px;
+}
+
 .overlay {
-	background: rgba(0,0,0,0.6);
+	background: rgba(0, 0, 0, 0.6);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -433,12 +461,12 @@ header.fixed-header {
 }
 
 .hero .slider-1 {
-	background: url(../images/slider2.jpg) no-repeat 50% 50%;
+	background: url(../images/landing.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 
 .hero .slider-2 {
-	background: url(../images/landing.jpg) no-repeat 50% 50%;
+	background: url(../images/landing2.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 
@@ -448,7 +476,6 @@ header.fixed-header {
 	position: relative;
 	height: 100%;
 	bottom: 65%;
-	margin-top: 7%;
 	margin-left: 15%;
 }
 
@@ -937,7 +964,6 @@ header.fixed-header {
 /*meet*/
 .meet {
 	position: relative;
-	padding-top: 100px;
 }
 
 .meet .title {

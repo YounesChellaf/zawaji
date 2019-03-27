@@ -29,6 +29,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/invitation.css')}}" rel="stylesheet">
 
     <!-- Responsive styles for this template -->
     <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
@@ -41,6 +42,26 @@
 
     <!-- Google map api -->
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
+    <style>
+        nav, body, a,label, h1, h2, h3, h4, h5, h6, p, tr, td, ul, li, span, option,button{
+            font-family: DroidArabicKufiRegular, 'sans-serif' !important;
+        }
+    </style>
+    <style>
+        ::placeholder { /* Firefox, Chrome, Opera */
+            color: #000000; !important;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #000000;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #000000;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -65,10 +86,10 @@
                 <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt></a>
             </div>
             <div class="navbar-wrapper">
-                <div id="navbar" class="collapse navbar-collapse pull-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#couple">Alisa &amp; Jhon</a></li>
+                <div id="navbar" class="collapse navbar-collapse pull-right" dir="rtl">
+                    <ul class="nav navbar-nav" dir="rtl">
+                        <li><a href="index.html">التسجيل</a></li>
+                        <li><a href="#couple">تسجيل الدخول</a></li>
                         <li><a href="#coming">Coming</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#gift-registry">Gift Registry</a></li>
@@ -99,23 +120,27 @@
         <div class="slider-1 item">
             <div class="overlay"></div>
         </div>
-        <div class="slider-2 item">
+        <!--<div class="slider-2 item">
             <div class="overlay"></div>
         </div>
     </div> <!-- end of hero-slider -->
-
+    </div>
     <div class="button-search container">
+        <div class="row slogan"  dir="rtl">
+            <h1>لنحجز معاً مكاناً لإقامة حفل زفافك في السعودية</h1>
+            <h4>اختر من بين آلاف قاعات الزفاف و خدمات الافراح المنتشرة  بجميع مناطق المملكة العربية السعودية...</h4>
+        </div>
         <div class="row">
             <div class="col col-md-9">
                 <div class="button-group pull-left">
                     <a href="blog.html"><i class="fa fa-paper-plane"></i></a>
-                    <a href="#" class="millde"><i class="fa fa-heart"></i></a>
-                    <a href="#wedding-reciption"><i class="fa fa-map-marker"></i></a>
+                    <a href="#" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
+                    <a href="#wedding-reciption"><i class="fa fa-heart"></i></a>
                 </div>
                 <div class="search pull-left">
                     <form dir="rtl">
-                        <div class="form-group" dir="rtl">
-                            <input type="text" class="form-control" placeholder="اختر مدينتك" style="background: #ffffff !important;">
+                        <div class="form-group" dir="rtl" >
+                            <input type="text" class="form-control" placeholder="اختر مدينتك">
                         </div>
                         <button type="submit" class="btn btn-default"><span> ابحث الان&nbsp;&nbsp; </span> <i class="fa fa-search"></i></button>
                     </form>
@@ -141,7 +166,7 @@
                 <div class="groom col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="{{asset('assets/images/slider2.jpg')}}" alt>
+                            <img src="{{asset('assets/images/salle1.jpg')}}" alt>
                         </div>
                         <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">ننظم لك فرحك</a>
                     </div>
@@ -149,7 +174,7 @@
                 <div class="bride col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="{{asset('assets/images/slider2.jpg')}}" alt>
+                            <img src="{{asset('assets/images/salle2.jpg')}}" alt>
                         </div>
                         <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">احجز عن بعد</a>
                     </div>
@@ -167,153 +192,108 @@
         </div> <!-- end of para -->
     </div> <!-- end of container -->
 </section> <!-- end of couple -->
-
 <section class="gallery" id="gallery">
     <div class="container">
         <div class="section-title row">
             <div class="col col-md-4 col-md-offset-5" dir="rtl" style="text-align: center">
                 <h2 >قاعاتنا</h2>
-                <p>اليك باقة من قاعات الافراح المتوافد عليها من زبائننا</p>
+                <p>اليك باقة من قاعات الافراح المتوافد عليها</p>
             </div>
         </div> <!-- end of section-title -->
 
         <div class="gallery-content row">
             <div class="col col-sm-6 col-md-4">
                 <div>
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
                     <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                            <h4>اسم القاعة</h4>
+                            <p>متواجدة في المنطقة آ</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col col-sm-6 col-md-4">
                 <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-2.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-2.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                            <h4>اسم القاعة</h4>
+                            <p>متواجدة في المنطقة آ</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col col-sm-6 col-md-4">
                 <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-3.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-3.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                            <h4>اسم القاعة</h4>
+                            <p>متواجدة في المنطقة آ</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col col-sm-6 col-md-4">
                 <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-4.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-4.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                            <h4>اسم القاعة</h4>
+                            <p>متواجدة في المنطقة آ</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col col-sm-6 col-md-4">
                 <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-5.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-5.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                            <h4>اسم القاعة</h4>
+                            <p>متواجدة في المنطقة آ</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col col-sm-6 col-md-4">
                 <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-6.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
+                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-6.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
+                            <h4>اسم القاعة</h4>
+                            <p>متواجدة في المنطقة آ</p>
+                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-7.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
 
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-7.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-8.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-8.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="images/gallery/frame.png" alt class="frame img img-responsive">
-                    <img src="images/gallery/thumb/img-1.jpg" alt class="thumb img img-responsive">
-                    <button class="btn btn-default">Cras sit amet ligula sit amet</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>First Meet</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="images/gallery/gallery-img/img-1.jpg" class="btn btn-default" data-lightbox-gallery="gallery2">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn btn-default">View all Images</a>
+            <a href="#" class="btn btn-default">اظهار المزيد</a>
         </div> <!-- end of gallery-content -->
     </div> <!-- end of container -->
 </section> <!-- end of gallery -->
@@ -321,33 +301,11 @@
 <section class="our-story">
     <div class="container">
         <div class="section-title row">
-            <div class="col col-md-4 col-md-offset-5">
-                <span>We Meet A Beautiful Day!</span>
-                <h2>Our Story</h2>
-                <p>Thanks For Your Valuable Gift</p>
+            <div class="col col-md-6 col-md-offset-5" style="margin-top: 2%">
+                <h2>قيل عن موقع زواجي</h2>
             </div>
         </div> <!-- end of section-title -->
 
-        <div class="content row">
-            <div class="conversation col">
-                <div class="left-side col col-xs-6">
-                    <img src="images/story/jhon.png" alt>
-                    <div class="left left-conversation-slider">
-                        <span>Hello!</span>
-                        <span>I love u</span>
-                        <span>Marry?</span>
-                    </div>
-                </div>
-                <div class="right-side col col-xs-6">
-                    <img src="images/story/alisa.png" alt>
-                    <div class="right right-conversation-slider">
-                        <span>Hi!</span>
-                        <span>Too</span>
-                        <span>Yes!</span>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
 
             <div class="meet col">
                 <div class="col col-md-8 col-md-offset-2">
@@ -383,150 +341,84 @@
                 <p>Thanks For Your Valuable Gift</p>
             </div>
         </div> <!-- end of section-title -->
-
-        <div class="title row">
-            <div class="col col-md-8 col-md-offset-2">
-                <h3>We Will Come Togather Very Soon!</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="evnt_card_container">
+                        <div class="containers">
+                            <div class="cards">
+                                <div class="card front evnt_prt evnt_prt_1">
+                                    <h2>Wedding Ceremony</h2>
+                                    <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
+                                    <p>LONDON.UK</p>
+                                    <button class="btn btn-primary btn_evnt">4:30PM</button>
+                                </div><!--.card .front .evnt_prt .evnt_prt_1-->
+                                <div class="card back evnt_prt_back evnt_prt_back_1">
+                                    <h2>Wedding Ceremony</h2>
+                                    <div class="evnt_addres">
+                                        <p>Hotel Radisson</p>
+                                        <p>4th Street,DOHS MIRPUR</p>
+                                        <p>Saturday, 20 july 2015</p>
+                                        <p>4:30PM - 6:15PM</p>
+                                    </div>
+                                </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
+                            </div><!-- .cards-->
+                        </div><!--.containers-->
+                    </div><!-- .evnt_card_container-->
+                </div>
+                <div class="col-md-4">
+                    <div class="evnt_card_container">
+                        <div class="containers">
+                            <div class="cards">
+                                <div class="card front evnt_prt evnt_prt_1">
+                                    <h2>Wedding Ceremony</h2>
+                                    <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
+                                    <p>LONDON.UK</p>
+                                    <button class="btn btn-primary btn_evnt">4:30PM</button>
+                                </div><!--.card .front .evnt_prt .evnt_prt_1-->
+                                <div class="card back evnt_prt_back evnt_prt_back_1">
+                                    <h2>Wedding Ceremony</h2>
+                                    <div class="evnt_addres">
+                                        <p>Hotel Radisson</p>
+                                        <p>4th Street,DOHS MIRPUR</p>
+                                        <p>Saturday, 20 july 2015</p>
+                                        <p>4:30PM - 6:15PM</p>
+                                    </div>
+                                </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
+                            </div><!-- .cards-->
+                        </div><!--.containers-->
+                    </div><!-- .evnt_card_container-->
+                </div>
+                <div class="col-md-4">
+                    <div class="evnt_card_container">
+                        <div class="containers">
+                            <div class="cards">
+                                <div class="card front evnt_prt evnt_prt_1">
+                                    <h2>Wedding Ceremony</h2>
+                                    <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
+                                    <p>LONDON.UK</p>
+                                    <button class="btn btn-primary btn_evnt">4:30PM</button>
+                                </div><!--.card .front .evnt_prt .evnt_prt_1-->
+                                <div class="card back evnt_prt_back evnt_prt_back_1">
+                                    <h2>Wedding Ceremony</h2>
+                                    <div class="evnt_addres">
+                                        <p>Hotel Radisson</p>
+                                        <p>4th Street,DOHS MIRPUR</p>
+                                        <p>Saturday, 20 july 2015</p>
+                                        <p>4:30PM - 6:15PM</p>
+                                    </div>
+                                </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
+                            </div><!-- .cards-->
+                        </div><!--.containers-->
+                    </div><!-- .evnt_card_container-->
+                </div>
             </div>
         </div>
-
-        <div class="count-down-wrapper row">
-            <div id="clock">
-                <div class="col col-xs-6 col-sm-3 time">
-                    <div class="days_dash" data-vp-add-class="visible bounceIn" data-vp-offset="0">
-                        <div class="wrapper-digit">
-                            <div class="digit"></div>
-                            <div class="digit"></div>
-                            <div class="digit"></div>
-                            <p class="note dash_title">Days</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-xs-6 col-sm-3 time">
-                    <div class="hours_dash" data-vp-add-class="visible bounceIn" data-vp-offset="0">
-                        <div class="wrapper-digit">
-                            <div class="digit"></div>
-                            <div class="digit"></div>
-                            <p class="note dash_title">Hours</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-xs-6 col-sm-3 time">
-                    <div class="minutes_dash" data-vp-add-class="visible bounceIn" data-vp-offset="0">
-                        <div class="wrapper-digit">
-                            <div class=" digit"></div>
-                            <div class=" digit"></div>
-                            <p class="note dash_title">Minutes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-xs-6 col-sm-3 time">
-                    <div class="seconds_dash" data-vp-add-class="visible bounceIn" data-vp-offset="0">
-                        <div class="wrapper-digit">
-                            <div class=" digit"></div>
-                            <div class=" digit"></div>
-                            <p class="note dash_title">Seconds</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div> <!-- end of clock -->
-        </div> <!-- count-down-wrapper -->
     </div> <!-- end of container -->
 </section> <!-- end of coming-soon -->
 
-<section class="wedding-reciption" id="wedding-reciption">
-    <div class="container">
-        <div class="row">
-            <div class="wedding col col-sm-5">
-                <div class="title">
-                    <div>
-                        <h3>Wedding</h3>
-                        <span>Ceremony</span>
-                    </div>
-                </div>
-                <p>Thanks a lot for your valuable gift, consectetur adipiscing elit. Duis ut lobortis nulla.Mauris eu dolor mi.</p>
-                <ul class="nav">
-                    <li><i class="fa fa-mobile"></i>Friday 6th May, 2016</li>
-                    <li><i class="fa fa-clock-o"></i>9.00am - 12.00pm</li>
-                    <li><i class="fa fa-map-marker"></i>St. Paul’s Chapel (Episc.)</li>
-                </ul>
-                <div class="view">
-                    <a href="#" id="show-wedding-ceremony">View</a>
-                </div>
-            </div> <!-- end of wedding -->
-
-            <div class="reciption col col-sm-5 col-sm-offset-2">
-                <div class="title">
-                    <div>
-                        <h3>Reciption</h3>
-                        <span>Ceremony</span>
-                    </div>
-                </div>
-                <p>Thanks a lot for your valuable gift, consectetur adipiscing elit. Duis ut lobortis nulla.Mauris eu dolor mi.</p>
-                <ul class="nav">
-                    <li><i class="fa fa-mobile"></i>Friday 6th May, 2016</li>
-                    <li><i class="fa fa-clock-o"></i>9.00am - 12.00pm</li>
-                    <li><i class="fa fa-map-marker"></i>St. Paul’s Chapel (Episc.)</li>
-                </ul>
-                <div class="view">
-                    <a href="#" id="show-reciption-ceremony">View</a>
-                </div>
-            </div> <!-- end of reciption -->
-        </div>
-    </div> <!-- end of container -->
-</section> <!-- wedding-reciption -->
 
 
-
-<section class="gift-registry" id="gift-registry">
-    <div class="container">
-        <div class="section-title row">
-            <div class="col col-md-4 col-md-offset-5">
-                <span>We Meet A Beautiful Day!</span>
-                <h2>Gift Registry</h2>
-                <p>Thanks For Your Valuable Gift</p>
-            </div>
-        </div> <!-- end of section-title -->
-
-        <div class="para row">
-            <div class="col col-md-8 col-md-offset-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat, vel ornare quam sem ut nisi.</p>
-            </div>
-        </div>
-
-        <div class="gift-content row">
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-1.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-2.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-3.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-4.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-5.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-6.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-7.png" alt class="img img-responsive">
-            </div>
-            <div class="col col-xs-6 col-sm-3">
-                <img src="images/gift-registry/img-8.png" alt class="img img-responsive">
-            </div>
-        </div>
-    </div> <!-- end of container -->
-</section> <!-- end of gift-registry -->
 
 <section class="rsvp" id="rsvp">
     <div class="container">
@@ -557,7 +449,7 @@
                         <textarea class="form-control" id="description" name="description"></textarea>
                     </div>
                     <div class="form-group submit col col-sm-12" dir="ltr">
-                        <button class="btn btn-default" type="submit">ارسال</button>
+                        <button class="btn btn-default" type="submit" >ارسال</button>
                     </div>
                     <div class="clearfix"></div>
                 </form>
@@ -585,7 +477,7 @@
         </div>
 
         <div class="copyright">
-            <p>&copy; 2016 Wedding - Premium HTML Theme by Themexriver</p>
+            <p>&copy; 2019 - Programmed by <a href="https://www.facebook.com/younes.chelaf" target="_blank"> Younes Chellaf</a></p>
         </div>
     </div> <!-- end of footer-wrapper -->
 </footer> <!-- end of footer -->

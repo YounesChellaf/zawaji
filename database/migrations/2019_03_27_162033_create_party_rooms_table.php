@@ -1,0 +1,55 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreatePartyRoomsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('party_rooms', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->longText('description');
+            $table->string('logo')->nullable();
+            $table->string('images');
+            $table->string('video')->nullable();
+            $table->string('email');
+            $table->integer('number_room')->nullable();
+            $table->integer('total_capacity')->nullable();
+            $table->bigInteger('total_price')->nullable();
+            $table->integer('capacity_men_room')->nullable();
+            $table->bigInteger('price_men_room')->nullable();
+            $table->integer('capacity_women_room')->nullable();
+            $table->bigInteger('price_women_room')->nullable();
+            $table->string('city');
+            $table->string('location')->nullable();
+            $table->integer('discount')->nullable();
+
+
+
+
+
+
+
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('party_rooms');
+    }
+}
