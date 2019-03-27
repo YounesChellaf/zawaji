@@ -84,6 +84,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+	.slogan{
+		display: none;
+	}
 	.section-title {
 		background: url(../images/section-title-bg-sm.png) no-repeat center center;
 		width: 500px;

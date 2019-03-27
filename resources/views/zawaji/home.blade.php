@@ -166,7 +166,7 @@
                 <div class="groom col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="{{asset('assets/images/salle1.jpg')}}" alt>
+                            <img src="{{asset('assets/images/salle1.jpg')}}" alt size="full">
                         </div>
                         <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">ننظم لك فرحك</a>
                     </div>
