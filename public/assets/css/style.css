@@ -71,7 +71,7 @@ a:hover {
 #0.2	Global Elements 
 --------------------------------------------------------------*/
 .slogan{
-    margin-bottom: -1%
+    margin-bottom: -2%
 }
 .slogan h1 {
 	background-image: linear-gradient(to left, #780b9c, #9d5e9f, #6fbfb5, #33d88b, #eb1269);
@@ -450,7 +450,7 @@ header.fixed-header {
 #1.2	hero
 --------------------------------------------------------------*/
 .hero {
-	height: 963px;
+	height: 975px;
 	position: relative;
 	overflow: hidden;
 	z-index: 5;
@@ -477,7 +477,7 @@ header.fixed-header {
 .hero .button-search {
 	position: relative;
 	height: 100%;
-	bottom: 65%;
+	bottom: 68%;
 	margin-left: 15%;
 }
 

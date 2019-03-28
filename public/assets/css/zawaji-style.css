@@ -711,6 +711,28 @@ p.relation{
 .event_party_sec{
     padding-bottom:0px;
 }
+.containers, .card {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    font-family: sans-serif;
+    float: left;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 .evnt_prt {
     text-align : center;
     color : #ffffff;

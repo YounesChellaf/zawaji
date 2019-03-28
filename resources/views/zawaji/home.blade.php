@@ -133,9 +133,9 @@
         <div class="row">
             <div class="col col-md-9">
                 <div class="button-group pull-left">
-                    <a href="blog.html"><i class="fa fa-paper-plane"></i></a>
-                    <a href="#" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
-                    <a href="#wedding-reciption"><i class="fa fa-heart"></i></a>
+                    <a href="/reserve"><i class="fa fa-paper-plane"></i></a>
+                    <a href="/reserve" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
+                    <a href="#gallery"><i class="fa fa-heart"></i></a>
                 </div>
                 <div class="search pull-left">
                     <form dir="rtl" action="/reserve">
@@ -310,20 +310,15 @@
             <div class="meet col">
                 <div class="col col-md-8 col-md-offset-2">
                     <div class="meet-slider">
-                        <div>
-                            <div class="title">
-                                <span>We Meet On A</span>
-                                <h2>Beautiful Day!</h2>
+                        @foreach(\App\Message::all() as $message)
+                            <div>
+                                <div class="title">
+                                    <span>{{$message->name}}</span>
+                                    <h2>{{$message->subject}}</h2>
+                                </div>
+                                <p class="para-with-bg">{{$message->message}}</p>
                             </div>
-                            <p class="para-with-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat, vel ornare quam sem ut nisi. </p>
-                        </div>
-                        <div>
-                            <div class="title">
-                                <span>We Meet On A</span>
-                                <h2>Beautiful Day!</h2>
-                            </div>
-                            <p class="para-with-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat, vel ornare quam sem ut nisi. </p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -335,10 +330,10 @@
 <section class="coming-soon" id="coming">
     <div class="container">
         <div class="section-title row">
-            <div class="col col-md-4 col-md-offset-5">
-                <span>We Meet A Beautiful Day!</span>
-                <h2>Coming soon</h2>
-                <p>Thanks For Your Valuable Gift</p>
+            <div class="col col-md-4 col-md-offset-5" dir="rtl" style="text-align: center">
+                <span></span>
+                <h2>انت مدعو !</h2>
+                <p>يتشرف زوارنا بتقديم دعوة زفاف لك</p>
             </div>
         </div> <!-- end of section-title -->
         <div class="container">
@@ -346,14 +341,14 @@
                 <div class="col-md-4">
                     <div class="evnt_card_container">
                         <div class="containers">
-                            <div class="cards">
-                                <div class="card front evnt_prt evnt_prt_1">
+                            <div class="cards" dir="rtl">
+                                <div class="card front evnt_prt evnt_prt_1" dir="rtl">
                                     <h2>Wedding Ceremony</h2>
                                     <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
                                     <p>LONDON.UK</p>
                                     <button class="btn btn-primary btn_evnt">4:30PM</button>
                                 </div><!--.card .front .evnt_prt .evnt_prt_1-->
-                                <div class="card back evnt_prt_back evnt_prt_back_1">
+                                <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
                                     <h2>Wedding Ceremony</h2>
                                     <div class="evnt_addres">
                                         <p>Hotel Radisson</p>
@@ -431,25 +426,26 @@
 
         <div class="form row" dir="rtl">
             <div class="col col-md-10 col-md-offset-1">
-                <form method="post" action="sendemail.php" id="rsvp-form">
+                <form method="post" action="/messages" id="rsvp-form">
+                    @csrf
                     <div class="form-group col col-sm-6">
                         <label for="email">العنوان البريدي</label>
                         <input type="email" class="form-control" name="email" id="email">
                     </div>
                     <div class="form-group col col-sm-6">
                         <label for="name">الاسم</label>
-                        <input type="text" class="form-control" name="username" id="name">
+                        <input type="text" class="form-control" name="name" id="name">
                     </div>
                     <div class="form-group col col-sm-12">
                         <label for="events">الموضوع</label>
-                        <input type="text" class="form-control" name="events" id="events">
+                        <input type="text" class="form-control" name="subject" id="events">
                     </div>
                     <div class="form-group col col-sm-12">
                         <label for="description">الرسالة</label>
-                        <textarea class="form-control" id="description" name="description"></textarea>
+                        <textarea class="form-control" id="description" name="message"></textarea>
                     </div>
                     <div class="form-group submit col col-sm-12" dir="ltr">
-                        <button class="btn btn-default" type="submit" >ارسال</button>
+                        <button id="alert" class="btn btn-default" type="submit">ارسال</button>
                     </div>
                     <div class="clearfix"></div>
                 </form>

@@ -124,6 +124,11 @@
     line-height:21px;
     cursor:initial;
 }
+.evnt_prt_back{
+    text-align : center;
+    color : #ffffff;
+    padding : 20px 0;
+}
 .evnt_prt {
     text-align : center;
     color : #ffffff;
