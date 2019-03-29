@@ -23,22 +23,10 @@ class CreatePartyRoomsTable extends Migration
             $table->string('email');
             $table->integer('number_room')->nullable();
             $table->integer('total_capacity')->nullable();
-            $table->bigInteger('total_price')->nullable();
             $table->integer('capacity_men_room')->nullable();
-            $table->bigInteger('price_men_room')->nullable();
             $table->integer('capacity_women_room')->nullable();
-            $table->bigInteger('price_women_room')->nullable();
             $table->string('city');
             $table->string('location')->nullable();
-            $table->integer('discount')->nullable();
-
-
-
-
-
-
-
-
             $table->timestamps();
         });
     }
