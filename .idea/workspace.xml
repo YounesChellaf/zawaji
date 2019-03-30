@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user-role.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,8 +105,8 @@
       <file leaf-file-name="user.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="184">
+              <caret line="8" column="19" lean-forward="true" selection-end-line="132" selection-end-column="11" />
               <folding>
                 <element signature="e#2908#3639#0#HTML" />
                 <element signature="e#3105#3138#0#HTML" expanded="true" />
@@ -158,20 +154,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="44" column="113" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="113" />
+            <state relative-caret-position="391">
+              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="user-role.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user-role.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+              <folding>
+                <element signature="e#2875#3609#0#HTML" />
+                <element signature="e#3136#3169#0#HTML" expanded="true" />
+                <element signature="e#3646#4380#0#HTML" />
+                <element signature="e#3907#3940#0#HTML" expanded="true" />
+                <element signature="e#4417#5151#0#HTML" />
+                <element signature="e#4678#4711#0#HTML" expanded="true" />
+                <element signature="e#5188#5922#0#HTML" />
+                <element signature="e#5449#5482#0#HTML" expanded="true" />
+                <element signature="e#5959#6693#0#HTML" />
+                <element signature="e#6220#6253#0#HTML" expanded="true" />
+                <element signature="e#7265#8265#0#HTML" />
+                <element signature="e#7755#7762#1#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -245,6 +255,7 @@
         <option value="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user-role.blade.php" />
       </list>
     </option>
   </component>
@@ -419,6 +430,14 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin_layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zawaji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zawaji" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -472,12 +491,12 @@
       <updated>1553272195916</updated>
       <workItem from="1553272197142" duration="14647000" />
       <workItem from="1553603792035" duration="31542000" />
-      <workItem from="1553866844976" duration="14156000" />
+      <workItem from="1553866844976" duration="14620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60345000" />
+    <option name="totallyTimeSpent" value="60809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -512,9 +531,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/js/perfect-scrollbar.jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/framework/views/7156027eb9de3abd80a394bb41582c4f3086c4c8.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -894,10 +910,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state relative-caret-position="184">
+          <caret line="8" column="19" lean-forward="true" selection-end-line="132" selection-end-column="11" />
           <folding>
             <element signature="e#2908#3639#0#HTML" />
             <element signature="e#3105#3138#0#HTML" expanded="true" />
@@ -915,10 +938,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user-role.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="e#2875#3609#0#HTML" />
+            <element signature="e#3136#3169#0#HTML" expanded="true" />
+            <element signature="e#3646#4380#0#HTML" />
+            <element signature="e#3907#3940#0#HTML" expanded="true" />
+            <element signature="e#4417#5151#0#HTML" />
+            <element signature="e#4678#4711#0#HTML" expanded="true" />
+            <element signature="e#5188#5922#0#HTML" />
+            <element signature="e#5449#5482#0#HTML" expanded="true" />
+            <element signature="e#5959#6693#0#HTML" />
+            <element signature="e#6220#6253#0#HTML" expanded="true" />
+            <element signature="e#7265#8265#0#HTML" />
+            <element signature="e#7755#7762#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
