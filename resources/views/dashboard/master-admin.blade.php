@@ -348,16 +348,18 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- PERSONAL</li>
-                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">رزنامة الافراح </span></a></li>
-                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الحجـــوزات </span></a></li>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">اعـــدادات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="/owner/delivered-order">المـؤكدة</a></li>
                             <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
                         </ul>
                     </li>
                     <li class="nav-small-cap">--- SUPPORT</li>
-                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">Log Out</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الخروج</span></a></li>
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->

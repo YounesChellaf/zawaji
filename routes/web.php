@@ -21,3 +21,9 @@ Route::group(['prefix'=>'/owner'],function (){
         return view('dashboard.layouts.undelivered-order');
     });
 });
+Route::group(['prefix'=>'/admin'],function (){
+    Route::get('/users',function (){
+        return view('dashboard.admin_layouts.user');
+    });
+
+});
