@@ -48,20 +48,6 @@
             font-family: DroidArabicKufiRegular, 'sans-serif' !important;
         }
     </style>
-    <style>
-        ::placeholder { /* Firefox, Chrome, Opera */
-            color: #000000; !important;
-        }
-
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #000000;
-        }
-
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #000000;
-        }
-    </style>
-
 </head>
 
 <body>
