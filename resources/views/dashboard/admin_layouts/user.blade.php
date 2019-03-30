@@ -21,7 +21,7 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">المستخدمين</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i>اضـــافة عضـو</button>
+                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#model-add-user"><i class="fa fa-plus-circle"></i>اضـــافة عضـو</button>
                     </div>
                 </div>
             </div>
@@ -44,8 +44,7 @@
                                         <th>الصورة</th>
                                         <th>نوع العضو</th>
                                         <th>العنـوان</th>
-                                        <th>تفاصيـل</th>
-                                        <th>حـذف</th>
+                                        <th>حـظـر</th>
                                     </tr>
                                     </thead>
                                     <tbody>
