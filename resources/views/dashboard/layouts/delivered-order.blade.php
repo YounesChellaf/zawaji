@@ -21,7 +21,7 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">الطلبات المؤكدة</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#modal-add-order2"><i class="fa fa-plus-circle"></i>اضـافة طلـب</button>
                     </div>
                 </div>
             </div>
@@ -186,6 +186,47 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
                     <a href="delete/"><button type="button" class="btn btn-outline-danger">حــذف</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="modal-add-order2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">اضـافة طلـب</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            @csrf
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">اسم الزبون</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">صورة الزبون (اختياري)</label>
+                                <input type="file" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">بداية الحجـز</label>
+                                <input type="date" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">نهاية الحجـز</label>
+                                <input type="date" class="form-control" id="message-text"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">المبلـغ المدفوع</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">الــغاء</button>
+                        <button type="button" class="btn btn-outline-success waves-effect waves-light">اضــافة</button>
+                    </div>
                 </div>
             </div>
         </div>

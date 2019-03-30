@@ -25,5 +25,11 @@ Route::group(['prefix'=>'/admin'],function (){
     Route::get('/users',function (){
         return view('dashboard.admin_layouts.user');
     });
+    Route::get('/',function (){
+        return view('dashboard.admin_layouts.home');
+    });
+    Route::get('/user-roles',function (){
+        return view('dashboard.admin_layouts.user-role');
+    });
 
 });

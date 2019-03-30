@@ -18,6 +18,7 @@ class CreateReservationsTable extends Migration
             $table->integer('user_id');
             $table->integer('party_room_id');
             $table->float('payment');
+            $table->boolean('status');
             $table->date('date');
             $table->timestamps();
         });
