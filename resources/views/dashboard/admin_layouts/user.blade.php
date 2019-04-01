@@ -21,7 +21,7 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">المستخدمين</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#model-add-user"><i class="fa fa-plus-circle"></i>اضـــافة عضـو</button>
+                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#modal-add-user"><i class="fa fa-plus-circle"></i>اضـــافة عضـو</button>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,6 @@
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
                                         <td>20-feb-2019</td>
                                         <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
                                     <tr>
@@ -63,7 +62,6 @@
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
                                         <td>20-feb-2019</td>
                                         <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
                                     <tr>
@@ -72,7 +70,6 @@
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
                                         <td>20-feb-2019</td>
                                         <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
                                     <tr>
@@ -81,7 +78,6 @@
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
                                         <td>20-feb-2019</td>
                                         <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
                                     <tr>
@@ -90,7 +86,22 @@
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
                                         <td>20-feb-2019</td>
                                         <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
+                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zorita Serrano</td>
+                                        <td>Zorita Serrano</td>
+                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td>20-feb-2019</td>
+                                        <td>1600</td>
+                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zorita Serrano</td>
+                                        <td>Zorita Serrano</td>
+                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td>20-feb-2019</td>
+                                        <td>1600</td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
                                     </tbody>
@@ -122,6 +133,46 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
                     <a href="delete/"><button type="button" class="btn btn-outline-danger">حــذف</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="modal-add-user" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">اضـافة عضو جـديد</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            @csrf
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">الاســــم</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">الايميـــــل</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">الصــورة</label>
+                                <input type="file" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">العنــوان</label>
+                                <input type="text" class="form-control" id="message-text"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">صنـف العضـو</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success waves-effect waves-light">اضــافة</button>
+                    </div>
                 </div>
             </div>
         </div>

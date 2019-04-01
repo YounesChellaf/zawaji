@@ -31,5 +31,11 @@ Route::group(['prefix'=>'/admin'],function (){
     Route::get('/user-roles',function (){
         return view('dashboard.admin_layouts.user-role');
     });
+    Route::get('/orders',function (){
+        return view('dashboard.admin_layouts.orders');
+    });
+    Route::get('/social-links',function (){
+        return view('dashboard.admin_layouts.social-links');
+    });
 
 });

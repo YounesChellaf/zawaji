@@ -77,16 +77,19 @@
                         <li><a href="index.html">التسجيل</a></li>
                         <li><a href="#couple">تسجيل الدخول</a></li>
                         <li><a href="#coming">ارسل دعوة</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#gift-registry">Gift Registry</a></li>
-                        <li><a href="#rsvp">RSVP</a></li>
+                        <li><a href="#gift-registry"> أضف شركتك</a></li>
+
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog <i class="fa fa-angle-down"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >المدينــــة<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog.html">Blog style</a></li>
-                                <li><a href="blog-details.html">Blog details</a></li>
+                                <li><a href="/">تبــــوك</a></li>
+                                <li><a href="/">جــــدة</a></li>
+                                <li><a href="/">الريــــاض</a></li>
+                                <li><a href="/">مكـــــــة</a></li>
+                                <li><a href="/">المدينـــــة</a></li>
                             </ul>
                         </li>
+                        <li><a href="/">الرئيــسية</a></li>
                     </ul>
                 </div>
                 <button class="tog-nav btn btn-default">
@@ -152,7 +155,7 @@
                 <div class="groom col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="{{asset('assets/images/salle1.jpg')}}" alt size="full">
+                            <img src="{{asset('assets/images/landing3.jpg')}}" alt size="full">
                         </div>
                         <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">ننظم لك فرحك</a>
                     </div>
@@ -160,7 +163,7 @@
                 <div class="bride col col-sm-6">
                     <div class="frame-wrapper">
                         <div class="frame">
-                            <img src="{{asset('assets/images/salle2.jpg')}}" alt>
+                            <img src="{{asset('assets/images/landing3.jpg')}}" alt>
                         </div>
                         <a href="" class="btn btn-default" data-lightbox-gallery="gallery1">احجز عن بعد</a>
                     </div>
@@ -191,7 +194,7 @@
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
                     <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
@@ -206,7 +209,7 @@
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
                     <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
@@ -221,7 +224,7 @@
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
                     <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
@@ -236,7 +239,7 @@
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
                     <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
@@ -251,7 +254,7 @@
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
                     <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
@@ -266,7 +269,7 @@
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/slider2.jpg')}}" alt class="thumb img img-responsive">
+                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
                     <button class="btn btn-default" dir="rtl">اسم القاعة</button>
 
                     <div class="hover-content">
@@ -278,6 +281,7 @@
                     </div>
                 </div>
             </div>
+
 
             <a href="#" class="btn btn-default">اظهار المزيد</a>
         </div> <!-- end of gallery-content -->
@@ -329,18 +333,18 @@
                         <div class="containers">
                             <div class="cards" dir="rtl">
                                 <div class="card front evnt_prt evnt_prt_1" dir="rtl">
-                                    <h2>Wedding Ceremony</h2>
+                                    <h2>موعد 1</h2>
                                     <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
-                                    <p>LONDON.UK</p>
-                                    <button class="btn btn-primary btn_evnt">4:30PM</button>
+                                    <p>منطقــة</p>
+                                    <button class="btn btn-primary btn_evnt">ســــــــاعة 1</button>
                                 </div><!--.card .front .evnt_prt .evnt_prt_1-->
                                 <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
-                                    <h2>Wedding Ceremony</h2>
+                                    <h2>انت مدعـو من طرف</h2>
                                     <div class="evnt_addres">
-                                        <p>Hotel Radisson</p>
-                                        <p>4th Street,DOHS MIRPUR</p>
-                                        <p>Saturday, 20 july 2015</p>
-                                        <p>4:30PM - 6:15PM</p>
+                                        <p>قاعــة الافراح 1</p>
+                                        <p>العنـــوان 1</p>
+                                        <p>يوم/شهر</p>
+                                        <p>ســــــــاعة</p>
                                     </div>
                                 </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
                             </div><!-- .cards-->
@@ -350,20 +354,20 @@
                 <div class="col-md-4">
                     <div class="evnt_card_container">
                         <div class="containers">
-                            <div class="cards">
-                                <div class="card front evnt_prt evnt_prt_1">
-                                    <h2>Wedding Ceremony</h2>
+                            <div class="cards" dir="rtl">
+                                <div class="card front evnt_prt evnt_prt_1" dir="rtl">
+                                    <h2>موعد 2</h2>
                                     <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
-                                    <p>LONDON.UK</p>
-                                    <button class="btn btn-primary btn_evnt">4:30PM</button>
+                                    <p>منطقــة</p>
+                                    <button class="btn btn-primary btn_evnt">ســــــــاعة 2</button>
                                 </div><!--.card .front .evnt_prt .evnt_prt_1-->
-                                <div class="card back evnt_prt_back evnt_prt_back_1">
-                                    <h2>Wedding Ceremony</h2>
+                                <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
+                                    <h2>انت مدعـو من طرف</h2>
                                     <div class="evnt_addres">
-                                        <p>Hotel Radisson</p>
-                                        <p>4th Street,DOHS MIRPUR</p>
-                                        <p>Saturday, 20 july 2015</p>
-                                        <p>4:30PM - 6:15PM</p>
+                                        <p>قاعــة الافراح 2</p>
+                                        <p>العنـــوان 2</p>
+                                        <p>يوم/شهر</p>
+                                        <p>ســــــــاعة</p>
                                     </div>
                                 </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
                             </div><!-- .cards-->
@@ -373,20 +377,20 @@
                 <div class="col-md-4">
                     <div class="evnt_card_container">
                         <div class="containers">
-                            <div class="cards">
-                                <div class="card front evnt_prt evnt_prt_1">
-                                    <h2>Wedding Ceremony</h2>
+                            <div class="cards" dir="rtl">
+                                <div class="card front evnt_prt evnt_prt_1" dir="rtl">
+                                    <h2>موعد 3</h2>
                                     <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
-                                    <p>LONDON.UK</p>
-                                    <button class="btn btn-primary btn_evnt">4:30PM</button>
+                                    <p>منطقــة</p>
+                                    <button class="btn btn-primary btn_evnt">ســــــــاعة 3</button>
                                 </div><!--.card .front .evnt_prt .evnt_prt_1-->
-                                <div class="card back evnt_prt_back evnt_prt_back_1">
-                                    <h2>Wedding Ceremony</h2>
+                                <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
+                                    <h2>انت مدعـو من طرف</h2>
                                     <div class="evnt_addres">
-                                        <p>Hotel Radisson</p>
-                                        <p>4th Street,DOHS MIRPUR</p>
-                                        <p>Saturday, 20 july 2015</p>
-                                        <p>4:30PM - 6:15PM</p>
+                                        <p>قاعــة الافراح3</p>
+                                        <p>العنـــوان 3</p>
+                                        <p>يوم/شهر</p>
+                                        <p>ســــــــاعة</p>
                                     </div>
                                 </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
                             </div><!-- .cards-->
@@ -451,9 +455,9 @@
             <div class="social-links">
                 <ul class="nav">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -463,96 +467,6 @@
         </div>
     </div> <!-- end of footer-wrapper -->
 </footer> <!-- end of footer -->
-
-<div class="ceremony" id="popup-wedding-ceremony">
-    <div class="container">
-        <button class="close"><i class="fa fa-times"></i></button>
-        <div class="ceremony-banar row">
-            <div class="overlay"></div>
-            <div class="title">
-                <h2>Jhon's wedding</h2>
-                <span>Ceremony</span>
-            </div>
-        </div> <!-- end of banar -->
-
-        <div class="content">
-            <div class="row">
-                <div class="left-col col col-md-4">
-                    <div>
-                        <div class="time">
-                            <h3>26<span> February</span></h3>
-                            <div>
-                                <p>Starts - 12:00 pm</p>
-                                <p>End - 6:00 pm</p>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <p><i class="fa fa-phone-square"></i> +1212-758-5700</p>
-                            <p><i class="fa fa-envelope-square"></i> johnandalisa@mail.com</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-col col col-md-8">
-                    <h3>St. Paul's Chapel</h3>
-                    <span><i class="fa fa-map-marker"></i> 209 Broadway, New York, NY 10007, United States</span>
-
-                    <div class="details">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. voluptatem accusantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat.</p>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end of content -->
-
-        <div class="map row" id="googlemap-1"></div>
-    </div> <!-- end of container -->
-</div> <!-- popup-wedding-ceremony -->
-
-<div class="ceremony" id="popup-reciption-ceremony">
-    <div class="container">
-        <button class="close"><i class="fa fa-times"></i></button>
-        <div class="ceremony-banar row">
-            <div class="overlay"></div>
-            <div class="title">
-                <h2>Alisa's Reciption</h2>
-                <span>Ceremony</span>
-            </div>
-        </div> <!-- end of banar -->
-
-        <div class="content">
-            <div class="row">
-                <div class="left-col col col-md-4">
-                    <div>
-                        <div class="time">
-                            <h3>28<span> February</span></h3>
-                            <div>
-                                <p>Starts - 12:00 pm</p>
-                                <p>End - 6:00 pm</p>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <p><i class="fa fa-phone-square"></i> +1212-058-3200</p>
-                            <p><i class="fa fa-envelope-square"></i> alisandalisa@mail.com</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-col col col-md-8">
-                    <h3>Four Seasons Hotel New York</h3>
-                    <span><i class="fa fa-map-marker"></i> 57 E 57th St, New York, NY 10022, United States</span>
-
-                    <div class="details">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. voluptatem accusantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Duis ut lobortis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lacinia, est eget scelerisque blandit, nulla eros mollis erat.</p>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end of content -->
-
-        <div class="map row" id="googlemap-2"></div>
-    </div> <!-- end of container -->
-</div> <!-- popup-wedding-ceremony -->
 
 
 <!-- Bootstrap core JavaScript
