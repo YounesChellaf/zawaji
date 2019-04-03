@@ -107,6 +107,7 @@
             // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
             // it doesn't need to have a start or end
             var eventObject = {
+
                 title: $.trim($(this).text()) // use the element's text as the event title
             };
             // store the Event Object in the DOM element so we can get to it later
@@ -130,7 +131,8 @@
         var form = '';
         var today = new Date($.now());
 
-        var defaultEvents =  [{
+        var defaultEvents =
+            [{
                 title: 'Released Ample Admin!',
                 start: new Date($.now() + 506800000),
                 className: 'bg-info'
