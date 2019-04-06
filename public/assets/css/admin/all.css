@@ -28,7 +28,7 @@
 @import url("square/purple.css");
 */
 
-@import url("_all.css");
+@import url("flat/_all.css");
 /*
 @import url("flat/flat.css");
 @import url("flat/red.css");
@@ -56,6 +56,6 @@
 @import url("line/purple.css");
 */
 
-@import url("polaris.css");
+@import url("polaris/polaris.css");
 
-@import url("futurico.css");
+@import url("futurico/futurico.css");

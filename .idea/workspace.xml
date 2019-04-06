@@ -2,32 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-wysihtml5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/dropify.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/form-icheck.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts/dropify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts/dropify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts/dropify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts/dropify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-wysihtml5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/icheck.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/icheck.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/jquery.steps.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/sticky-kit.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/sweetalert.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/wysihtml5-0.3.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/dropify.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-datepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-material-datetimepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/daterangepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/aero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/aero@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/blue@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/flat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/flat@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/green@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/grey@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/orange@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/pink@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/purple@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/red@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/yellow@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico/futurico.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico/futurico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico/futurico@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/line.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/line@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/aero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/aero@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/blue@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/green@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/grey@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/minimal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/minimal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/minimal@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/orange@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/pink@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/purple@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/red@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/yellow@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris/polaris@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-material-datetimepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/daterangepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/dropify.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/admin/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/admin/steps.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin/steps.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,41 +110,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="room_party.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="room_party.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2961">
-              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="23">
+              <caret line="137" column="55" selection-start-line="137" selection-start-column="55" selection-end-line="137" selection-end-column="55" />
               <folding>
-                <element signature="e#233#1092#0#HTML" />
-                <element signature="e#1078#11583#0#HTML" />
-                <element signature="e#4124#4151#0#HTML" expanded="true" />
-                <element signature="e#4461#4488#0#HTML" expanded="true" />
-                <element signature="e#4355#5472#0#HTML" />
+                <element signature="e#6653#6680#0#HTML" expanded="true" />
+                <element signature="e#6619#7988#0#HTML" />
+                <element signature="e#6726#6756#0#HTML" expanded="true" />
+                <element signature="e#8176#8203#0#HTML" expanded="true" />
+                <element signature="e#8142#9435#0#HTML" />
+                <element signature="e#8245#8275#0#HTML" expanded="true" />
+                <element signature="e#13780#15094#0#HTML" />
+                <element signature="e#12228#12339#0#HTML" />
+                <element signature="e#11735#14096#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropify.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/dropify.min.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="dropify.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/dropify.min.css">
+      <file leaf-file-name="steps.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/steps.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icheck.init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/admin/icheck.init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            <state relative-caret-position="190">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -83,46 +142,60 @@
       <file leaf-file-name="form-icheck.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/admin/form-icheck.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1502" />
+            <state relative-caret-position="181">
+              <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-material-datetimepicker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/admin/bootstrap-material-datetimepicker.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-timepicker.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/bootstrap-timepicker.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="all.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/admin/all.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="338">
+              <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polaris.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="_all.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/_all.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2659">
+              <caret line="583" column="29" lean-forward="true" selection-start-line="583" selection-start-column="29" selection-end-line="583" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_all.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/_all.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="polaris.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/polaris.css">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/flat/_all.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-927" />
+            <state relative-caret-position="-11760" />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/steps.css">
+      <file leaf-file-name="_all.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/line/_all.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
-            </state>
+            <state relative-caret-position="-15900" />
           </provider>
         </entry>
       </file>
@@ -152,6 +225,7 @@
       <find>Search</find>
       <find>PER</find>
       <find>calendar-events</find>
+      <find>#mda</find>
     </findStrings>
     <replaceStrings>
       <replace>#c74b6f</replace>
@@ -206,9 +280,10 @@
         <option value="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/bootstrap-wysihtml5.css" />
-        <option value="$PROJECT_DIR$/public/assets/css/admin/steps.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/admin/chechbox.scss" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/all.css" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/admin/steps.css" />
       </list>
     </option>
   </component>
@@ -415,10 +490,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/js" />
-      <recent name="$PROJECT_DIR$/public/assets/css" />
       <recent name="$PROJECT_DIR$/public/assets/css/admin" />
       <recent name="$PROJECT_DIR$/public/assets/js/admin" />
+      <recent name="$PROJECT_DIR$/public/assets/js" />
+      <recent name="$PROJECT_DIR$/public/assets/css" />
       <recent name="$PROJECT_DIR$/public/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -451,12 +526,12 @@
       <workItem from="1553603792035" duration="31542000" />
       <workItem from="1553866844976" duration="14853000" />
       <workItem from="1553947317585" duration="19052000" />
-      <workItem from="1554404990989" duration="11569000" />
+      <workItem from="1554404990989" duration="17500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91663000" />
+    <option name="totallyTimeSpent" value="97594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,105 +575,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22655">
-          <caret line="4" column="117512" selection-start-line="4" selection-start-column="117512" selection-end-line="4" selection-end-column="117512" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/icons/crypto-icons/cryptocoins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/fullcalendar.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14838" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/queue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1817">
-          <caret line="79" column="6" lean-forward="true" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/cache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1367">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3066">
-          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artisan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-824" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_29_175630_create_reservations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/cal-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4922">
-          <caret line="214" column="26" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -809,37 +785,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/steps.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/form-icheck.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1502" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/admin/polaris.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-927" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/_all.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/admin/icheck.init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -849,21 +803,116 @@
     <entry file="file://$PROJECT_DIR$/public/assets/css/admin/dropify.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/dropify.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/flat/red.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/futurico.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-789" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/chechbox.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3128">
+          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/bootstrap-material-datetimepicker.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/bootstrap-datepicker.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/bootstrap-datepicker.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/bootstrap-timepicker.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/daterangepicker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/daterangepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/bootstrap-timepicker.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/admin/bootstrap-material-datetimepicker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/flat/_all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11760" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/line/_all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/_all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2659">
+          <caret line="583" column="29" lean-forward="true" selection-start-line="583" selection-start-column="29" selection-end-line="583" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/form-icheck.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2961">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="23">
+          <caret line="137" column="55" selection-start-line="137" selection-start-column="55" selection-end-line="137" selection-end-column="55" />
           <folding>
-            <element signature="e#233#1092#0#HTML" />
-            <element signature="e#1078#11583#0#HTML" />
-            <element signature="e#4124#4151#0#HTML" expanded="true" />
-            <element signature="e#4461#4488#0#HTML" expanded="true" />
-            <element signature="e#4355#5472#0#HTML" />
+            <element signature="e#6653#6680#0#HTML" expanded="true" />
+            <element signature="e#6619#7988#0#HTML" />
+            <element signature="e#6726#6756#0#HTML" expanded="true" />
+            <element signature="e#8176#8203#0#HTML" expanded="true" />
+            <element signature="e#8142#9435#0#HTML" />
+            <element signature="e#8245#8275#0#HTML" expanded="true" />
+            <element signature="e#13780#15094#0#HTML" />
+            <element signature="e#12228#12339#0#HTML" />
+            <element signature="e#11735#14096#0#HTML" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/steps.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>

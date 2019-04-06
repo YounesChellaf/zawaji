@@ -3,9 +3,17 @@
     <link href="{{asset('assets/css/admin/steps.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/css/admin/bootstrap-wysihtml5.css')}}" />
-    <link href="{{asset('assets/css/admin/bootstrap-wysihtml5.css')}}../assets/node_modules/icheck/skins/all.css" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/all.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/form-icheck.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/dropify.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
+    <!-- Page plugins css -->
+    <!-- Color picker plugins css -->
+    <!-- Date picker plugins css -->
+    <link href="{{asset('assets/css/admin/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker plugins css -->
+    <link href="{{asset('assets/css/admin/bootstrap-timepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/daterangepicker.css')}}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="page-wrapper">
@@ -20,26 +28,6 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">قـــاعة الافراح</li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">File Upload1</h4>
-                            <label for="input-file-now">Your so fresh input file — Default version</label>
-                            <input type="file" id="input-file-now" class="dropify" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">File Upload2</h4>
-                            <label for="input-file-now-custom-1">You can add a default value</label>
-                            <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/node_modules/dropify/src/images/test-image-1.jpg" />
-                        </div>
                     </div>
                 </div>
             </div>
@@ -71,9 +59,25 @@
                                 </select>
                             </div>
                         </div>
-
                     </div>
                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-material">
+                                <label for="firstName1">رقم الهاتف:</label>
+                                <input type="text" class="form-control" id="firstName1"> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-material">
+                                <label for="firstName1">الايميـــــل:</label>
+                                <input type="text" class="form-control" id="firstName1"> </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-material">
+                                <label for="firstName1">عنـــــوان القاعـــة:</label>
+                                <input type="text" class="form-control" id="firstName1"> </div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-material">
@@ -87,58 +91,109 @@
                 <section>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-material" style="padding-bottom: 20%">
+                            <div class="form-material">
                                 <label for="jobTitle1">السعـــة الكليــة :</label>
                                 <input type="text" class="form-control" id="jobTitle1"> </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-material" style="padding-bottom: 20%">
+                            <div class="form-material">
                                 <label for="jobTitle1">عـــدد القاعات :</label>
                                 <input type="text" class="form-control" id="jobTitle1"> </div>
                         </div>
-                        <div class="col-md-6 skin skin-square">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <ul class="icheck-list">
+                        <div class="col-md-6">
+                            <div class="form-material">
+                                <label for="jobTitle1">سعـــة قاعـة الرجــال :</label>
+                                <input type="text" class="form-control" id="jobTitle1"> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-material">
+                                <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
+                                <input type="text" class="form-control" id="jobTitle1"> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-material">
+                                <div class="col-md-6 input-group" style="flex-direction: row">
+                                    <ul style="list-style-type: none;">
                                         <li>
-                                            <input type="checkbox" class="check" id="square-checkbox-1" data-checkbox="icheckbox_square-red">
-                                            <label for="square-checkbox-1">Checkbox 1</label>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">مطعـــــــم</label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" class="check" id="square-checkbox-2" checked data-checkbox="icheckbox_square-red">
-                                            <label for="square-checkbox-2">Checkbox 2</label>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">مســـــرح</label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" class="check" id="square-checkbox-disabled" disabled data-checkbox="icheckbox_square-red">
-                                            <label for="square-checkbox-disabled">Disabled</label>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">قاعـــة مطعميـــة</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">موقف سيــارات</label>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="videoUrl1">Company Name :</label>
-                                <input type="text" class="form-control" id="videoUrl1">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-material">
-                                <label for="shortDescription1">Job Description :</label>
-                                <textarea name="shortDescription" id="shortDescription1" rows="6" class="form-control"></textarea>
+                            <div class="form-material" >
+                                <div class="col-md-6 input-group" style="flex-direction: row">
+                                    <ul style="list-style-type: none;">
+                                        <li>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">مطعـــــــم</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">مســـــرح</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">قاعـــة مطعميـــة</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="check">
+                                            <label for="square-checkbox-1">موقف سيــارات</label>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- Step 3 -->
-                <h6>Interview</h6>
+                <h6>صـــــور القاعــــة</h6>
                 <section>
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">File Upload1</h4>
-                                    <label for="input-file-now">Your so fresh input file — Default version</label>
+                                    <h4 class="card-title">اضف الصورة الرئيسية</h4>
+                                    <input type="file" id="input-file-now" class="dropify" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">الصورة 2</h4>
+                                    <input type="file" id="input-file-now" class="dropify" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">الصورة 3</h4>
+                                    <input type="file" id="input-file-now" class="dropify" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">الصورة 4</h4>
                                     <input type="file" id="input-file-now" class="dropify" />
                                 </div>
                             </div>
@@ -146,48 +201,51 @@
                     </div>
                 </section>
                 <!-- Step 4 -->
-                <h6>Remark</h6>
+                <h6>حـــــــدد سعـــــرك</h6>
                 <section>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="behName1">Behaviour :</label>
-                                <input type="text" class="form-control" id="behName1">
-                            </div>
-                            <div class="form-group">
-                                <label for="participants1">Confidance</label>
-                                <input type="text" class="form-control" id="participants1">
-                            </div>
-                            <div class="form-group">
-                                <label for="participants1">Result</label>
-                                <select class="custom-select form-control" id="participants1" name="location">
-                                    <option value="">Select Result</option>
-                                    <option value="Selected">Selected</option>
-                                    <option value="Rejected">Rejected</option>
-                                    <option value="Call Second-time">Call Second-time</option>
-                                </select>
-                            </div>
+                        <div class="col-md-4">
+                            <div class="form-material">
+                                <label for="firstName1">السعـــــــر:</label>
+                                <input type="text" class="form-control" id="firstName1"> </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="decisions1">Comments</label>
-                                <textarea name="decisions" id="decisions1" rows="4" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Rate Interviwer :</label>
-                                <div class="c-inputs-stacked">
-                                    <label class="inline custom-control custom-checkbox block">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">1 star</span> </label>
-                                    <label class="inline custom-control custom-checkbox block">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">2 star</span> </label>
-                                    <label class="inline custom-control custom-checkbox block">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">3 star</span> </label>
-                                    <label class="inline custom-control custom-checkbox block">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">4 star</span> </label>
-                                    <label class="inline custom-control custom-checkbox block">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">5 star</span> </label>
-                                </div>
-                            </div>
+                        <div class="col-md-4">
+                                    <label class="m-t-20">مـــــــن :</label>
+                                    <input type="text" class="form-control" placeholder="2017-06-04" id="mdate">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="m-t-20">الـــــــى :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-material">
+                                <label for="firstName1">السعـــــــر:</label>
+                                <input type="text" class="form-control" id="firstName1"> </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="m-t-20">مـــــــن :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate2">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="m-t-20">الـــــــى :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-material">
+                                <label for="firstName1">السعـــــــر:</label>
+                                <input type="text" class="form-control" id="firstName1"> </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="m-t-20">مـــــــن :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate4">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="m-t-20">الـــــــى :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate5">
                         </div>
                     </div>
                 </section>
@@ -315,5 +373,91 @@
                 }
             }
         })
+    </script>
+    <script src="{{asset('assets/js/admin/bootstrap-datepicker.min.js')}}"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="{{asset('assets/js/admin/bootstrap-timepicker.min.js')}}"></script>
+    <script src="{{asset('assets/js/admin/daterangepicker.js')}}"></script>
+    <script src="{{asset('assets/js/admin/bootstrap-material-datetimepicker.js')}}"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script>
+        // MAterial Date picker
+        $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate1').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate2').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate3').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate4').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate5').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+        $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+        $('#min-date').bootstrapMaterialDatePicker({ format: 'DD/MM/YYYY HH:mm', minDate: new Date() });
+        // Clock pickers
+        $('#single-input').clockpicker({
+            placement: 'bottom',
+            align: 'left',
+            autoclose: true,
+            'default': 'now'
+        });
+        $('.clockpicker').clockpicker({
+            donetext: 'Done',
+        }).find('input').change(function() {
+            console.log(this.value);
+        });
+        $('#check-minutes').click(function(e) {
+            // Have to stop propagation here
+            e.stopPropagation();
+            input.clockpicker('show').clockpicker('toggleView', 'minutes');
+        });
+        if (/mobile/i.test(navigator.userAgent)) {
+            $('input').prop('readOnly', true);
+        }
+        // Colorpicker
+        $(".colorpicker").asColorPicker();
+        $(".complex-colorpicker").asColorPicker({
+            mode: 'complex'
+        });
+        $(".gradient-colorpicker").asColorPicker({
+            mode: 'gradient'
+        });
+        // Date Picker
+        jQuery('.mydatepicker, #datepicker').datepicker();
+        jQuery('#datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+        jQuery('#date-range').datepicker({
+            toggleActive: true
+        });
+        jQuery('#datepicker-inline').datepicker({
+            todayHighlight: true
+        });
+        // Daterange picker
+        $('.input-daterange-datepicker').daterangepicker({
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-danger',
+            cancelClass: 'btn-inverse'
+        });
+        $('.input-daterange-timepicker').daterangepicker({
+            timePicker: true,
+            format: 'MM/DD/YYYY h:mm A',
+            timePickerIncrement: 30,
+            timePicker12Hour: true,
+            timePickerSeconds: false,
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-danger',
+            cancelClass: 'btn-inverse'
+        });
+        $('.input-limit-datepicker').daterangepicker({
+            format: 'MM/DD/YYYY',
+            minDate: '06/01/2015',
+            maxDate: '06/30/2015',
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-danger',
+            cancelClass: 'btn-inverse',
+            dateLimit: {
+                days: 6
+            }
+        });
     </script>
 @endsection
