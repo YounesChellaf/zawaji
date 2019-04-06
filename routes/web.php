@@ -20,6 +20,9 @@ Route::group(['prefix'=>'/owner'],function (){
     Route::get('/undelivered-order',function (){
         return view('dashboard.layouts.undelivered-order');
     });
+    Route::get('/add_party_room',function (){
+        return view('dashboard.layouts.room_party');
+    });
 });
 Route::group(['prefix'=>'/admin'],function (){
     Route::get('/users',function (){

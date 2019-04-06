@@ -77,7 +77,7 @@
                         <li><a href="index.html">التسجيل</a></li>
                         <li><a href="#couple">تسجيل الدخول</a></li>
                         <li><a href="#coming">ارسل دعوة</a></li>
-                        <li><a href="#gift-registry"> أضف شركتك</a></li>
+                        <li><a href="/owner/add_party_room"> أضف شركتك</a></li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >المدينــــة<i class="fa fa-angle-down"></i></a>
