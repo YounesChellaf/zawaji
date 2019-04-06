@@ -1,86 +1,202 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Zawaji Admin</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    @yield('css')
+    <link href="{{asset('assets/css/morris.css')}}" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="{{asset('assets/css/jquery.toast.css')}}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{asset('assets/css/theme-style.min.css')}}" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
 
-    <title>Couple - HTML5 Boostrap Wedding Event template</title>
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="img/fav.png">
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/owl.carousel.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/owl.theme.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/zawaji-style.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/zawaji-responsive.css')}}" rel="stylesheet">
-    <!-- Pretty Photo CSS -->
-    <link href="css/prettyPhoto.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/smoothslides.theme.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--style-->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
+    <style>
+        nav, body, a,label, h1, h2, h3, h4, h5, h6, p, tr, td, ul, li, span, option,button{
+            font-family: DroidArabicKufiRegular, 'sans-serif' !important;
+        }
+    </style>
+    <!--endstyle-->
 </head>
 
-<body id="page-top" class="index four">
-<!-- Navigation -->
-<nav id="header_nav" class="navbar navbar-default navbar-fixed-top" dir="rtl">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">zawaji</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="Main_Menu navbar-example collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right main_nav" >
-                <li> <a href="/">الرئيسية</a> </li>
-                <li> <a href="#bride_groom_sec">Bride & Groom</a> </li>
-                <li> <a href="#family">Our Family</a> </li>
-                <li> <a href="#photo_gallery">Photo Gallery</a> </li>
-                <li> <a href="#events">Events</a> </li>
-                <li> <a href="#blog">Blog</a> </li>
-                <li> <a href="#rsvp">RSVP</a> </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-        <!-- /.navbar-collapse -->
+<body class="skin-default fixed-layout rtl">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="site-loder">
+    <div class="lode-wrap">
+        <span></span>
+        <span></span>
     </div>
-    <!-- /.container-fluid -->
-</nav>
-<!-- Header -->
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar" style="height: 11%; background-color:#c74b6f">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- This is  -->
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
 
-<!--Phone mail addres section-->
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0">
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
+                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        </a>
+                        <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
+                            <ul>
+                                <li>
+                                    <div class="drop-title">لديك رسائل</div>
+                                </li>
+                                <li>
+                                    <div class="message-center">
+                                        <!-- Message -->
+                                        <a href="javascript:void(0)">
+                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                            <div class="mail-contnet">
+                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                            <div class="mail-contnet">
+                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                            <div class="mail-contnet">
+                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
+                                        </a>
+                                        <!-- Message -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar" style="width: 30% !important;">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- User Profile-->
 
-<!-- Bootstrap Core JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/jquery.singlePageNav.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-<!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/jquery.mixitup.min.js"></script>
-<script src="js/owl.carousel.js" type="text/javascript"></script>
-<!-- PrettyPhoto -->
-<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-<!-- Nicescroll JavaScript -->
-<script type="text/javascript" src="js/smoothslides.min.js"></script>
-<script src="js/countdown.js"></script>
-<!-- Video Background JavaScript -->
-<script src="js/jquery.videobackground.js"></script>
-<script src="js/jquery.imageScroll.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="js/site.js"></script>
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">--- بخصوص القـاعـة</li>
+                    <li> <a class="waves-effect waves-dark" href="/owner/add_party_room" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">رزنامة الافراح </span></a></li>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="/owner/delivered-order">المـؤكدة</a></li>
+                            <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-small-cap">--- الاعـدادات</li>
+                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">تسجيل الخروج</span></a></li>
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    @yield('content');
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="{{asset('assets/js/admin/jquery-3.2.1.min.js')}}"></script>
+<!-- Bootstrap popper Core JavaScript -->
+<script src="{{asset('assets/js/popper.min.js')}}"></script>
+<script src="{{asset('assets/js/admin/bootstrap.min.js')}}"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="{{asset('assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
+<!--Wave Effects -->
+<script src="{{asset('assets/js/waves.js')}}"></script>
+<!--Menu sidebar -->
+<script src="{{asset('assets/js/sidebarmenu.js')}}"></script>
+<!--Custom JavaScript -->
+<script src="{{asset('assets/js/custom.min.js')}}"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!--morris JavaScript -->
+<script src="{{asset('assets/js/raphael-min.js')}}"></script>
+<script src="{{asset('assets/js/morris.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.sparkline.min.js')}}"></script>
+<!-- Popup message jquery -->
+<script src="{{asset('assets/js/jquery.toast.js')}}"></script>
+<!-- Chart JS -->
+<script src="{{asset('assets/js/dashboard1.js')}}"></script>
+<script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
+<script src="{{asset('assets/js/admin/moment.js')}}"></script>>
+@yield('script');
+
 </body>
+
 </html>

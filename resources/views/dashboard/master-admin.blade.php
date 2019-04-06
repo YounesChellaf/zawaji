@@ -55,7 +55,7 @@
     <!-- ============================================================== -->
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <header class="topbar">
+    <header class="topbar" style="background-color:#c74b6f">
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
             <!-- ============================================================== -->
             <!-- Logo -->

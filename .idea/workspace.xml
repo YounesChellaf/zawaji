@@ -2,101 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-datepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-material-datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/bootstrap-timepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/aero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/aero@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/flat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/flat@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/grey@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/orange@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/pink@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/purple@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/red@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/flat/yellow@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico/futurico.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico/futurico.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/futurico/futurico@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/line.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/line@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/line/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/aero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/aero@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/grey@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/minimal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/minimal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/minimal@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/orange@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/pink@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/purple@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/red@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/minimal/yellow@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/admin/polaris/polaris@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-datepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-material-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/bootstrap-timepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/admin/dropify.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/admin/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin/all.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/admin/steps.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin/steps.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/admin/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,34 +40,105 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="steps.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/admin/steps.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="5934">
+              <caret line="258" column="22" selection-start-line="258" selection-start-column="22" selection-end-line="258" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form-icheck.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/form-icheck.css">
+      <file leaf-file-name="zawaji-master.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+            <state relative-caret-position="252">
+              <caret line="128" column="48" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#1;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap-material-datetimepicker.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/admin/bootstrap-material-datetimepicker.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="7" column="118463" selection-start-line="7" selection-start-column="118463" selection-end-line="7" selection-end-column="118463" />
+              <folding>
+                <element signature="e#53480#53680#2" expanded="true" />
+                <element signature="e#53886#54035#2" expanded="true" />
+                <element signature="e#54534#54680#2" expanded="true" />
+                <element signature="e#54981#55147#1" expanded="true" />
+                <element signature="e#65468#65711#2" expanded="true" />
+                <element signature="e#66536#66785#2" expanded="true" />
+                <element signature="e#92436#92626#2" expanded="true" />
+                <element signature="e#92672#92862#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap-timepicker.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/bootstrap-timepicker.min.css">
+      <file leaf-file-name="style.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/style.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+            <state relative-caret-position="50386">
+              <caret line="34" column="109429" selection-start-line="34" selection-start-column="109429" selection-end-line="34" selection-end-column="109429" />
+              <folding>
+                <element signature="e#217295#217529#2" expanded="true" />
+                <element signature="e#218206#218440#1" expanded="true" />
+                <element signature="e#221621#221897#2" expanded="true" />
+                <element signature="e#222588#222864#1" expanded="true" />
+                <element signature="e#251390#251577#2" expanded="true" />
+                <element signature="e#252105#252241#2" expanded="true" />
+                <element signature="e#252394#252527#2" expanded="true" />
+                <element signature="e#263744#263974#2" expanded="true" />
+                <element signature="e#264809#265045#2" expanded="true" />
+                <element signature="e#292984#293161#2" expanded="true" />
+                <element signature="e#293207#293384#2" expanded="true" />
+                <element signature="e#417519#417766#2" expanded="true" />
+                <element signature="e#418106#418426#2" expanded="true" />
+                <element signature="e#418757#419046#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="59" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="59" column="58" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="58" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#aside#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master-admin.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,29 +155,6 @@
       <file leaf-file-name="polaris.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/admin/polaris/polaris.css">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="_all.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/_all.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2659">
-              <caret line="583" column="29" lean-forward="true" selection-start-line="583" selection-start-column="29" selection-end-line="583" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_all.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/flat/_all.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11760" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_all.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/line/_all.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15900" />
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -226,6 +184,8 @@
       <find>PER</find>
       <find>calendar-events</find>
       <find>#mda</find>
+      <find>#2962FF</find>
+      <find>#01c0c8</find>
     </findStrings>
     <replaceStrings>
       <replace>#c74b6f</replace>
@@ -271,19 +231,20 @@
         <option value="$PROJECT_DIR$/app/Link.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LinkController.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/js/admin/cal-init.js" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/layouts/delivered-order.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/bootstrap-wysihtml5.css" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/chechbox.scss" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/all.css" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/steps.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/admin/style.min.css" />
+        <option value="$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php" />
       </list>
     </option>
   </component>
@@ -526,12 +487,12 @@
       <workItem from="1553603792035" duration="31542000" />
       <workItem from="1553866844976" duration="14853000" />
       <workItem from="1553947317585" duration="19052000" />
-      <workItem from="1554404990989" duration="17500000" />
+      <workItem from="1554404990989" duration="19231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97594000" />
+    <option name="totallyTimeSpent" value="99325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -575,13 +536,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -661,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -688,29 +635,6 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/admin/jquery.validate.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/style.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20695">
-          <caret line="34" column="67401" selection-start-line="34" selection-start-column="67401" selection-end-line="34" selection-end-column="67401" />
-          <folding>
-            <element signature="e#217295#217529#2" expanded="true" />
-            <element signature="e#218206#218440#1" expanded="true" />
-            <element signature="e#221621#221897#2" expanded="true" />
-            <element signature="e#222588#222864#1" expanded="true" />
-            <element signature="e#251390#251577#2" expanded="true" />
-            <element signature="e#252105#252241#2" expanded="true" />
-            <element signature="e#252394#252527#2" expanded="true" />
-            <element signature="e#263744#263974#2" expanded="true" />
-            <element signature="e#264809#265045#2" expanded="true" />
-            <element signature="e#292984#293161#2" expanded="true" />
-            <element signature="e#293207#293384#2" expanded="true" />
-            <element signature="e#417519#417766#2" expanded="true" />
-            <element signature="e#418106#418426#2" expanded="true" />
-            <element signature="e#418757#419046#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/admin/sticky-kit.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -718,30 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="193" column="58" lean-forward="true" selection-start-line="193" selection-start-column="58" selection-end-line="193" selection-end-column="58" />
-          <folding>
-            <element signature="n#ul#1;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/layouts/undelivered-order.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-592">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="n#ul#1;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -758,13 +662,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/admin/sweetalert.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/admin/bootstrap-wysihtml5.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -909,10 +806,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/zawaji/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="59" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="7" column="118463" selection-start-line="7" selection-start-column="118463" selection-end-line="7" selection-end-column="118463" />
+          <folding>
+            <element signature="e#53480#53680#2" expanded="true" />
+            <element signature="e#53886#54035#2" expanded="true" />
+            <element signature="e#54534#54680#2" expanded="true" />
+            <element signature="e#54981#55147#1" expanded="true" />
+            <element signature="e#65468#65711#2" expanded="true" />
+            <element signature="e#66536#66785#2" expanded="true" />
+            <element signature="e#92436#92626#2" expanded="true" />
+            <element signature="e#92672#92862#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master-admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="59" column="58" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="58" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/admin/steps.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="5934">
+          <caret line="258" column="22" selection-start-line="258" selection-start-column="22" selection-end-line="258" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50386">
+          <caret line="34" column="109429" selection-start-line="34" selection-start-column="109429" selection-end-line="34" selection-end-column="109429" />
+          <folding>
+            <element signature="e#217295#217529#2" expanded="true" />
+            <element signature="e#218206#218440#1" expanded="true" />
+            <element signature="e#221621#221897#2" expanded="true" />
+            <element signature="e#222588#222864#1" expanded="true" />
+            <element signature="e#251390#251577#2" expanded="true" />
+            <element signature="e#252105#252241#2" expanded="true" />
+            <element signature="e#252394#252527#2" expanded="true" />
+            <element signature="e#263744#263974#2" expanded="true" />
+            <element signature="e#264809#265045#2" expanded="true" />
+            <element signature="e#292984#293161#2" expanded="true" />
+            <element signature="e#293207#293384#2" expanded="true" />
+            <element signature="e#417519#417766#2" expanded="true" />
+            <element signature="e#418106#418426#2" expanded="true" />
+            <element signature="e#418757#419046#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/zawaji/zawaji-master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="128" column="48" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
