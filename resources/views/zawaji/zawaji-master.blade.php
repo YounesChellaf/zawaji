@@ -24,6 +24,7 @@
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/client/bootstrap-slider.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/client/slider.scss')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
     <!-- Page plugins css -->
     <!-- Color picker plugins css -->
@@ -82,16 +83,6 @@
                     <!-- ============================================================== -->
                     <!-- Search -->
                     <!-- ============================================================== -->
-
-                    <li><button class="btn btn-light">login</button></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
-                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-                        </a>
-                    </li>
-                    <!-- ============================================================== -->
-                    <li class="nav-item left-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
-
                 </ul>
                 <!-- ============================================================== -->
                 <!-- User profile and search -->
@@ -99,14 +90,7 @@
                 <ul class="navbar-nav my-lg-0" style="float: left !important;">
                     <!-- ============================================================== -->
                     <!-- ============================================================== -->
-                    <li><button class="btn btn-light">login</button></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
-                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-                        </a>
-                    </li>
-                    <!-- ============================================================== -->
-                    <li class="nav-item left-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+
                 </ul>
             </div>
         </nav>
@@ -154,8 +138,9 @@
                     </div>
                     <div class="row" style="margin-top: 3% ; margin-bottom: 15%">
                         <label class="m-t-20" style="margin-right: 3%">حـــــدد سعــــرك :</label>
-                        <div class="range-slider col-md-10">
-                            <input style="width: 100%" id="ex2" data-slider-id='ex1Slider' type="range" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                        <div class="range-slider" style="width: 100%;">
+                            <input style="width: 80%" class="range-slider__range" type="range" value="500" min="500" max="4000" step="100">
+                            <span class="range-slider__value">0</span>
                         </div>
                     </div>
 
@@ -215,6 +200,7 @@
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/client/bootstrap-slider.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/client/range-slider.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/client/slider.js')}}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script src="{{asset('assets/js/admin/bootstrap-datepicker.min.js')}}"></script>
 <!-- Date range Plugin JavaScript -->
