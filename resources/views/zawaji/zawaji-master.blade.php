@@ -23,6 +23,7 @@
     <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/client/bootstrap-slider.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,7 +86,7 @@
                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
                             <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                         </a>
-                        <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
+                        <div class="dropdown-menu mailbox dropdown-menu-left animated bounceInDown" aria-labelledby="2">
                             <ul>
                                 <li>
                                     <div class="drop-title">لديك رسائل</div>
@@ -115,7 +116,7 @@
                         </div>
                     </li>
                     <!-- ============================================================== -->
-                    <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                    <li class="nav-item left-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -126,13 +127,18 @@
     <!-- ============================================================== -->
     <!-- Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
-    <aside class="left-sidebar" style="width: 30% !important;">
+    <aside class="left-sidebar" style="width: 30% !important">
         <!-- Sidebar scroll-->
-        <div class="scroll-sidebar">
-            <!-- User Profile-->
-
-            <!-- Sidebar navigation-->
-            <nav class="sidebar-nav">
+        <div class="scroll-sidebar" >
+            <div class="user-profile">
+                <div class="user-pro-body">
+                    <div class="dropdown text-lg-center" style="margin-top: 25%">
+                        <h3>احـصـل على العـــرض المنــــاسب</h3>
+                        <h6>باختيار الفلتر المناسب</h6>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav" >
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- بخصوص القـاعـة</li>
                     <li> <a class="waves-effect waves-dark" href="/owner/add_party_room" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
@@ -143,6 +149,9 @@
                             <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
                         </ul>
                     </li>
+                    <div class="range-slider">
+                        <input id="ex2" data-slider-id='ex1Slider' type="range" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                    </div>
                     <li class="nav-small-cap">--- الاعـدادات</li>
                     <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">تسجيل الخروج</span></a></li>
                 </ul>
@@ -194,7 +203,16 @@
 <!-- Chart JS -->
 <script src="{{asset('assets/js/dashboard1.js')}}"></script>
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
-<script src="{{asset('assets/js/admin/moment.js')}}"></script>>
+<script src="{{asset('assets/js/admin/moment.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/client/bootstrap-slider.js')}}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
 @yield('script');
 
 </body>

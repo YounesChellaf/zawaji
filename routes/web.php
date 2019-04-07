@@ -3,7 +3,7 @@ Route::get('/', function () {
     return view('zawaji.home');
 });
 Route::get('/reserve', function () {
-    return view('zawaji.zawaji-master');
+    return view('client.search_parties');
 });
 
 Route::resource('invitations','InvitationController');
