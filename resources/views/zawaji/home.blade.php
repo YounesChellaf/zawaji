@@ -74,19 +74,19 @@
             <div class="navbar-wrapper">
                 <div id="navbar" class="collapse navbar-collapse pull-right" dir="rtl">
                     <ul class="nav navbar-nav" dir="rtl">
-                        <li><a href="index.html">التسجيل</a></li>
-                        <li><a href="#couple">تسجيل الدخول</a></li>
+                        <li><a href="#">التسجيل</a></li>
+                        <li><a href="#">تسجيل الدخول</a></li>
                         <li><a href="#coming">ارسل دعوة</a></li>
                         <li><a href="/owner/add_party_room"> أضف شركتك</a></li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >المدينــــة<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/">تبــــوك</a></li>
-                                <li><a href="/">جــــدة</a></li>
-                                <li><a href="/">الريــــاض</a></li>
-                                <li><a href="/">مكـــــــة</a></li>
-                                <li><a href="/">المدينـــــة</a></li>
+                                <li><a href="/reserve">تبــــوك</a></li>
+                                <li><a href="/reserve">جــــدة</a></li>
+                                <li><a href="/reserve">الريــــاض</a></li>
+                                <li><a href="/reserve">مكـــــــة</a></li>
+                                <li><a href="/reserve">المدينـــــة</a></li>
                             </ul>
                         </li>
                         <li><a href="/">الرئيــسية</a></li>
@@ -122,7 +122,7 @@
         <div class="row">
             <div class="col col-md-9">
                 <div class="button-group pull-left">
-                    <a href="/reserve"><i class="fa fa-paper-plane"></i></a>
+                    <a href="#coming"><i class="fa fa-paper-plane"></i></a>
                     <a href="/reserve" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
                     <a href="#gallery"><i class="fa fa-heart"></i></a>
                 </div>
@@ -201,7 +201,7 @@
                         <div>
                             <h4>اسم القاعة</h4>
                             <p>متواجدة في المنطقة آ</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                         <div>
                             <h4>اسم القاعة</h4>
                             <p>متواجدة في المنطقة آ</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                         <div>
                             <h4>اسم القاعة</h4>
                             <p>متواجدة في المنطقة آ</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -246,7 +246,7 @@
                         <div>
                             <h4>اسم القاعة</h4>
                             <p>متواجدة في المنطقة آ</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
                         <div>
                             <h4>اسم القاعة</h4>
                             <p>متواجدة في المنطقة آ</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -276,11 +276,12 @@
                         <div>
                             <h4>اسم القاعة</h4>
                             <p>متواجدة في المنطقة آ</p>
-                            <a  href="{{asset('assets/images/slider2.jpg')}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
             <a href="#" class="btn btn-default">اظهار المزيد</a>
