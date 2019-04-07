@@ -24,6 +24,14 @@
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/client/bootstrap-slider.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
+    <!-- Page plugins css -->
+    <!-- Color picker plugins css -->
+    <!-- Date picker plugins css -->
+    <link href="{{asset('assets/css/admin/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker plugins css -->
+    <link href="{{asset('assets/css/admin/bootstrap-timepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/daterangepicker.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,45 +83,27 @@
                     <!-- Search -->
                     <!-- ============================================================== -->
 
-                </ul>
-                <!-- ============================================================== -->
-                <!-- User profile and search -->
-                <!-- ============================================================== -->
-                <ul class="navbar-nav my-lg-0">
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
+                    <li><button class="btn btn-light">login</button></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
                             <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                         </a>
-                        <div class="dropdown-menu mailbox dropdown-menu-left animated bounceInDown" aria-labelledby="2">
-                            <ul>
-                                <li>
-                                    <div class="drop-title">لديك رسائل</div>
-                                </li>
-                                <li>
-                                    <div class="message-center">
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <!-- Message -->
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <li class="nav-item left-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0" style="float: left !important;">
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <li><button class="btn btn-light">login</button></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
+                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        </a>
                     </li>
                     <!-- ============================================================== -->
                     <li class="nav-item left-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
@@ -139,22 +129,41 @@
                 </div>
             </div>
             <nav class="sidebar-nav" >
-                <ul id="sidebarnav">
-                    <li class="nav-small-cap">--- بخصوص القـاعـة</li>
-                    <li> <a class="waves-effect waves-dark" href="/owner/add_party_room" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">رزنامة الافراح </span></a></li>
-                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="/owner/delivered-order">المـؤكدة</a></li>
-                            <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
-                        </ul>
+                <ul id="sidebarnav" style="margin-right: 10%">
+
+                    <li>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-material">
+                                    <label for="firstName1">المنطـــــــقة:</label>
+                                    <input type="text" class="form-control" id="firstName1"> </div>
+                            </div>
+                        </div>
                     </li>
-                    <div class="range-slider">
-                        <input id="ex2" data-slider-id='ex1Slider' type="range" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                    <div class="row">
+                        <div class="col-md-10">
+                            <label class="m-t-20">مـــــــن :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate">
+                        </div>
                     </div>
-                    <li class="nav-small-cap">--- الاعـدادات</li>
-                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">تسجيل الخروج</span></a></li>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <label class="m-t-20">الـــــــى :</label>
+                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate1">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 3% ; margin-bottom: 15%">
+                        <label class="m-t-20" style="margin-right: 3%">حـــــدد سعــــرك :</label>
+                        <div class="range-slider col-md-10">
+                            <input style="width: 100%" id="ex2" data-slider-id='ex1Slider' type="range" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                        </div>
+                    </div>
+
+
                 </ul>
+                <div class="row" style="margin-right: 10%">
+                    <button class="btn btn-danger" style="width: 80%"> ابحـــــــــث</button>
+                </div>
             </nav>
             <!-- End Sidebar navigation -->
         </div>
@@ -205,7 +214,94 @@
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/client/bootstrap-slider.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/client/range-slider.js')}}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script src="{{asset('assets/js/admin/bootstrap-datepicker.min.js')}}"></script>
+<!-- Date range Plugin JavaScript -->
+<script src="{{asset('assets/js/admin/bootstrap-timepicker.min.js')}}"></script>
+<script src="{{asset('assets/js/admin/daterangepicker.js')}}"></script>
+<script src="{{asset('assets/js/admin/bootstrap-material-datetimepicker.js')}}"></script>
+<!-- Clock Plugin JavaScript -->
+<script>
+    // MAterial Date picker
+    $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#mdate1').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#mdate2').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#mdate3').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#mdate4').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#mdate5').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+    $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+    $('#min-date').bootstrapMaterialDatePicker({ format: 'DD/MM/YYYY HH:mm', minDate: new Date() });
+    // Clock pickers
+    $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    }).find('input').change(function() {
+        console.log(this.value);
+    });
+    $('#check-minutes').click(function(e) {
+        // Have to stop propagation here
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+    // Colorpicker
+    $(".colorpicker").asColorPicker();
+    $(".complex-colorpicker").asColorPicker({
+        mode: 'complex'
+    });
+    $(".gradient-colorpicker").asColorPicker({
+        mode: 'gradient'
+    });
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+    // Daterange picker
+    $('.input-daterange-datepicker').daterangepicker({
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-daterange-timepicker').daterangepicker({
+        timePicker: true,
+        format: 'MM/DD/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false,
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-limit-datepicker').daterangepicker({
+        format: 'MM/DD/YYYY',
+        minDate: '06/01/2015',
+        maxDate: '06/30/2015',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse',
+        dateLimit: {
+            days: 6
+        }
+    });
+</script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
