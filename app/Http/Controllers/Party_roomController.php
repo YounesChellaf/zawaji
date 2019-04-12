@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PartyRoomRequest;
+use App\Image;
 use App\Party_room;
 use Illuminate\Http\Request;
 
@@ -33,11 +35,13 @@ class Party_roomController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PartyRoomRequest $request)
     {
         if ($request->post()){
+            $validated = $request->validated();
             $party_room = Party_room::new($request);
-            return redirect('/owner/calender');
+            $image= Image::new($request,$party_room->id);
+            return redirect('/owner/calendar');
         }
     }
 

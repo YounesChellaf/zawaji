@@ -2,7 +2,7 @@
 
 namespace App;
 
-use http\Env\Request;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 
 class Party_room extends Model
@@ -16,6 +16,9 @@ class Party_room extends Model
 
     function reservations(){
         return $this->hasMany('App\Reservation');
+    }
+    function  image(){
+        return $this->hasMany('App\Image');
     }
 
     public static function new(Request $request){
