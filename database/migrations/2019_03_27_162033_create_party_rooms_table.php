@@ -18,9 +18,10 @@ class CreatePartyRoomsTable extends Migration
             $table->string('name');
             $table->longText('description');
             $table->string('logo')->nullable();
-            $table->string('images');
+            $table->string('images')->nullable();
             $table->string('video')->nullable();
             $table->string('email');
+            $table->string('phone_number');
             $table->integer('number_room')->nullable();
             $table->integer('total_capacity')->nullable();
             $table->integer('capacity_men_room')->nullable();

@@ -225,6 +225,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Party_room' => App\Party_room::class,
+        'Image' => App\Image::class,
+        'Invitation' => App\Invitation::class,
+        'Link' => App\Link::class,
+        'Message' => App\Message::class,
+        'Price' => App\Price::class,
+        'Reservation' => App\Reservation::class,
+        'User' => App\User::class,
 
     ],
 

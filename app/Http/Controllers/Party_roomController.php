@@ -14,7 +14,7 @@ class Party_roomController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.layouts.room_party');
     }
 
     /**
@@ -35,7 +35,10 @@ class Party_roomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->post()){
+            $party_room = Party_room::new($request);
+            return redirect('/owner/calender');
+        }
     }
 
     /**

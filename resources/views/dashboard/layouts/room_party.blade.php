@@ -36,26 +36,25 @@
                      <div class="card">
         <div class="card-body wizard-content">
             <h4 class="card-title">قـــم باضافة قاعة افراحك ضمن مجموعاتنا</h4>
-            <form action="#" class="tab-wizard wizard-circle">
+            <form action="/owner/party_room" method="post" class="tab-wizard wizard-circle">
                 <!-- Step 1 -->
+                @csrf
                 <h6>معلومات عامة</h6>
                 <section>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="firstName1">اســــم القــاعة:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="name" value="sfdfs"> </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="location1">المـــــدينة :</label>
-                                <select class="custom-select form-control" id="location1" name="location">
-                                    <option value=""></option>
-                                    <option value="Amsterdam">تبــــوك</option>
-                                    <option value="Berlin">جــــدة</option>
-                                    <option value="Frankfurt">الريــــاض</option>
-                                    <option value="Frankfurt">المدينـــــة</option>
-                                    <option value="Frankfurt">مكـــــــة</option>
+                                <select class="custom-select form-control" id="location1" name="city">
+                                    <option value="مكـــــــة"></option>
+                                    <option value="تبــــوك">تبــــوك</option>
+                                    <option value="جــــدة">جــــدة</option>
+                                    <option value="مكـــــــة">مكـــــــة</option>
                                 </select>
                             </div>
                         </div>
@@ -64,25 +63,25 @@
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="firstName1">رقم الهاتف:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="phone_number" value="234"> </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="firstName1">الايميـــــل:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="email" value="fsdfdsfsd"> </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-material">
                                 <label for="firstName1">عنـــــوان القاعـــة:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="location" value="dsdsadas"> </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-material">
                             <label for="shortDescription1">مقال عن القـــــاعة :</label>
-                            <textarea name="shortDescription" id="shortDescription1" rows="6" class="form-control"></textarea>
+                            <textarea name="description" id="shortDescription1" rows="6" class="form-control"></textarea>
                         </div>
                     </div>
                 </section>
@@ -93,22 +92,22 @@
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="jobTitle1">السعـــة الكليــة :</label>
-                                <input type="text" class="form-control" id="jobTitle1"> </div>
+                                <input type="text" class="form-control" id="jobTitle1" name="total_capacity" value="23"> </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="jobTitle1">عـــدد القاعات :</label>
-                                <input type="text" class="form-control" id="jobTitle1"> </div>
+                                <input type="text" class="form-control" id="jobTitle1" name="number_room" value="234"> </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="jobTitle1">سعـــة قاعـة الرجــال :</label>
-                                <input type="text" class="form-control" id="jobTitle1"> </div>
+                                <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" value="234"> </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
-                                <input type="text" class="form-control" id="jobTitle1"> </div>
+                                <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room" value="2321"> </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-material">
@@ -168,7 +167,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">اضف الصورة الرئيسية</h4>
-                                    <input type="file" id="input-file-now" class="dropify" />
+                                    <input type="file" id="input-file-now" class="dropify" name="image1"/>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +175,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">الصورة 2</h4>
-                                    <input type="file" id="input-file-now" class="dropify" />
+                                    <input type="file" id="input-file-now" class="dropify" name="image2" />
                                 </div>
                             </div>
                         </div>
@@ -186,7 +185,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">الصورة 3</h4>
-                                    <input type="file" id="input-file-now" class="dropify" />
+                                    <input type="file" id="input-file-now" class="dropify" name="image3" />
                                 </div>
                             </div>
                         </div>
@@ -194,7 +193,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">الصورة 4</h4>
-                                    <input type="file" id="input-file-now" class="dropify" />
+                                    <input type="file" id="input-file-now" class="dropify" name="image4" />
                                 </div>
                             </div>
                         </div>
@@ -211,7 +210,7 @@
                         </div>
                         <div class="col-md-4">
                                     <label class="m-t-20">مـــــــن :</label>
-                                    <input type="text" class="form-control" placeholder="2017-06-04" id="mdate">
+                                    <input type="text" class="form-control" placeholder="2017-06-04" id="mdate" >
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">الـــــــى :</label>
@@ -247,6 +246,9 @@
                             <label class="m-t-20">الـــــــى :</label>
                             <input type="text" class="form-control" placeholder="2017-06-04" id="mdate5">
                         </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-success" type="submit">submit</button>
                     </div>
                 </section>
             </form>
