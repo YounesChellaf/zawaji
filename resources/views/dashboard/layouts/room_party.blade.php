@@ -68,7 +68,7 @@
                         <div class="col-md-6">
                             <div class="form-material">
                                 <label for="firstName1">الايميـــــل:</label>
-                                <input type="text" class="form-control" id="firstName1" name="email" value="fsdfdsfsd"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="email" value="younes@gmail.com"> </div>
                         </div>
                     </div>
                     <div class="row">
@@ -109,54 +109,38 @@
                                 <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
                                 <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room" value="2321"> </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <div class="col-md-6 input-group" style="flex-direction: row">
-                                    <ul style="list-style-type: none;">
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">مطعـــــــم</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">مســـــرح</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">قاعـــة مطعميـــة</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">موقف سيــارات</label>
-                                        </li>
-                                    </ul>
+                            <div class="col-md-6">
+                                <div class="form-material">
+                                    <div class="col-md-6 input-group" style="flex-direction: row">
+                                        <ul style="list-style-type: none;">
+                                            <li>
+                                                <input type="checkbox" class="check" name="kitchen">
+                                                <label for="square-checkbox-1">مطعـــــــم</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="check" name="theatre">
+                                                <label for="square-checkbox-1">مســـــرح</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-material" >
-                                <div class="col-md-6 input-group" style="flex-direction: row">
-                                    <ul style="list-style-type: none;">
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">مطعـــــــم</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">مســـــرح</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">قاعـــة مطعميـــة</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" class="check">
-                                            <label for="square-checkbox-1">موقف سيــارات</label>
-                                        </li>
-                                    </ul>
+                            <div class="col-md-6">
+                                <div class="form-material">
+                                    <div class="col-md-6 input-group" style="flex-direction: row">
+                                        <ul style="list-style-type: none;">
+                                            <li>
+                                                <input type="checkbox" class="check" name="restaurent">
+                                                <label for="square-checkbox-1">قاعـــة مطعميـــة</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="check" name="parcking">
+                                                <label for="square-checkbox-1">موقف سيــارات</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </section>
                 <!-- Step 3 -->

@@ -40,7 +40,6 @@ class Party_roomController extends Controller
         if ($request->post()){
             $validated = $request->validated();
             $party_room = Party_room::new($request);
-            $image= Image::new($request,$party_room->id);
             return redirect('/owner/calendar');
         }
     }

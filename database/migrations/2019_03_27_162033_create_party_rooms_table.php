@@ -27,6 +27,10 @@ class CreatePartyRoomsTable extends Migration
             $table->integer('capacity_men_room')->nullable();
             $table->integer('capacity_women_room')->nullable();
             $table->string('city');
+            $table->string('kitchen')->nullable();
+            $table->string('theatre')->nullable();
+            $table->string('restaurent')->nullable();
+            $table->string('parcking')->nullable();
             $table->string('location')->nullable();
             $table->timestamps();
         });

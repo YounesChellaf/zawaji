@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Party_room extends Model
 {
-    protected $fillable = ['name','description','logo','phone_number','images','video','email','number_room','total_capacity',
+    protected $fillable = ['name','description','restaurent','kitchen','parcking','theatre','logo','phone_number','images','video','email','number_room','total_capacity',
         'capacity_men_room','capacity_women_room','city','location'];
 
     function prices(){
@@ -34,6 +34,10 @@ class Party_room extends Model
                 'total_capacity' => $request->total_capacity,
                 'capacity_men_room' => $request->capacity_men_room,
                 'capacity_women_room' => $request->capacity_women_room,
+                'kitchen' => $request->kitchen,
+                'theatre' => $request->theatre,
+                'restaurent' => $request->restaurent,
+                'parcking' => $request->parcking,
             ]);
             return  $party_room;
         }
