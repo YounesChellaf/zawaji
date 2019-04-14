@@ -38,8 +38,8 @@ class Party_roomController extends Controller
     public function store(PartyRoomRequest $request)
     {
         if ($request->post()){
-            $validated = $request->validated();
-            $party_room = Party_room::new($request);
+                $validated = $request->validated();
+                $party_room = Party_room::new($request);
             return redirect('/owner/calendar');
         }
     }

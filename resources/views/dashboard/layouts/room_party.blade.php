@@ -36,9 +36,9 @@
                      <div class="card">
         <div class="card-body wizard-content">
             <h4 class="card-title">قـــم باضافة قاعة افراحك ضمن مجموعاتنا</h4>
-            <form action="/owner/party_room" method="post" class="tab-wizard wizard-circle">
+            <form action="/owner/party_room" method="post"  enctype="multipart/form-data" class="tab-wizard wizard-circle">
                 <!-- Step 1 -->
-                @csrf
+                {!! csrf_field()!!}
                 <h6>معلومات عامة</h6>
                 <section>
                     <div class="row">
@@ -190,45 +190,45 @@
                         <div class="col-md-4">
                             <div class="form-material">
                                 <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="price1"> </div>
                         </div>
                         <div class="col-md-4">
                                     <label class="m-t-20">مـــــــن :</label>
-                                    <input type="text" class="form-control" placeholder="2017-06-04" id="mdate" >
+                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="fromdate1">
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">الـــــــى :</label>
-                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate1">
+                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate1" name="todate1">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-material">
                                 <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="price2"> </div>
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">مـــــــن :</label>
-                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate2">
+                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate2" name="fromdate2">
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">الـــــــى :</label>
-                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate3">
+                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate3" name="todate2">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-material">
                                 <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="price3"> </div>
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">مـــــــن :</label>
-                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate4">
+                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate4" name="fromdate3">
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">الـــــــى :</label>
-                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate5">
+                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate5" name="todate3">
                         </div>
                     </div>
                     <div class="row">

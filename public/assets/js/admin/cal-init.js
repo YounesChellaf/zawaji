@@ -12,9 +12,7 @@
         this.$saveCategoryBtn = $('.save-category'),
         this.$calendarObj = null
     };
-
-
-    /* on drop */
+   /* on drop */
     CalendarApp.prototype.onDrop = function (eventObj, date) { 
         var $this = this;
             // retrieve the dropped element's stored Event Object
@@ -194,7 +192,6 @@
             eventClick: function(calEvent, jsEvent, view) { $this.onEventClick(calEvent, jsEvent, view); }
 
         });
-
         //on new event
         this.$saveCategoryBtn.on('click', function(){
             var categoryName = $this.$categoryForm.find("input[name='category-name']").val();
@@ -203,15 +200,12 @@
                 $this.$extEvents.append('<div class="calendar-events" data-class="bg-' + categoryColor + '" style="position: relative;"><i class="fa fa-circle text-' + categoryColor + '"></i>' + categoryName + '</div>')
                 $this.enableDrag();
             }
-
         });
     },
-
-   //init CalendarApp
+//init CalendarApp
     $.CalendarApp = new CalendarApp, $.CalendarApp.Constructor = CalendarApp
-    
-}(window.jQuery),
 
+}(window.jQuery),
 //initializing CalendarApp
 function($) {
     "use strict";

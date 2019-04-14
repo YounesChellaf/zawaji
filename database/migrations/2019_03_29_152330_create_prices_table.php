@@ -16,8 +16,8 @@ class CreatePricesTable extends Migration
         Schema::create('prices', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('party_room_id');
-            $table->enum('category',['full','men','women']);
-            $table->float('price');
+            //$table->enum('category',['full','men','women']);
+            $table->integer('price');
             $table->date('date_from');
             $table->date('date_to')->nullable();
             $table->timestamps();

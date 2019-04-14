@@ -28,6 +28,7 @@ class PartyRoomRequest extends FormRequest
             'description' => 'required',
             'email' => 'required|email',
             'phone_number' => 'required',
+            'image1' => 'required',
             'city' => 'required',
         ];
     }

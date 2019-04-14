@@ -39,7 +39,17 @@ class Party_room extends Model
                 'restaurent' => $request->restaurent,
                 'parcking' => $request->parcking,
             ]);
-            return  $party_room;
+            for($i=1;$i<5;$i++){
+                $photo = $request->file('image'.$i);
+                $destpath = 'assets/images/party_room';
+                $file_name = $photo->getClientOriginalName();
+                $photo->move($destpath,$file_name);
+                $image = Image::create([
+                    'party_room_id' => $party_room->id,
+                    'path' => $file_name
+                ]);
+            }
+            return $party_room;
         }
     }
 }
