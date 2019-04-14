@@ -49,6 +49,14 @@ class Party_room extends Model
                     'path' => $file_name
                 ]);
             }
+            for($i=1;$i<4;$i++){
+                $price = Price::create([
+                    'party_room_id' => $party_room->id,
+                    'price' => $request->input('price'.$i),
+                    'date_from' => $request->input('fromdate'.$i),
+                    'date_to' => $request->input('todate'.$i),
+                ]);
+            }
             return $party_room;
         }
     }

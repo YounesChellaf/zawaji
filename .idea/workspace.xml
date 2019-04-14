@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Party_roomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Party_roomController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PartyRoomRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PartyRoomRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Party_room.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Party_room.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Price.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Price.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_29_152330_create_prices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_29_152330_create_prices_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/admin/cal-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/admin/cal-init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +46,8 @@
       <file leaf-file-name="Party_room.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Party_room.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="561">
+              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
               <folding>
                 <element signature="e#23#51#0#PHP" expanded="true" />
               </folding>
@@ -470,12 +461,12 @@
       <workItem from="1554905142289" duration="1125000" />
       <workItem from="1554971311294" duration="2973000" />
       <workItem from="1555011466026" duration="13524000" />
-      <workItem from="1555247232738" duration="5757000" />
+      <workItem from="1555247232738" duration="5807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132946000" />
+    <option name="totallyTimeSpent" value="132996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -871,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Party_room.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="561">
+          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
           <folding>
             <element signature="e#23#51#0#PHP" expanded="true" />
           </folding>
