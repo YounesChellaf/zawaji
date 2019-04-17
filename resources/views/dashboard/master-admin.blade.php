@@ -227,6 +227,7 @@
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- PERSONAL</li>
                     <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="/admin/rooms" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/users" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/user-roles" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/orders" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الحجـــوزات </span></a></li>

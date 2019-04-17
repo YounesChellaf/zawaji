@@ -89,4 +89,18 @@ class Party_roomController extends Controller
         Party_room::destroy($id);
         return redirect()->back();
     }
+
+    public function approuv($id){
+        $party_room = Party_room::find($id);
+        $party_room->status = 'approved';
+        $party_room->save();
+        return redirect()->back();
+
+    }
+    public function bann($id){
+        $party_room = Party_room::find($id);
+        $party_room->status = 'banned';
+        $party_room->save();
+        return redirect()->back();
+    }
 }

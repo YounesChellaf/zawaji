@@ -32,6 +32,7 @@ class CreatePartyRoomsTable extends Migration
             $table->string('restaurent')->nullable();
             $table->string('parcking')->nullable();
             $table->string('location')->nullable();
+            $table->enum('status', ['approved', 'disapproved', 'banned'])->default('disapproved');
             $table->timestamps();
         });
     }

@@ -21,6 +21,23 @@ class Party_room extends Model
         return $this->hasMany('App\Image');
     }
 
+    public function status(){
+        switch ($this->status) {
+            case 'approved':
+                echo '<label class="label label-success">مؤكـــــدة</label>';
+                break;
+
+            case 'disapproved':
+                echo '<label class="label label-danger">غيـر مؤكـدة </label>';
+                break;
+            case 'banned':
+                echo '<label class="label label-danger">محظــــــور</label>';
+                break;
+
+            default:
+                break;
+        }
+    }
     public static function new(Request $request){
         if ($request->post()){
             $party_room = Party_room::create([

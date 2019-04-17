@@ -191,21 +191,23 @@
         </div> <!-- end of section-title -->
 
         <div class="gallery-content row">
+            @foreach(\App\Party_room::all() as $room)
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
-                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
+                    <img src="{{asset('assets/images/party_room/'.$room->image[0]->path)}}"  style="height: 350px;" alt class="thumb img img-responsive">
+                    <button class="btn btn-default" dir="rtl">{{$room->name}}</button>
 
                     <div class="hover-content">
                         <div>
-                            <h4>اسم القاعة</h4>
-                            <p>متواجدة في المنطقة آ</p>
+                            <h4>{{$room->name}}</h4>
+                            <p>متواجدة في {{$room->city}}</p>
                             <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">

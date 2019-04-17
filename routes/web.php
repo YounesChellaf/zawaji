@@ -26,6 +26,11 @@ Route::group(['prefix'=>'/admin'],function (){
     Route::get('/users',function (){
         return view('dashboard.admin_layouts.user');
     });
+    Route::get('/rooms',function (){
+        return view('dashboard.admin_layouts.rooms');
+    });
+    Route::get('/rooms/approuv/{id}','Party_roomController@approuv');
+    Route::get('/rooms/bann/{id}','Party_roomController@bann');
     Route::get('/',function (){
         return view('dashboard.admin_layouts.home');
     });
@@ -38,5 +43,6 @@ Route::group(['prefix'=>'/admin'],function (){
     Route::get('/social-links',function (){
         return view('dashboard.admin_layouts.social-links');
     });
+    Route::resource('party_room','Party_roomController');
 
 });
