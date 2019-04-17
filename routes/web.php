@@ -46,3 +46,6 @@ Route::group(['prefix'=>'/admin'],function (){
     Route::resource('party_room','Party_roomController');
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
