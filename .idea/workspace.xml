@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="" />
+    <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -385,12 +387,12 @@
       <workItem from="1556444003871" duration="1870000" />
       <workItem from="1556560340104" duration="25000" />
       <workItem from="1557937755245" duration="159000" />
-      <workItem from="1558809313713" duration="703000" />
+      <workItem from="1558809313713" duration="1164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151287000" />
+    <option name="totallyTimeSpent" value="151748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,8 +413,8 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info id="npm" order="1" sideWeight="0.5008347" side_tool="true" weight="0.25608012" />
       <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.19757576" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.30972818" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.19757576" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.30972818" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
