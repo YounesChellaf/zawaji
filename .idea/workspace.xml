@@ -295,7 +295,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,6 +322,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,11 +390,12 @@
       <workItem from="1558809313713" duration="2136000" />
       <workItem from="1559082073374" duration="482000" />
       <workItem from="1559126450594" duration="302000" />
+      <workItem from="1559220642839" duration="50000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153504000" />
+    <option name="totallyTimeSpent" value="153554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -415,7 +416,7 @@
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="npm" order="1" sideWeight="0.5008347" side_tool="true" weight="0.25608012" />
       <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.19653894" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.31831187" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.32260373" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
