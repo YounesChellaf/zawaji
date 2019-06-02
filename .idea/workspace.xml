@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +44,7 @@
       <file leaf-file-name="PermissionsServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
+            <state relative-caret-position="621">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#32#41#0#PHP" expanded="true" />
@@ -295,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,7 +321,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,11 +389,12 @@
       <workItem from="1559082073374" duration="482000" />
       <workItem from="1559126450594" duration="302000" />
       <workItem from="1559220642839" duration="50000" />
+      <workItem from="1559428724355" duration="33000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153554000" />
+    <option name="totallyTimeSpent" value="153587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,10 +412,10 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="npm" order="1" sideWeight="0.5008347" side_tool="true" weight="0.25608012" />
+      <window_info anchor="bottom" id="Run" order="7" />
       <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.19653894" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.32260373" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.32689556" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
@@ -759,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="621">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#32#41#0#PHP" expanded="true" />
