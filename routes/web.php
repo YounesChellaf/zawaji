@@ -10,7 +10,7 @@ Route::resource('invitations','InvitationController');
 Route::resource('messages','MessageController');
 
 
-Route::group(['prefix'=>'/owner'],function (){
+Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
     Route::get('/calendar',function (){
         return view('dashboard.layouts.calender');
     });
@@ -22,9 +22,12 @@ Route::group(['prefix'=>'/owner'],function (){
     });
     Route::resource('party_room','Party_roomController');
 });
-Route::group(['prefix'=>'/admin'],function (){
+Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
     Route::get('/users',function (){
         return view('dashboard.admin_layouts.user');
+    });
+    Route::get('/user-roles',function (){
+        return view('dashboard.admin_layouts.user-role');
     });
     Route::get('/rooms',function (){
         return view('dashboard.admin_layouts.rooms');
@@ -33,9 +36,6 @@ Route::group(['prefix'=>'/admin'],function (){
     Route::get('/rooms/bann/{id}','Party_roomController@bann');
     Route::get('/',function (){
         return view('dashboard.admin_layouts.home');
-    });
-    Route::get('/user-roles',function (){
-        return view('dashboard.admin_layouts.user-role');
     });
     Route::get('/orders',function (){
         return view('dashboard.admin_layouts.orders');
