@@ -3,7 +3,7 @@
     <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="page-wrapper">
+    <div class="page-wrapper" style="width: 85% !important;">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->

@@ -3,15 +3,15 @@
     <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="page-wrapper">
+    <div class="page-wrapper" style="width: 85% !important;">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
-        <div class="container-fluid">
+        <div class="container-fluid" >
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <div class="row page-titles">
+            <div class="row page-titles" >
                 <div class="col-md-5 align-self-center">
                     <h4 class="text-themecolor">انواع المستخدمين</h4>
                 </div>
