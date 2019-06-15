@@ -57,7 +57,9 @@
                                 </div>
                                 <div class="col-lg-9">
                                     <div class="card-body b-l calender-sidebar">
-                                        <div id="calendar"></div>
+                                        {{--<div id="calendar"></div>--}}
+                                        {!! $calendar->calendar() !!}
+                                        {!! $calendar->script() !!}
                                     </div>
                                 </div>
                             </div>

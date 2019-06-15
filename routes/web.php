@@ -11,8 +11,17 @@ Route::resource('messages','MessageController');
 
 
 Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
+    Route::get('/calendar','ReservationController@showCalendar');
     Route::get('/calendar',function (){
-        return view('dashboard.layouts.calender');
+        $events[] = \Calendar::event(
+            "Valentine's Day", //event title
+            true, //full day event?
+            new \DateTime('2019-06-17'), //start time (you can also use Carbon instead of DateTime)
+            new \DateTime('2019-06-17'), //end time (you can also use Carbon instead of DateTime)
+            'stringEventId' //optionally, you can specify an event ID
+        );
+        $calendar = \Calendar::addEvents($events);
+        return view('dashboard.layouts.calender',compact('calendar'));
     });
     Route::get('/delivered-order',function (){
         return view('dashboard.layouts.delivered-order');
@@ -23,6 +32,7 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
     Route::resource('party_room','Party_roomController');
 });
 Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
+    Route::resource('/weddingType','WeedingTypeController');
     Route::get('/users',function (){
         return view('dashboard.admin_layouts.user');
     });
