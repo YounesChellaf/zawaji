@@ -51,7 +51,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach(\App\Party_room::all() as $room)
+                                    @foreach(App\Party_room::all() as $room)
                                     <tr>
                                         <td>Zorita Serrano</td>
                                         <td>{{$room->name}}</td>
@@ -79,6 +79,7 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
     </div>
+    @foreach(App\Party_room::all() as $room)
     <div class="modal fade" id="model-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -98,6 +99,7 @@
             </div>
         </div>
     </div>
+    @endforeach
 @endsection
 @section('script')
     <script src="{{asset('assets/js/admin/datatables.min.js')}}"></script>

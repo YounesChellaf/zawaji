@@ -45,21 +45,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach( App\Role::all() as $role)
                                     <tr>
-                                        <td>admin</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
+                                        <td>{{$role->name}}</td>
+                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update-{{$role->id}}">تعــديل</button></td>
+                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete-{{$role->id}}">حـذف</button></td>
                                     </tr>
-                                    <tr>
-                                        <td>saller</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>client</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -74,7 +66,8 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
     </div>
-    <div class="modal fade" id="model-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    @foreach(App\Role::all() as $role)
+    <div class="modal fade" id="model-delete-{{$role->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -86,15 +79,20 @@
                 <div class="modal-body">
                     هل تريد حــذف هذا الصـنف
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
-                    <a href="delete/"><button type="button" class="btn btn-outline-danger">حــذف</button></a>
-                </div>
+                <form method="post" action="{{route('role.destroy',$role->id)}}">
+                    @method('DELETE')
+                    @csrf
+                    <input type="hidden">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
+                        <button type="submit" class="btn btn-outline-danger">حــذف</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div id="model-update" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div id="model-update-{{$role->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -102,21 +100,23 @@
                         <h4 class="modal-title">تعـديل صنف المستخدم</h4>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="{{route('role.update',$role->id)}}">
+                            @method('PUT')
                             @csrf
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">صنف المستخدم</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <input type="text" name="name" value="{{$role->name}}" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
     <div class="col-md-4">
         <div id="model-add-role" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
@@ -126,16 +126,16 @@
                         <h4 class="modal-title">اضافـة صنف المستخدم</h4>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="{{route('role.store')}}">
                             @csrf
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">صنف المستخدم</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <input type="text" name="name" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">حفــــــظ</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success waves-effect waves-light">حفــــــظ</button>
                     </div>
                 </div>
             </div>

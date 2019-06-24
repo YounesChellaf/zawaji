@@ -32,6 +32,7 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
     Route::resource('party_room','Party_roomController');
 });
 Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
+    Route::resource('role','RoleController');
     Route::resource('/weddingType','WeedingTypeController');
     Route::get('/users',function (){
         return view('dashboard.admin_layouts.user');
