@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -428,12 +427,12 @@
       <workItem from="1559844538961" duration="374000" />
       <workItem from="1559948070833" duration="174000" />
       <workItem from="1560450821251" duration="11076000" />
-      <workItem from="1560937632182" duration="1525000" />
+      <workItem from="1560937632182" duration="1855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170053000" />
+    <option name="totallyTimeSpent" value="170383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +445,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32880098" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -454,8 +452,8 @@
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info id="npm" order="1" sideWeight="0.5008347" side_tool="true" weight="0.25608012" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3893696" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.36552218" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3893696" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.36552218" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
