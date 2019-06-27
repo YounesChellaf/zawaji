@@ -13,6 +13,10 @@ class Role extends Model
         return $this->belongsToMany('App\Permission','permissions_roles');
     }
 
+    public function user(){
+        return $this->belongsToMany(User::class);
+    }
+
     public static function new(Request $request){
         if ($request->post()){
             $role =Role::create([

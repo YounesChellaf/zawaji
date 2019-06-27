@@ -17,6 +17,7 @@ class CreatePartyRoomsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->longText('description');
+            $table->integer('owner_id');
             $table->string('logo')->nullable();
             $table->string('images')->nullable();
             $table->string('video')->nullable();

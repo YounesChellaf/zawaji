@@ -11,18 +11,9 @@ Route::resource('messages','MessageController');
 
 
 Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
-    Route::get('/calendar','ReservationController@showCalendar');
-    Route::get('/calendar',function (){
-        $events[] = \Calendar::event(
-            "Valentine's Day", //event title
-            true, //full day event?
-            new \DateTime('2019-06-17'), //start time (you can also use Carbon instead of DateTime)
-            new \DateTime('2019-06-17'), //end time (you can also use Carbon instead of DateTime)
-            'stringEventId' //optionally, you can specify an event ID
-        );
-        $calendar = \Calendar::addEvents($events);
-        return view('dashboard.layouts.calender',compact('calendar'));
-    });
+    Route::get('/calendar','CalendarController@showCalendar');
+    Route::post('/calendar','CalendarController@CreateEvent');
+    Route::resource('reservation','ReservationController');
     Route::get('/delivered-order',function (){
         return view('dashboard.layouts.delivered-order');
     });

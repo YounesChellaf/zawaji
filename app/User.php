@@ -42,4 +42,10 @@ class User extends Authenticatable
     function reservations(){
         return $this->hasMany('App\Reservation');
     }
+    function party_room(){
+        return $this->belongsTo(Party_room::class);
+    }
+    function role(){
+        return $this->belongsToMany(Role::class);
+    }
 }

@@ -15,11 +15,14 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->integer('party_room_id');
-            $table->float('payment');
-            $table->boolean('status');
-            $table->date('date');
+            $table->string('reserver_name')->nullable();
+            $table->integer('wedding_type_id');
+            $table->float('payment')->nullable();
+            $table->string('status')->default('broullion');
+            $table->date('date_from');
+            $table->date('date_to');
             $table->timestamps();
         });
     }

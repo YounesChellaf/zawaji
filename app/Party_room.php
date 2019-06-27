@@ -14,6 +14,10 @@ class Party_room extends Model
         return $this->hasMany('App\Price');
     }
 
+    function owner(){
+        return $this->hasOne(User::class,'owner_id');
+    }
+
     function reservations(){
         return $this->hasMany('App\Reservation');
     }
