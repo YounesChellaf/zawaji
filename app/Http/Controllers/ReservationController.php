@@ -17,18 +17,6 @@ class ReservationController extends Controller
         //
     }
 
-    public function showCalendar(){
-        $event = Reservation::all();
-        $events[] = \Calendar::event(
-            "Valentine's Day", //event title
-            true, //full day event?
-            new \DateTime('2019-06-17'), //start time (you can also use Carbon instead of DateTime)
-            new \DateTime('2019-06-17'), //end time (you can also use Carbon instead of DateTime)
-            'stringEventId' //optionally, you can specify an event ID
-        );
-        $calendar = \Calendar::addEvents($events);
-        return view('dashboard.layouts.calender',compact('calendar'));
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -48,7 +36,17 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->post()){
+            $reservation = Reservation::create([
+                'user_id' => auth()->user()->id,
+                'party_room_id' => 1,
+                'wedding_type_id' => $request->wedding_type_id,
+                'reserver_name' => $request->reserver_name,
+                'date_from' => $request->date_from,
+                'date_to' => $request->date_to,
+            ]);
+            return redirect()->back();
+        }
     }
 
     /**
