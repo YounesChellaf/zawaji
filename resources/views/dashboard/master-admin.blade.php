@@ -161,22 +161,14 @@
                                 </li>
                                 <li>
                                     <div class="message-center">
+                                        @foreach(\App\Message::all() as $message)
                                         <!-- Message -->
                                         <a href="javascript:void(0)">
                                             <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                             <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
+                                                <h5>{{$message->name}}</h5> <span class="mail-desc">{{$message->subject}}</span> <span class="time">{{$message->created_at->format('H:i')}}</span> </div>
                                         </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
+                                        @endforeach
                                         <!-- Message -->
                                     </div>
                                 </li>
@@ -184,7 +176,7 @@
                         </div>
                     </li>
                     <!-- ============================================================== -->
-                    <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                    <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class=""></i></a></li>
                 </ul>
             </div>
         </nav>
