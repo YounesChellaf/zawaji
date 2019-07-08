@@ -419,6 +419,17 @@
 
         <div class="form row" dir="rtl">
             <div class="col col-md-10 col-md-offset-1">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>تنويــــه</strong> لم يتم ارسال الرسالة بنجاح و ذلك بسبب
+                        <br>
+                        <ul class="t7wissa-errors-list">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form method="post" action="/messages" id="rsvp-form">
                     @csrf
                     <div class="form-group col col-sm-6">

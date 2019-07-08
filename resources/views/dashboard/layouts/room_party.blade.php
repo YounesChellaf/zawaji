@@ -146,38 +146,75 @@
                 <!-- Step 3 -->
                 <h6>صـــــور القاعــــة</h6>
                 <section>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">اضف الصورة الرئيسية</h4>
-                                    <input type="file" id="input-file-now" class="dropify" name="image1"/>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-10">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">اضف الصورة الرئيسية</h4>
+                                            <input type="file" id="input-file-now" class="dropify" name="image[]"/>
+                                            <input type="hidden" name="nb" value="">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">الصورة 2</h4>
-                                    <input type="file" id="input-file-now" class="dropify" name="image2" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">الصورة 3</h4>
-                                    <input type="file" id="input-file-now" class="dropify" name="image3" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">الصورة 4</h4>
-                                    <input type="file" id="input-file-now" class="dropify" name="image4" />
+                            <table class="table table-bordered table-hover">
+                                <tbody>
+                                @foreach($room->instance as $instance)
+                                    <tr>
+                                        <td><input type="text" name='reference[]'  value="{{$instance->reference}}" class="form-control"/></td>
+                                        <td><input type="number" name='number[]'  value="{{$instance->number}}" class="form-control"/></td>
+                                        <td>
+                                            <select name="equipement_id[]" class="form-control">
+                                                <option value="{{$instance->equipement_id}}">Choisir un type d'equipement</option>
+                                                @foreach(Equipement::all() as $equipement)
+                                                    <option value="{{$equipement->id}}">{{$equipement->type}} : {{$equipement->marque}}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="status[]" class="form-control">
+                                                <option value="{{$instance->status}}">{{$instance->status}}</option>
+                                                <option value="new">Nouveau</option>
+                                                <option value="used">Utilisé</option>
+                                            </select>
+                                        </td>
+                                        <input type="hidden" name="nb" value="">
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-hover" id="tab_logic1">
+                                <tbody>
+                                <tr id='add0'>
+                                    <td>1</td>
+                                    <td><input type="text" name='reference[]'  placeholder='Réference' class="form-control"/></td>
+                                    <td><input type="number" name='number[]'  placeholder='Nombre' class="form-control"/></td>
+                                    <td>
+                                        <select name="equipement_id[]" class="form-control">
+                                            <option value="">Choisir un type d'equipement</option>
+                                            @foreach(Equipement::all() as $equipement)
+                                                <option value="{{$equipement->id}}">{{$equipement->type}} : {{$equipement->marque}}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="status[]" class="form-control">
+                                            <option value="new">Nouveau</option>
+                                            <option value="used">Utilisé</option>
+                                        </select>
+                                    </td>
+                                    <input type="hidden" name="nb" value="">
+                                </tr>
+                                <tr id='add1'></tr>
+                                </tbody>
+                            </table>
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                    <a id="add_row1" class="btn btn-primary pull-left">Ajouter equipement</a>
+                                    <a id='delete_row1' class="btn btn-danger pull-right">Supprimer ligne</a>
                                 </div>
                             </div>
                         </div>

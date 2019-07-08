@@ -25,17 +25,13 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
 Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
     Route::resource('role','RoleController');
     Route::resource('/weddingType','WeedingTypeController');
-    Route::get('/users',function (){
-        return view('dashboard.admin_layouts.user');
-    });
+    Route::resource('/users','UserController');
     Route::get('/user-roles',function (){
         return view('dashboard.admin_layouts.user-role');
     });
-    Route::get('/rooms',function (){
-        return view('dashboard.admin_layouts.rooms');
-    });
     Route::get('/rooms/approuv/{id}','Party_roomController@approuv');
     Route::get('/rooms/bann/{id}','Party_roomController@bann');
+    Route::get('/rooms','Party_roomController@showAll');
     Route::get('/',function (){
         return view('dashboard.admin_layouts.home');
     });

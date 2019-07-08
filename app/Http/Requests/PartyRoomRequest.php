@@ -30,12 +30,17 @@ class PartyRoomRequest extends FormRequest
             'phone_number' => 'required',
             'image1' => 'required',
             'city' => 'required',
+            'total_capacity' => 'required',
+            'capacity_men_room' => 'required',
+            'capacity_women_room' => 'required',
+            'number_room' => 'required',
         ];
     }
     public function messages()
     {
         return [
             'name.required' => "اسم قاعة الافراح اجبــــاري",
+            'name.min' => "اسم قاعة الافراح يجب ان يتجاوز 3 حروف",
             'description.required' => "يجب عليكم اضافـة وصف حول القاعـــة",
             'email.required' => "الايميــــــل اجبــــاري",
             'city.required' => "المدينـة اجبــــارية",
