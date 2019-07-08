@@ -48,62 +48,16 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach(\App\User::all() as $user)
                                     <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->email}}</td>
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
+                                        <td>admin</td>
                                         <td>1600</td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

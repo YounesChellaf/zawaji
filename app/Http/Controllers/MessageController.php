@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MessageRequest;
 use App\Message;
 use Illuminate\Http\Request;
 
@@ -33,19 +34,22 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MessageRequest $request)
     {
-        $name =$request->input('name');
-        $email=$request->input('email');
-        $subject =$request->input('subject');
-        $message =$request->input('message');
-        Message::create([
-            'name' => $name,
-            'email' => $email,
-            'subject' => $subject,
-            'message' => $message,
-        ]);
-        return redirect()->back();
+        if ($request->post()){
+            $validated = $request->validated();
+            $name =$request->input('name');
+            $email=$request->input('email');
+            $subject =$request->input('subject');
+            $message =$request->input('message');
+            Message::create([
+                'name' => $name,
+                'email' => $email,
+                'subject' => $subject,
+                'message' => $message,
+            ]);
+            return redirect()->back();
+        }
     }
 
     /**
