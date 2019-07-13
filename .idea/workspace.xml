@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a8ab74-062f-4769-99f4-b5c10649e878" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Party_roomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Party_roomController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PartyRoomRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PartyRoomRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_27_162033_create_party_rooms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_162033_create_party_rooms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/room_party.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/zawaji/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +19,7 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="644">
               <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
             </state>
           </provider>
@@ -37,7 +28,7 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
+            <state relative-caret-position="621">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
@@ -61,11 +52,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+            <state relative-caret-position="253">
+              <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+              <folding>
+                <element signature="e#4698#4705#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -73,8 +76,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="897">
+              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -91,20 +94,11 @@
       <file leaf-file-name="CalendarController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="506">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="e#40#60#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rooms.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/rooms.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -311,9 +305,9 @@
       <path value="$PROJECT_DIR$/vendor/maddhatter/laravel-fullcalendar" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="836" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -321,7 +315,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -392,10 +385,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="role&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_04_17_231118_create_roles_table.php&#10;User&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/User.php&#10;use&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2014_10_12_000000_create_users_table.php&#10;web&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;party&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_27_162033_create_party_rooms_table.php&#10;صثز&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;Mess&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Http/Controllers/MessageController.php&#10;Rese&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Reservation.php&#10;Cal&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Http/Controllers/CalendarController.php&#10;Per&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Providers/PermissionsServiceProvider.php&#10;Role&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Role.php&#10;user&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_04_20_110404_create_roles_users_table.php&#10;Reser&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Http/Controllers/ReservationController.php&#10;weed&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_06_15_115534_create_weeding_types_table.php&#10;Part&#9;null&#9;null&#10;part&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_27_162033_create_party_rooms_table.php&#10;Wee&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/WeedingType.php&#10;we&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/admin_layouts/weddingType.blade.php&#10;Permis&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Providers/PermissionsServiceProvider.php&#10;reser&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_29_175630_create_reservations_table.php&#10;WEB&#9;null&#9;null&#10;composer&#9;FILE&#9;file:///Users/issam/dev/zawaji/composer.json&#10;Permissio&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Providers/PermissionsServiceProvider.php&#10;connectio&#9;FILE&#9;file:///Users/issam/dev/zawaji/vendor/symfony/var-dumper/Server/Connection.php&#10;.en&#9;FILE&#9;file:///Users/issam/dev/zawaji/.env&#10;compo&#9;FILE&#9;file:///Users/issam/dev/zawaji/composer.json&#10;app&#9;FILE&#9;file:///Users/issam/dev/zawaji/config/app.php&#10;Rol&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Role.php&#10;Gate&#9;null&#9;null&#10;permissions&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Permissions/HasPermissionsTrait.php&#10;us&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/User.php&#10;per&#9;null&#9;null&#10;R&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Party_room.php&#10;roo&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/admin_layouts/rooms.blade.php&#10;room&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_27_162033_create_party_rooms_table.php&#10;imag&#9;null&#9;null&#10;Pa&#9;null&#9;null&#10;app.p&#9;FILE&#9;file:///Users/issam/dev/zawaji/config/app.php&#10;step&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/admin/steps.css&#10;config&#9;FILE&#9;file:///Users/issam/dev/zawaji/config&#10;confi&#9;FILE&#9;file:///Users/issam/dev/zawaji/config&#10;ser&#9;FILE&#9;file:///Users/issam/dev/zawaji/server.php&#10;Serve&#9;null&#9;null&#10;cal&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/js/admin/cal-init.js&#10;calenda&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/js/admin/fullcalendar.min.js&#10;boot&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/bootstrap.min.css&#10;اخوث&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/zawaji/home.blade.php&#10;home&#9;FILE&#9;file:///Users/issam/dev/zawaji/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub&#10;homeC&#9;FILE&#9;file:///Users/issam/dev/zawaji/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub&#10;Mes&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value=".env&#9;FILE&#9;file:///Users/issam/dev/zawaji/.env&#10;role&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_04_17_231118_create_roles_table.php&#10;User&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/User.php&#10;use&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2014_10_12_000000_create_users_table.php&#10;web&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;party&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_27_162033_create_party_rooms_table.php&#10;صثز&#9;FILE&#9;file:///Users/issam/dev/zawaji/routes/web.php&#10;Mess&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Http/Controllers/MessageController.php&#10;Rese&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Reservation.php&#10;Cal&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Http/Controllers/CalendarController.php&#10;Per&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Providers/PermissionsServiceProvider.php&#10;Role&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Role.php&#10;user&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_04_20_110404_create_roles_users_table.php&#10;Reser&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Http/Controllers/ReservationController.php&#10;weed&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_06_15_115534_create_weeding_types_table.php&#10;Part&#9;null&#9;null&#10;part&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_27_162033_create_party_rooms_table.php&#10;Wee&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/WeedingType.php&#10;we&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/admin_layouts/weddingType.blade.php&#10;Permis&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Providers/PermissionsServiceProvider.php&#10;reser&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_29_175630_create_reservations_table.php&#10;WEB&#9;null&#9;null&#10;composer&#9;FILE&#9;file:///Users/issam/dev/zawaji/composer.json&#10;Permissio&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Providers/PermissionsServiceProvider.php&#10;connectio&#9;FILE&#9;file:///Users/issam/dev/zawaji/vendor/symfony/var-dumper/Server/Connection.php&#10;.en&#9;FILE&#9;file:///Users/issam/dev/zawaji/.env&#10;compo&#9;FILE&#9;file:///Users/issam/dev/zawaji/composer.json&#10;app&#9;FILE&#9;file:///Users/issam/dev/zawaji/config/app.php&#10;Rol&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Role.php&#10;Gate&#9;null&#9;null&#10;permissions&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Permissions/HasPermissionsTrait.php&#10;us&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/User.php&#10;per&#9;null&#9;null&#10;R&#9;FILE&#9;file:///Users/issam/dev/zawaji/app/Party_room.php&#10;roo&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/dashboard/admin_layouts/rooms.blade.php&#10;room&#9;FILE&#9;file:///Users/issam/dev/zawaji/database/migrations/2019_03_27_162033_create_party_rooms_table.php&#10;imag&#9;null&#9;null&#10;Pa&#9;null&#9;null&#10;app.p&#9;FILE&#9;file:///Users/issam/dev/zawaji/config/app.php&#10;step&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/admin/steps.css&#10;config&#9;FILE&#9;file:///Users/issam/dev/zawaji/config&#10;confi&#9;FILE&#9;file:///Users/issam/dev/zawaji/config&#10;ser&#9;FILE&#9;file:///Users/issam/dev/zawaji/server.php&#10;Serve&#9;null&#9;null&#10;cal&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/js/admin/cal-init.js&#10;calenda&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/js/admin/fullcalendar.min.js&#10;boot&#9;FILE&#9;file:///Users/issam/dev/zawaji/public/assets/css/bootstrap.min.css&#10;اخوث&#9;FILE&#9;file:///Users/issam/dev/zawaji/resources/views/zawaji/home.blade.php&#10;home&#9;FILE&#9;file:///Users/issam/dev/zawaji/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub&#10;homeC&#9;FILE&#9;file:///Users/issam/dev/zawaji/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -473,11 +467,13 @@
       <workItem from="1561647149589" duration="398000" />
       <workItem from="1562362350328" duration="3683000" />
       <workItem from="1562409849108" duration="1595000" />
+      <workItem from="1562619571184" duration="276000" />
+      <workItem from="1562748333201" duration="182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184453000" />
+    <option name="totallyTimeSpent" value="184911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,22 +485,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="836" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32880098" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info id="npm" order="1" sideWeight="0.5008347" side_tool="true" weight="0.25608012" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.18912238" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.23104435" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.21161826" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916527" visible="true" weight="0.23676682" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -552,13 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -767,9 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
           <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#77#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,15 +796,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/rooms.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
+        <state relative-caret-position="1495">
           <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="506">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="e#40#60#0#PHP" expanded="true" />
           </folding>
@@ -827,7 +813,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="621">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
@@ -841,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="644">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
         </state>
       </provider>
@@ -862,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="897">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -876,8 +862,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/admin_layouts/user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state relative-caret-position="253">
+          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+          <folding>
+            <element signature="e#4698#4705#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
