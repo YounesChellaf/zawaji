@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\PermissionsServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 
@@ -237,5 +238,4 @@ return [
         'Reservation' => App\Reservation::class,
         'User' => App\User::class,
     ],
-
 ];

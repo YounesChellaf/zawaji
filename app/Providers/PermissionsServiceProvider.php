@@ -24,7 +24,7 @@ class PermissionsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Permission::all()->map(function ($permission){
-        });
+//        Permission::all()->map(function ($permission){
+//        });
     }
 }

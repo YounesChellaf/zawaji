@@ -51,3 +51,7 @@ Route::get('/test',function (\Illuminate\Http\Request $request){
     $user = $request->user();
     dd($user->can('delete'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
