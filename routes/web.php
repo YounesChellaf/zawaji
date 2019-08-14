@@ -42,6 +42,8 @@ Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
         return view('dashboard.admin_layouts.social-links');
     });
     Route::resource('party_room','Party_roomController');
+    Route::post('user/{id}','UserController@bann')->name('admin.user.bann');
+
 
 });
 Auth::routes();
@@ -52,6 +54,5 @@ Route::get('/test',function (\Illuminate\Http\Request $request){
     dd($user->can('delete'));
 });
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

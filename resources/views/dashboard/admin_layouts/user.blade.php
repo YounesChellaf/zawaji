@@ -40,22 +40,26 @@
                                     <thead>
                                     <tr>
                                         <th>الاسم</th>
+                                        <th>اللقـب</th>
                                         <th>الايميل</th>
                                         <th>الصورة</th>
                                         <th>نوع العضو</th>
                                         <th>العنـوان</th>
-                                        <th>حـظـر</th>
+                                        <th>حالة المستخـدم</th>
+                                        <th>حــظر</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach(\App\User::all() as $user)
                                     <tr>
-                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->first_name}}</td>
+                                        <td>{{$user->last_name}}</td>
                                         <td>{{$user->email}}</td>
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>admin</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
+                                        <td>{{$user->phone_number}}</td>
+                                        <td>{{$user->type}}</td>
+                                        <td>{{$user->active()}}</td>
+                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete-{{$user->id}}">حــظر</button></td>
                                     </tr>
                                     @endforeach
                                     </tbody>
@@ -72,7 +76,8 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
     </div>
-    <div class="modal fade" id="model-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    @foreach(\App\User::all() as $user)
+    <div class="modal fade" id="model-delete-{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -84,13 +89,16 @@
                 <div class="modal-body">
                     هل تريد حــظر هذا العضو
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
-                    <a href="delete/"><button type="button" class="btn btn-outline-danger">حــذف</button></a>
-                </div>
+                <form action="{{route('admin.user.bann',$user->id)}}" method="POST">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
+                        <button type="submit" class="btn btn-outline-danger">حــظر</button></a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    @endforeach
     <div class="col-md-4">
         <div id="modal-add-user" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">

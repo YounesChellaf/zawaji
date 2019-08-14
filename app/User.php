@@ -17,9 +17,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $guarded=[];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -40,12 +38,27 @@ class User extends Authenticatable
     ];
 
     function reservations(){
-        return $this->hasMany('App\Reservation');
+        return $this->hasMany(Reservation::class);
     }
     function party_room(){
         return $this->belongsTo(Party_room::class);
     }
     function role(){
         return $this->belongsToMany(Role::class);
+    }
+
+
+    public function active(){
+        switch ($this->active) {
+            case true:
+                echo '<label class="label label-success">فعـــــال</label>';
+                break;
+            case false:
+                echo '<label class="label label-danger">محظـــــور</label>';
+                break;
+            default:
+                // code...
+                break;
+        }
     }
 }

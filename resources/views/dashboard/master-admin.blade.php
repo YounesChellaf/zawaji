@@ -195,7 +195,7 @@
                 <div class="user-pro-body">
                     <div><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle"></div>
                     <div class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Steave Gection <span class="caret"></span></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{auth()->user()->first_name.' '.auth()->user()->last_name}}<span class="caret"></span></a>
                         <div class="dropdown-menu animated flipInY" dir="rtl" >
                             <!-- text-->
                             <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
@@ -217,7 +217,6 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li class="nav-small-cap">--- PERSONAL</li>
                     <li> <a class="waves-effect waves-dark" href={{route('role.index')}} aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/rooms" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/users" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>

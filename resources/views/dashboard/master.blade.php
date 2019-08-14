@@ -209,7 +209,7 @@
                 <div class="user-pro-body">
                     <div><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle"></div>
                     <div class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">اسم صـاحب القاعــة<span class="caret"></span></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{auth()->user()->first_name.''.auth()->user()->last_name}}<span class="caret"></span></a>
                         <div class="dropdown-menu animated flipInY" dir="rtl" >
                             <!-- text-->
                             <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
