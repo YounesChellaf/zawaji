@@ -71,6 +71,12 @@ class UserController extends Controller
         //
     }
 
+    public function bann($id){
+        $user = User::find($id);
+        $user->active = false;
+        $user->save();
+        return view('dashboard.admin_layouts.home');
+    }
     /**
      * Remove the specified resource from storage.
      *
