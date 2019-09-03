@@ -217,16 +217,15 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li> <a class="waves-effect waves-dark" href={{route('role.index')}} aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/rooms" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/admin/users" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/admin/user-roles" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('users.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('admin.users-roles')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/orders" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الحجـــوزات </span></a></li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">اعـــدادات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('weddingType.index')}}">انـــواع الافـراح</a></li>
                             <li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>
-                            <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
                         </ul>
                     </li>
                     <li class="nav-small-cap">--- SUPPORT</li>

@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Party_room extends Model
 {
-    protected $fillable = ['name','description','restaurent','kitchen','parcking','theatre','logo','phone_number','images','video','email','number_room','total_capacity',
-        'capacity_men_room','capacity_women_room','city','location'];
+    protected $guarded=[];
 
     function prices(){
         return $this->hasMany('App\Price');

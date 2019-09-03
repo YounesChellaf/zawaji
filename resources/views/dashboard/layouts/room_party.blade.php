@@ -36,7 +36,7 @@
                      <div class="card">
         <div class="card-body wizard-content">
             <h4 class="card-title">قـــم باضافة قاعة افراحك ضمن مجموعاتنا</h4>
-            <form action="/owner/party_room" method="post"  enctype="multipart/form-data" class="tab-wizard wizard-circle">
+            <form action="{{route('party_room.store')}}" method="post"  enctype="multipart/form-data" class="tab-wizard wizard-circle">
                 <!-- Step 1 -->
                 {!! csrf_field()!!}
                 <h6>معلومات عامة</h6>
@@ -157,64 +157,6 @@
                                             <input type="hidden" name="nb" value="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                            <table class="table table-bordered table-hover">
-                                <tbody>
-                                @foreach($room->instance as $instance)
-                                    <tr>
-                                        <td><input type="text" name='reference[]'  value="{{$instance->reference}}" class="form-control"/></td>
-                                        <td><input type="number" name='number[]'  value="{{$instance->number}}" class="form-control"/></td>
-                                        <td>
-                                            <select name="equipement_id[]" class="form-control">
-                                                <option value="{{$instance->equipement_id}}">Choisir un type d'equipement</option>
-                                                @foreach(Equipement::all() as $equipement)
-                                                    <option value="{{$equipement->id}}">{{$equipement->type}} : {{$equipement->marque}}</option>
-                                                @endforeach
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <select name="status[]" class="form-control">
-                                                <option value="{{$instance->status}}">{{$instance->status}}</option>
-                                                <option value="new">Nouveau</option>
-                                                <option value="used">Utilisé</option>
-                                            </select>
-                                        </td>
-                                        <input type="hidden" name="nb" value="">
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                            <table class="table table-bordered table-hover" id="tab_logic1">
-                                <tbody>
-                                <tr id='add0'>
-                                    <td>1</td>
-                                    <td><input type="text" name='reference[]'  placeholder='Réference' class="form-control"/></td>
-                                    <td><input type="number" name='number[]'  placeholder='Nombre' class="form-control"/></td>
-                                    <td>
-                                        <select name="equipement_id[]" class="form-control">
-                                            <option value="">Choisir un type d'equipement</option>
-                                            @foreach(Equipement::all() as $equipement)
-                                                <option value="{{$equipement->id}}">{{$equipement->type}} : {{$equipement->marque}}</option>
-                                            @endforeach
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="status[]" class="form-control">
-                                            <option value="new">Nouveau</option>
-                                            <option value="used">Utilisé</option>
-                                        </select>
-                                    </td>
-                                    <input type="hidden" name="nb" value="">
-                                </tr>
-                                <tr id='add1'></tr>
-                                </tbody>
-                            </table>
-                            <div class="row clearfix">
-                                <div class="col-md-12">
-                                    <a id="add_row1" class="btn btn-primary pull-left">Ajouter equipement</a>
-                                    <a id='delete_row1' class="btn btn-danger pull-right">Supprimer ligne</a>
                                 </div>
                             </div>
                         </div>

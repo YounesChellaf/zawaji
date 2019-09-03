@@ -283,6 +283,21 @@
                     </div>
                 </div>
             </div>
+                <div class="col col-sm-6 col-md-4">
+                    <div>
+                        <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                        <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
+                        <button class="btn btn-default" dir="rtl">اسم القاعة</button>
+
+                        <div class="hover-content">
+                            <div>
+                                <h4>اسم القاعة</h4>
+                                <p>متواجدة في المنطقة آ</p>
+                                <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 

@@ -232,7 +232,7 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- بخصوص القـاعـة</li>
-                    <li> <a class="waves-effect waves-dark" href="/owner/party_room" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('party_room.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">رزنامة الافراح </span></a></li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
