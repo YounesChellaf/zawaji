@@ -17,4 +17,16 @@ class Reservation extends Model
     function weddingType(){
         return $this->belongsTo(WeedingType::class,'wedding_type_id');
     }
+
+    public static function new($request){
+        $reservation = Reservation::create([
+            'user_id' => auth()->user()->id,
+            'party_room_id' => 1,
+            'wedding_type_id' => $request->wedding_type_id,
+            'reserver_name' => $request->reserver_name,
+            'date_from' => $request->date_from,
+            'date_to' => $request->date_to,
+        ]);
+        return $reservation;
+    }
 }

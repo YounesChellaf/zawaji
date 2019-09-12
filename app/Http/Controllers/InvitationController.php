@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InvitationRequest;
 use Illuminate\Http\Request;
 use App\invitation;
 
 class InvitationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -33,26 +38,12 @@ class InvitationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(InvitationRequest $request)
     {
-        $inviter_id =$request->input('inviter_id');
-        $slogan =$request->input('slogan');
-        $party_room =$request->input('party_room');
-        $location =$request->input('location');
-        $date =$request->input('date');
-        $time = $request->input('time');
-        $broadcast = $request->input('broadcast');
-        $destination = $request->input('destination');
-        invitation::create([
-            'inviter_id' => $inviter_id,
-            'slogan' => $slogan,
-            'party_room' => $party_room,
-            'location' => $location,
-            'date' => $date,
-            'time' => $time,
-            'broadcast' => $broadcast,
-            'destination' => $destination,
-        ]);
+        if ($request->post()){
+            $validated = $request->validated();
+            Invitation::new($request);
+        }
         return redirect()->back();
     }
 
@@ -84,27 +75,19 @@ class InvitationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(InvitationRequest $request, $id)
     {
-        $inviter_id =$request->input('inviter_id');
-        $slogan =$request->input('slogan');
-        $party_room =$request->input('party_room');
-        $location =$request->input('location');
-        $date =$request->input('date');
-        $time = $request->input('time');
-        $broadcast = $request->input('broadcast');
-        $destination = $request->input('destination');
 
         $invitation = invitation::find(id);
 
-        $invitation->slogan = $inviter_id;
-        $invitation->slogan = $slogan;
-        $invitation->party_room = $party_room;
-        $invitation->location = $location;
-        $invitation->date = $date;
-        $invitation->time = $time;
-        $invitation->broadcast = $broadcast;
-        $invitation->destination = $destination;
+        $invitation->slogan = $request->inviter_id;
+        $invitation->slogan = $request->slogan;
+        $invitation->party_room = $request->party_room;
+        $invitation->location = $request->location;
+        $invitation->date = $request->date;
+        $invitation->time = $request->time;
+        $invitation->broadcast = $request->broadcast;
+        $invitation->destination = $request->destination;
 
         $invitation->save();
         return redirect()->back();
