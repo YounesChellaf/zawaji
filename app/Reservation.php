@@ -29,4 +29,13 @@ class Reservation extends Model
         ]);
         return $reservation;
     }
+    public static function editer($request,$id){
+        $reservation = Reservation::find($id);
+        $reservation->party_room_id = $request->party_room_id;
+        $reservation->wedding_type_id = $request->wedding_type_id;
+        $reservation->date_from = $request->date_from;
+        $reservation->date_to = $request->date_to;
+        $reservation->save();
+        return $reservation;
+    }
 }

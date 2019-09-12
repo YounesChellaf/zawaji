@@ -13,6 +13,4 @@ class Message extends Model
         return Message::create($request->all());
     }
 
-
-
 }

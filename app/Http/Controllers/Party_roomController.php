@@ -43,7 +43,7 @@ class Party_roomController extends Controller
     {
         if ($request->post()){
                 $validated = $request->validated();
-                $party_room = Party_room::new($request);
+                Party_room::new($request);
             return redirect('/owner/calendar');
         }
     }

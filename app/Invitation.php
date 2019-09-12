@@ -15,4 +15,17 @@ class Invitation extends Model
     public static function new($request){
         return invitation::create($request->all());
     }
+    public static function editer($request, $id){
+        $invitation = invitation::find(id);
+        $invitation->slogan = $request->inviter_id;
+        $invitation->slogan = $request->slogan;
+        $invitation->party_room = $request->party_room;
+        $invitation->location = $request->location;
+        $invitation->date = $request->date;
+        $invitation->time = $request->time;
+        $invitation->broadcast = $request->broadcast;
+        $invitation->destination = $request->destination;
+        $invitation->save();
+        return $invitation;
+    }
 }
