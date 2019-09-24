@@ -153,7 +153,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">اضف الصورة الرئيسية</h4>
-                                            <input type="file" id="input-file-now" class="dropify" name="image[]"/>
+                                            <input type="file" id="input-file-now" class="dropify" name="image"/>
                                             <input type="hidden" name="nb" value="">
                                         </div>
                                     </div>
@@ -169,45 +169,15 @@
                         <div class="col-md-4">
                             <div class="form-material">
                                 <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1" name="price1"> </div>
+                                <input type="text" class="form-control" id="firstName1" name="price"> </div>
                         </div>
                         <div class="col-md-4">
                                     <label class="m-t-20">مـــــــن :</label>
-                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="fromdate1">
+                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="fromdate">
                         </div>
                         <div class="col-md-4">
                             <label class="m-t-20">الـــــــى :</label>
-                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate1" name="todate1">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-material">
-                                <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1" name="price2"> </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="m-t-20">مـــــــن :</label>
-                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate2" name="fromdate2">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="m-t-20">الـــــــى :</label>
-                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate3" name="todate2">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-material">
-                                <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1" name="price3"> </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="m-t-20">مـــــــن :</label>
-                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate4" name="fromdate3">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="m-t-20">الـــــــى :</label>
-                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate5" name="todate3">
+                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate1" name="todate">
                         </div>
                     </div>
                     <div class="row">

@@ -26,6 +26,8 @@ Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
     Route::resource('role','RoleController');
     Route::resource('/weddingType','WeedingTypeController');
     Route::resource('users','UserController');
+    Route::resource('cities','CityController');
+
     Route::get('user-roles','UserController@show_users_role')->name('admin.users-roles');
     Route::get('/rooms/approuv/{id}','Party_roomController@approuv');
     Route::get('/rooms/bann/{id}','Party_roomController@bann');

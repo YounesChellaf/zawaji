@@ -35,7 +35,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive m-t-40">
-                                <table id="myTable" class="table table-bordered table-striped">
+                                <table id="example23" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
                                         <th>اسم صاحب القاعة</th>

@@ -74,11 +74,13 @@
             <div class="navbar-wrapper">
                 <div id="navbar" class="collapse navbar-collapse pull-right" dir="rtl">
                     <ul class="nav navbar-nav" dir="rtl">
+                        @if( ! auth()->user())
                         <li><a href="#">التسجيل</a></li>
                         <li><a href="#">تسجيل الدخول</a></li>
+                        @else
                         <li><a href="#coming">ارسل دعوة</a></li>
                         <li><a href="/owner/add_party_room"> أضف شركتك</a></li>
-
+                        @endif
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >المدينــــة<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -335,6 +337,7 @@
     </div> <!-- end of container -->
 </section> <!-- end of our-story -->
 
+@if( auth()->user())
 <section class="coming-soon" id="coming">
     <div class="container">
         <div class="section-title row">
@@ -419,6 +422,8 @@
         </div>
     </div> <!-- end of container -->
 </section> <!-- end of coming-soon -->
+@endif
+
 
 
 

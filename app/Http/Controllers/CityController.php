@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PartyRoomRequest;
-use App\Image;
-use App\Party_room;
 use Illuminate\Http\Request;
 
-class Party_roomController extends Controller
+class CityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +13,7 @@ class Party_roomController extends Controller
      */
     public function index()
     {
-        return view('dashboard.layouts.room_party');
-    }
-
-    public function showAll(){
-        return view('dashboard.admin_layouts.rooms');
+        //
     }
 
     /**
@@ -41,11 +34,7 @@ class Party_roomController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->post()){
-                //$validated = $request->validated();
-                Party_room::new($request);
-            return redirect('/');
-        }
+        //
     }
 
     /**
@@ -90,21 +79,6 @@ class Party_roomController extends Controller
      */
     public function destroy($id)
     {
-        Party_room::destroy($id);
-        return redirect()->back();
-    }
-
-    public function approuv($id){
-        $party_room = Party_room::find($id);
-        $party_room->status = 'approved';
-        $party_room->save();
-        return redirect()->back();
-
-    }
-    public function bann($id){
-        $party_room = Party_room::find($id);
-        $party_room->status = 'banned';
-        $party_room->save();
-        return redirect()->back();
+        //
     }
 }
