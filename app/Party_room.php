@@ -78,4 +78,8 @@ class Party_room extends Model
                 ]);
             return $party_room;
         }
+
+        public static function getRoom(){
+             return Party_room::where('status','approved')->get();
+        }
 }

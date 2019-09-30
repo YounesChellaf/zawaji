@@ -294,8 +294,49 @@
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
 <script src='{{asset('assets/js/admin/fullcalendar.min.js')}}'></script>
 <script src="{{asset('assets/js/admin/cal-init.js')}}"></script>
-@yield('script');
+<script>
+    $(function() {
+        $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+    });
 
+    $('#myTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'print',
+                exportOptions:
+                    {
+                        columns: [0, 1, 3, 4, 5]
+                    }
+            }
+        ],
+
+        "language": {
+            "sProcessing": "جارٍ التحميل...",
+            "sLengthMenu": "أظهر MENU مدخلات",
+            "sZeroRecords": "لم يعثر على أية سجلات",
+            "sInfo": "",
+            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+            "sInfoFiltered": "(منتقاة من مجموع MAX مُدخل)",
+            "sInfoPostFix": "",
+            "sSearch": "ابحث:",
+            "sUrl": "",
+            "oPaginate": {
+                "sFirst": "الأول",
+                "sPrevious": "السابق",
+                "sNext": "التالي",
+                "sLast": "الأخير"
+            }
+        }
+    });
+    $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
+</script>
 </body>
 
 </html>
