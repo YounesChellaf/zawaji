@@ -11,6 +11,7 @@ Route::resource('messages','MessageController');
 
 
 Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
+    Route::resource('party_room','Party_roomController');
     Route::get('/calendar','CalendarController@showCalendar');
     Route::post('/calendar','CalendarController@CreateEvent');
     Route::resource('reservation','ReservationController');
@@ -20,15 +21,14 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
     Route::get('/undelivered-order',function (){
         return view('dashboard.layouts.undelivered-order');
     });
-    Route::resource('party_room','Party_roomController');
 });
 Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
     Route::resource('role','RoleController');
     Route::resource('/weddingType','WeedingTypeController');
-    Route::resource('/users','UserController');
-    Route::get('/user-roles',function (){
-        return view('dashboard.admin_layouts.user-role');
-    });
+    Route::resource('users','UserController');
+    Route::resource('cities','CityController');
+
+    Route::get('user-roles','UserController@show_users_role')->name('admin.users-roles');
     Route::get('/rooms/approuv/{id}','Party_roomController@approuv');
     Route::get('/rooms/bann/{id}','Party_roomController@bann');
     Route::get('/rooms','Party_roomController@showAll');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RoleRequest;
 use App\Role;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,10 @@ class RoleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RoleRequest $request)
     {
         if ($request->post()){
+            $validated= $request->validated();
             Role::new($request);
         }
         return redirect()->route('role.index');
@@ -70,12 +72,11 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RoleRequest $request, $id)
     {
         if ($request->post()){
-            $role = Role::findOrFail($id);
-            $role->name = $request->name;
-            $role->save();
+            $validated = $request->validated();
+            Role::editer($request,$id);
             return redirect()->route('role.index');
         }
     }

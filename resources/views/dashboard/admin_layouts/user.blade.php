@@ -1,9 +1,6 @@
 @extends('dashboard.master-admin')
-@section('css')
-    <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
-@endsection
 @section('content')
-    <div class="page-wrapper" style="width: 85% !important;">
+    <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
@@ -92,7 +89,7 @@
                 <form action="{{route('admin.user.bann',$user->id)}}" method="POST">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
-                        <button type="submit" class="btn btn-outline-danger">حــظر</button></a>
+                        <button type="submit" class="btn btn-outline-danger">حــظر</button>
                     </div>
                 </form>
             </div>
@@ -139,7 +136,4 @@
             </div>
         </div>
     </div>
-@endsection
-@section('script')
-    <script src="{{asset('assets/js/admin/datatables.min.js')}}"></script>
 @endsection

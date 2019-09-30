@@ -232,6 +232,3 @@
         </div>
     </div>
 @endsection
-@section('script')
-    <script src="{{asset('assets/js/admin/datatables.min.js')}}"></script>
-@endsection

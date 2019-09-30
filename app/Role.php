@@ -25,4 +25,11 @@ class Role extends Model
             return $role;
         }
     }
+
+    public static function editer($request,$id){
+        $role = Role::findOrFail($id);
+        $role->name = $request->name;
+        $role->save();
+        return $role;
+    }
 }

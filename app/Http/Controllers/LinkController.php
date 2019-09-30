@@ -10,9 +10,9 @@ class LinkController extends Controller
         return view('dashboard.admin_layouts.social-links');
     }
     public function create(Request $request){
-
+        //
     }
     public function update(Request $request, $id){
-
+        //
     }
 }

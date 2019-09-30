@@ -2,16 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\InvitationRequest;
 use Illuminate\Http\Request;
-use App\invitation;
 
-class InvitationController extends Controller
+class CityController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -38,13 +32,9 @@ class InvitationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(InvitationRequest $request)
+    public function store(Request $request)
     {
-        if ($request->post()){
-            $validated = $request->validated();
-            Invitation::new($request);
-        }
-        return redirect()->back();
+        //
     }
 
     /**
@@ -55,6 +45,7 @@ class InvitationController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
@@ -75,14 +66,9 @@ class InvitationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(InvitationRequest $request, $id)
+    public function update(Request $request, $id)
     {
-
-        if ($request->post()){
-            $validated = $request->validated();
-            Invitation::editer($request,$id);
-            return redirect()->back();
-        }
+        //
     }
 
     /**
@@ -93,7 +79,6 @@ class InvitationController extends Controller
      */
     public function destroy($id)
     {
-        invitation::destroy($id);
-        return redirect()->back();
+        //
     }
 }

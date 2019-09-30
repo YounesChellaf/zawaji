@@ -18,36 +18,12 @@ class MessageController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(MessageRequest $request)
     {
         if ($request->post()){
             $validated = $request->validated();
-            $name =$request->input('name');
-            $email=$request->input('email');
-            $subject =$request->input('subject');
-            $message =$request->input('message');
-            Message::create([
-                'name' => $name,
-                'email' => $email,
-                'subject' => $subject,
-                'message' => $message,
-            ]);
+            Message::new($request);
             return redirect()->back();
         }
     }
@@ -63,35 +39,7 @@ class MessageController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         Message::destroy($id);

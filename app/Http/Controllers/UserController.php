@@ -16,6 +16,10 @@ class UserController extends Controller
         return view('dashboard.admin_layouts.user');
     }
 
+    public function show_users_role(){
+        return view('dashboard.admin_layouts.user-role');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

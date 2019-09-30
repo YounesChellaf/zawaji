@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReservationRequest;
 use App\Reservation;
 use Illuminate\Http\Request;
 
@@ -34,17 +35,11 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReservationRequest $request)
     {
         if ($request->post()){
-            $reservation = Reservation::create([
-                'user_id' => auth()->user()->id,
-                'party_room_id' => 1,
-                'wedding_type_id' => $request->wedding_type_id,
-                'reserver_name' => $request->reserver_name,
-                'date_from' => $request->date_from,
-                'date_to' => $request->date_to,
-            ]);
+            $validated = $request->validated();
+            Reservation::new($request);
             return redirect()->back();
         }
     }
@@ -78,9 +73,14 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ReservationRequest $request, $id)
     {
-        //
+        if ($request->post()){
+            $validated = $request->validated();
+            Reservation::editer($request,$id);
+            return redirect()->back();
+        }
+
     }
 
     /**
@@ -91,6 +91,7 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Reservation::destroy($id);
+        return redirect()->back();
     }
 }

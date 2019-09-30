@@ -22,6 +22,7 @@
     <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -92,7 +93,7 @@
                     <!-- ============================================================== -->
                     <li class="nav-item">
                         <form class="app-search d-none d-md-block d-lg-block">
-                            <input type="text" class="form-control" placeholder="ابحث">
+                            <input type="text" class="form-control" placeholder="ابحث"/>
                         </form>
                     </li>
                 </ul>
@@ -217,16 +218,16 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li> <a class="waves-effect waves-dark" href={{route('role.index')}} aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">اضــافة مناطق</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/rooms" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/admin/users" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/admin/user-roles" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('users.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('admin.users-roles')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/orders" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الحجـــوزات </span></a></li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">اعـــدادات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('weddingType.index')}}">انـــواع الافـراح</a></li>
                             <li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>
-                            <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
                         </ul>
                     </li>
                     <li class="nav-small-cap">--- SUPPORT</li>
@@ -260,6 +261,7 @@
 <!-- Bootstrap popper Core JavaScript -->
 <script src="{{asset('assets/js/popper.min.js')}}"></script>
 <script src="{{asset('assets/js/admin/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/datatables.min.js')}}"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="{{asset('assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
 <!--Wave Effects -->
@@ -283,8 +285,48 @@
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
 <script src='{{asset('assets/js/admin/fullcalendar.min.js')}}'></script>
 <script src="{{asset('assets/js/admin/cal-init.js')}}"></script>
-@yield('script');
+<script>
+    $(function() {
+        $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
 
+    $('#myTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'print',
+                exportOptions:
+                    {
+                        columns: [0, 1, 3, 4, 5]
+                    }
+            }
+        ],
+
+        "language": {
+            "sProcessing": "جارٍ التحميل...",
+            "sLengthMenu": "أظهر MENU مدخلات",
+            "sZeroRecords": "لم يعثر على أية سجلات",
+            "sInfo": "",
+            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+            "sInfoFiltered": "(منتقاة من مجموع MAX مُدخل)",
+            "sInfoPostFix": "",
+            "sSearch": "ابحث:",
+            "sUrl": "",
+            "oPaginate": {
+                "sFirst": "الأول",
+                "sPrevious": "السابق",
+                "sNext": "التالي",
+                "sLast": "الأخير"
+            }
+        }
+    });
+    $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
+</script>
 </body>
-
 </html>

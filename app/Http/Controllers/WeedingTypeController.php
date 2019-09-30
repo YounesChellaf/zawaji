@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\WeddingRequest;
 use App\WeedingType;
-use Illuminate\Http\Request;
 
 class WeedingTypeController extends Controller
 {
@@ -33,13 +33,11 @@ class WeedingTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WeddingRequest $request)
     {
         if ($request->post()){
-            WeedingType::create([
-                'name' => $request->name,
-                'color' => $request->color,
-            ]);
+            $validated = $request->validated();
+            WeedingType::new($request);
             return redirect()->route('weddingType.index');
         }
     }
@@ -73,13 +71,11 @@ class WeedingTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(WeddingRequest $request, $id)
     {
         if ($request->post()){
-            $type = WeedingType::findOrFail($id);
-            $type->name = $request->name;
-            $type->color = $request->color;
-            $type->save();
+            $validated = $request->validated();
+            WeedingType::editer($request,$id);
             return redirect()->route('weddingType.index');
         }
     }

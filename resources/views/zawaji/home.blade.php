@@ -74,11 +74,13 @@
             <div class="navbar-wrapper">
                 <div id="navbar" class="collapse navbar-collapse pull-right" dir="rtl">
                     <ul class="nav navbar-nav" dir="rtl">
+                        @if( ! auth()->user())
                         <li><a href="#">التسجيل</a></li>
                         <li><a href="#">تسجيل الدخول</a></li>
+                        @else
                         <li><a href="#coming">ارسل دعوة</a></li>
                         <li><a href="/owner/add_party_room"> أضف شركتك</a></li>
-
+                        @endif
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >المدينــــة<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -191,7 +193,7 @@
         </div> <!-- end of section-title -->
 
         <div class="gallery-content row">
-            @foreach(\App\Party_room::all() as $room)
+            @foreach(\App\Party_room::getRoom() as $room)
             <div class="col col-sm-6 col-md-4">
                 <div>
                     <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
@@ -208,85 +210,7 @@
                 </div>
             </div>
             @endforeach
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
-                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>اسم القاعة</h4>
-                            <p>متواجدة في المنطقة آ</p>
-                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
-                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>اسم القاعة</h4>
-                            <p>متواجدة في المنطقة آ</p>
-                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
-                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>اسم القاعة</h4>
-                            <p>متواجدة في المنطقة آ</p>
-                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
-                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>اسم القاعة</h4>
-                            <p>متواجدة في المنطقة آ</p>
-                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6 col-md-4">
-                <div>
-                    <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
-                    <img src="{{asset('assets/images/salle1.jpg')}}"  style="height: 350px;" alt class="thumb img img-responsive">
-                    <button class="btn btn-default" dir="rtl">اسم القاعة</button>
-
-                    <div class="hover-content">
-                        <div>
-                            <h4>اسم القاعة</h4>
-                            <p>متواجدة في المنطقة آ</p>
-                            <a  href="/reserve" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <a href="#" class="btn btn-default">اظهار المزيد</a>
+                <a href="#" class="btn btn-default">اظهار المزيد</a>
         </div> <!-- end of gallery-content -->
     </div> <!-- end of container -->
 </section> <!-- end of gallery -->
@@ -320,6 +244,7 @@
     </div> <!-- end of container -->
 </section> <!-- end of our-story -->
 
+@if( auth()->user())
 <section class="coming-soon" id="coming">
     <div class="container">
         <div class="section-title row">
@@ -404,6 +329,8 @@
         </div>
     </div> <!-- end of container -->
 </section> <!-- end of coming-soon -->
+@endif
+
 
 
 
