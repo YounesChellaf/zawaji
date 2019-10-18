@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
@@ -13,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.admin_layouts.city');
     }
 
     /**
@@ -34,7 +35,10 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->post()){
+            City::new($request);
+        }
+        return redirect(route('cities.index'));
     }
 
     /**
@@ -68,7 +72,12 @@ class CityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if ($request->post()){
+            $city = City::find($id);
+            $city->name = $request->name;
+            $city->save();
+            return redirect(route('cities.index'));
+        }
     }
 
     /**
@@ -79,6 +88,7 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        City::destroy($id);
+        return redirect(route('cities.index'));
     }
 }

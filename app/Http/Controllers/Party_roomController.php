@@ -23,6 +23,11 @@ class Party_roomController extends Controller
         return view('dashboard.admin_layouts.rooms');
     }
 
+    public function roomDetails($id){
+        $room = Party_room::find($id);
+        return view('zawaji.room-details')->with('room',$room);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -6,17 +6,20 @@ use App\Permissions\HasPermissionsTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use Notifiable;
-    use HasPermissionsTrait;
+//    use HasPermissionsTrait;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+
     protected $guarded=[];
 
     /**
@@ -47,9 +50,7 @@ class User extends Authenticatable
     function party_room(){
         return $this->belongsTo(Party_room::class);
     }
-    function role(){
-        return $this->belongsToMany(Role::class);
-    }
+
 
 
     public function active(){

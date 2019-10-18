@@ -34,15 +34,15 @@
                                     <div id="sparklinedash"></div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 m-b-30 text-center"> <small>القاعـات المسجلـة</small>
-                                    <h2><i class="ti-arrow-up text-purple"></i> 5064</h2>
+                                    <h2><i class="ti-arrow-up text-purple"></i> {{\App\Party_room::all()->count()}}</h2>
                                     <div id="sparklinedash2"></div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 m-b-30 text-center"> <small>طلبات الحجـز</small>
-                                    <h2><i class="ti-arrow-up text-info"></i> 664</h2>
+                                    <h2><i class="ti-arrow-up text-info"></i>{{\App\Reservation::all()->count()}}</h2>
                                     <div id="sparklinedash3"></div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 m-b-30 text-center"> <small>الطلبات المقبولة</small>
-                                    <h2><i class="ti-arrow-down text-danger"></i> 50%</h2>
+                                    <h2><i class="ti-arrow-down text-danger"></i>{{\App\Reservation::accepted_invitation_rate()}}%</h2>
                                     <div id="sparklinedash4"></div>
                                 </div>
                             </div>
