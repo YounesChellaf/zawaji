@@ -1,11 +1,16 @@
 <?php
 Route::get('/', function () {
-    return view('zawaji.home');
-});
+    return view('zawaji.landing');
+})->name('zawaji.landing');
 Route::get('/reserve', function () {
     return view('client.search_parties');
 });
+Route::get('/room-details/{id}','Party_roomController@roomDetails')->name('zawaji.room-details');
+Route::get('/rooms', function () {
+    return view('zawaji.party_rooms');
+})->name('zawaji.landing');
 
+Route::resource('/reserve','ReservationController');
 Route::resource('invitations','InvitationController');
 Route::resource('messages','MessageController');
 
@@ -15,6 +20,9 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
     Route::get('/calendar','CalendarController@showCalendar');
     Route::post('/calendar','CalendarController@CreateEvent');
     Route::resource('reservation','ReservationController');
+    Route::get('reservation/confirm/{id}','ReservationController@confirm')->name('reservation.confirmation');
+    Route::get('reservation/disapprouv/{id}','ReservationController@disapprouve')->name('reservation.disapprouv');
+
     Route::get('/delivered-order',function (){
         return view('dashboard.layouts.delivered-order');
     });
@@ -24,6 +32,9 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
 });
 Route::group(['prefix'=>'/admin','middleware' => 'auth'],function (){
     Route::resource('role','RoleController');
+    //Test routes
+    Route::get('/assign', 'Controller@assignRole');
+
     Route::resource('/weddingType','WeedingTypeController');
     Route::resource('users','UserController');
     Route::resource('cities','CityController');
@@ -56,3 +67,4 @@ Route::get('/test',function (\Illuminate\Http\Request $request){
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+

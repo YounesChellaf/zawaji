@@ -79,7 +79,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->active = false;
         $user->save();
-        return view('dashboard.admin_layouts.home');
+        return view('dashboard.admin_layouts.user');
     }
     /**
      * Remove the specified resource from storage.

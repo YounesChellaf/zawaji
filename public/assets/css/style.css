@@ -113,8 +113,8 @@ a:hover {
 	background-color: transparent !important;
 }
 
-.nav .open>a, 
-.nav .open>a:focus, 
+.nav .open>a,
+.nav .open>a:focus,
 .nav .open>a:hover {
 	background-color: transparent !important;
 }
@@ -300,7 +300,7 @@ a.btn:hover {
 
 
 /*---------------------------------------------------
-==== Home style-1 
+==== Home style-1
 ---------------------------------------------------*/
 /*--------------------------------------------------------------
 #1.1	header
@@ -1325,10 +1325,12 @@ header.fixed-header {
 
 .gallery .thumb {
 	position: absolute;
-	top: 50%;
+	top: 43%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	width: 75%;
+	height: 75%;
 }
 
 .gallery .gallery-content button {

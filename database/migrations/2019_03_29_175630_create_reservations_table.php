@@ -20,7 +20,7 @@ class CreateReservationsTable extends Migration
             $table->string('reserver_name')->nullable();
             $table->integer('wedding_type_id');
             $table->float('payment')->nullable();
-            $table->string('status')->default('broullion');
+            $table->enum('status', ['draft', 'approuved', 'disapproved'])->default('draft');
             $table->date('date_from');
             $table->date('date_to');
             $table->timestamps();

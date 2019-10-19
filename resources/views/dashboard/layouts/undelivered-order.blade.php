@@ -43,53 +43,23 @@
                                         <th>صورة الزبون</th>
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
-                                        <th>الثمن المدفوع مسبقا</th>
                                         <th>تفاصيـل</th>
                                         <th>تأكيد الحـجز</th>
                                         <th>الــغاء</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach(\App\Reservation::where('status','draft')->get() as $reservation )
                                     <tr>
-                                        <td>Zorita Serrano</td>
+                                        <td>{{$reservation->user->last_name.' '.$reservation->user->first_name }}</td>
                                         <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
+                                        <td>{{$reservation->date_from}}</td>
+                                        <td>{{$reservation->date_to}}</td>
                                         <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation">تأكيد</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">الــغاء</button></td>
+                                        <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation-{{$reservation->id}}">تأكيد</button></td>
+                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete-{{$reservation->id}}">الــغاء</button></td>
                                     </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation">تأكيد</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">الــغاء</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation">تأكيد</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">الــغاء</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation">تأكيد</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">الــغاء</button></td>
-                                    </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -104,7 +74,8 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
     </div>
-    <div class="modal fade" id="model-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    @foreach(\App\Reservation::where('status','draft')->get() as $reservation )
+    <div class="modal fade" id="model-delete-{{$reservation->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -118,12 +89,12 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
-                    <a href="delete/"><button type="button" class="btn btn-outline-danger">حــذف</button></a>
+                    <a href="{{route('reservation.disapprouv',$reservation->id)}}"><button type="button" class="btn btn-outline-danger">حــذف</button></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="model-confirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="model-confirmation-{{$reservation->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -136,11 +107,12 @@
                     سيتم قبول الطلب و اضـافته ضمن الطلبـات المؤكـدة
                 </div>
                 <div class="modal-footer">
-                    <a href="/"><button type="button" class="btn btn-outline-success">تاكيد الطلب</button></a>
+                    <a href="{{route('reservation.confirmation',$reservation->id)}}"><button type="button" class="btn btn-outline-success">تاكيد الطلب</button></a>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
     <div class="col-md-4">
                 <div id="modal-add-order" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                     <div class="modal-dialog">

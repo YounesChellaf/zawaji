@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +13,8 @@
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="{{asset('assets/css/morris.css')}}" rel="stylesheet">
-    <!--Toaster Popup message CSS -->
-    <link href="{{asset('assets/css/jquery.toast.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{{asset('assets/css/theme-style.min.css')}}" rel="stylesheet">
+
     <!-- Dashboard 1 Page CSS -->
     <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
@@ -219,19 +216,16 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">اضــافة مناطق</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('cities.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">اضــافة مناطق</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/rooms" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="{{route('users.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
                     <li> <a class="waves-effect waves-dark" href="{{route('admin.users-roles')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
                     <li> <a class="waves-effect waves-dark" href="/admin/orders" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الحجـــوزات </span></a></li>
-                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">اعـــدادات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">اعـــدادات عــامة</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('weddingType.index')}}">انـــواع الافـراح</a></li>
                             <li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-small-cap">--- SUPPORT</li>
-                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الخروج</span></a></li>
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->
@@ -278,7 +272,7 @@
 <script src="{{asset('assets/js/morris.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.sparkline.min.js')}}"></script>
 <!-- Popup message jquery -->
-<script src="{{asset('assets/js/jquery.toast.js')}}"></script>
+
 <!-- Chart JS -->
 <script src="{{asset('assets/js/dashboard1.js')}}"></script>
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
@@ -305,9 +299,9 @@
         "language": {
             "sProcessing": "جارٍ التحميل...",
             "sLengthMenu": "أظهر MENU مدخلات",
-            "sZeroRecords": "لم يعثر على أية سجلات",
+            "sZeroRecords": "لم يعثر على أي معلومة",
             "sInfo": "",
-            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 معلومة",
             "sInfoFiltered": "(منتقاة من مجموع MAX مُدخل)",
             "sInfoPostFix": "",
             "sSearch": "ابحث:",

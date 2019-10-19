@@ -15,8 +15,6 @@
     <!-- chartist CSS -->
     @yield('css')
     <link href="{{asset('assets/css/morris.css')}}" rel="stylesheet">
-    <!--Toaster Popup message CSS -->
-    <link href="{{asset('assets/css/jquery.toast.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('assets/css/theme-style.min.css')}}" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
@@ -287,7 +285,6 @@
 <script src="{{asset('assets/js/morris.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.sparkline.min.js')}}"></script>
 <!-- Popup message jquery -->
-<script src="{{asset('assets/js/jquery.toast.js')}}"></script>
 <!-- Chart JS -->
 <script src="{{asset('assets/js/dashboard1.js')}}"></script>
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
@@ -314,9 +311,9 @@
         "language": {
             "sProcessing": "جارٍ التحميل...",
             "sLengthMenu": "أظهر MENU مدخلات",
-            "sZeroRecords": "لم يعثر على أية سجلات",
+            "sZeroRecords": "يعرض 0 إلى 0 من أصل 0 معلومة",
             "sInfo": "",
-            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 معلومة",
             "sInfoFiltered": "(منتقاة من مجموع MAX مُدخل)",
             "sInfoPostFix": "",
             "sSearch": "ابحث:",

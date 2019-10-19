@@ -21,9 +21,8 @@ class Reservation extends Model
     public static function new($request){
         $reservation = Reservation::create([
             'user_id' => auth()->user()->id,
-            'party_room_id' => 1,
+            'party_room_id' => $request->party_room_id,
             'wedding_type_id' => $request->wedding_type_id,
-            'reserver_name' => $request->reserver_name,
             'date_from' => $request->date_from,
             'date_to' => $request->date_to,
         ]);
@@ -37,5 +36,28 @@ class Reservation extends Model
         $reservation->date_to = $request->date_to;
         $reservation->save();
         return $reservation;
+    }
+
+    public static function accepted_invitation_rate(){
+        if (Reservation::where('status','accepted')->count() == 0 )
+            return 0;
+        return (Reservation::where('status','accepted')->count())/Reservation::all()->count()*100;
+    }
+
+    public function status(){
+        switch ($this->status) {
+            case 'approuved':
+                echo '<label class="label label-success">مؤكـــــد</label>';
+                break;
+            case 'disapproved':
+                echo '<label class="label label-danger">غيـر مؤكـد </label>';
+                break;
+            case 'draft':
+                echo '<label class="label label-warning">قيد المعالجة</label>';
+                break;
+
+            default:
+                break;
+        }
     }
 }

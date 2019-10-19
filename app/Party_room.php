@@ -15,7 +15,7 @@ class Party_room extends Model
     }
 
     function owner(){
-        return $this->hasOne(User::class,'owner_id');
+        return $this->belongsTo(User::class,'owner_id');
     }
 
     function reservations(){

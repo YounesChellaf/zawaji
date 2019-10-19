@@ -1,9 +1,6 @@
 @extends('dashboard.master-admin')
-@section('css')
-    <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
-@endsection
 @section('content')
-    <div class="page-wrapper" style="width: 85% !important;">
+    <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->

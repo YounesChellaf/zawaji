@@ -86,7 +86,8 @@
                 <div class="modal-body">
                     هل تريد حــظر هذا العضو
                 </div>
-                <form action="{{route('admin.user.bann',$user->id)}}" method="POST">
+                <form action="{{route('admin.user.bann',$user->id)}}" method="post">
+                    @csrf
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
                         <button type="submit" class="btn btn-outline-danger">حــظر</button>
