@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +14,7 @@
     <!-- chartist CSS -->
     <link href="{{asset('assets/css/morris.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{{asset('assets/css/theme-style.min.css')}}" rel="stylesheet">
+
     <!-- Dashboard 1 Page CSS -->
     <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">

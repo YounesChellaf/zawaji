@@ -43,120 +43,21 @@
                                         <th>صورة الزبون</th>
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
-                                        <th>الثمن المدفوع مسبقا</th>
                                         <th>تفاصيـل</th>
                                         <th>حـذف</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zorita Serrano</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
-                                        <td>18-feb-2019</td>
-                                        <td>20-feb-2019</td>
-                                        <td>1600</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
-                                        <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
-                                    </tr>
+                                    @foreach(\App\Reservation::where('status','approuved')->get() as $reservation )
+                                        <tr>
+                                            <td>{{$reservation->user->last_name.' '.$reservation->user->first_name }}</td>
+                                            <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                            <td>{{$reservation->date_from}}</td>
+                                            <td>{{$reservation->date_to}}</td>
+                                            <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
+                                            <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

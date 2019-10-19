@@ -43,4 +43,21 @@ class Reservation extends Model
             return 0;
         return (Reservation::where('status','accepted')->count())/Reservation::all()->count()*100;
     }
+
+    public function status(){
+        switch ($this->status) {
+            case 'approuved':
+                echo '<label class="label label-success">مؤكـــــد</label>';
+                break;
+            case 'disapproved':
+                echo '<label class="label label-danger">غيـر مؤكـد </label>';
+                break;
+            case 'draft':
+                echo '<label class="label label-warning">قيد المعالجة</label>';
+                break;
+
+            default:
+                break;
+        }
+    }
 }

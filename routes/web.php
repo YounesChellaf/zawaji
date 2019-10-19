@@ -20,6 +20,9 @@ Route::group(['prefix'=>'/owner','middleware' => 'auth'],function (){
     Route::get('/calendar','CalendarController@showCalendar');
     Route::post('/calendar','CalendarController@CreateEvent');
     Route::resource('reservation','ReservationController');
+    Route::get('reservation/confirm/{id}','ReservationController@confirm')->name('reservation.confirmation');
+    Route::get('reservation/disapprouv/{id}','ReservationController@disapprouve')->name('reservation.disapprouv');
+
     Route::get('/delivered-order',function (){
         return view('dashboard.layouts.delivered-order');
     });

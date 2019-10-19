@@ -83,6 +83,20 @@ class ReservationController extends Controller
 
     }
 
+    public function confirm($id){
+        $reservation = Reservation::find($id);
+        $reservation->status = 'approuved';
+        $reservation->save();
+        return redirect()->back();
+    }
+
+    public function disapprouve($id){
+        $reservation = Reservation::find($id);
+        $reservation->status = 'disapproved';
+        $reservation->save();
+        return redirect()->back();
+    }
+
     /**
      * Remove the specified resource from storage.
      *
