@@ -12,7 +12,7 @@ class Reservation extends Model
         return $this->belongsTo('App\User');
     }
     function party_room(){
-        return $this->belongsTo('App\Party_room');
+        return $this->belongsTo(Party_room::class);
     }
     function weddingType(){
         return $this->belongsTo(WeedingType::class,'wedding_type_id');
@@ -25,6 +25,18 @@ class Reservation extends Model
             'wedding_type_id' => $request->wedding_type_id,
             'date_from' => $request->date_from,
             'date_to' => $request->date_to,
+        ]);
+        return $reservation;
+    }
+
+    public static function OwnerNew($request){
+        $reservation = Reservation::create([
+            'reserver_name' => $request->reserver_name,
+            'party_room_id' => $request->party_room_id,
+            'wedding_type_id' => $request->wedding_type_id,
+            'date_from' => $request->date_from,
+            'date_to' => $request->date_to,
+            'status' => 'approuved'
         ]);
         return $reservation;
     }

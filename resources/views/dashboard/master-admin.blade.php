@@ -14,19 +14,16 @@
     <!-- chartist CSS -->
     <link href="{{asset('assets/css/morris.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-
+    {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
     <!-- Dashboard 1 Page CSS -->
-    <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/dashboard3.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!--style-->
+    @yield('css')
+    {{--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>--}}
+    {{--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>--}}
+    {{--<![endif]-->--}}
+    {{--<!--style-->--}}
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
     <style>
         nav, body, a,label, h1, h2, h3, h4, h5, h6, p, tr, td, ul, li, span, option,button{
@@ -113,31 +110,18 @@
                                 <li>
                                     <div class="message-center">
                                         <!-- Message -->
-                                        <a href="javascript:void(0)">
+                                        @foreach(\App\Party_room::where('status','disapproved')->get() as $room)
+                                        <a href="{{route('admin.showRooms')}}">
                                             <div class="btn btn-danger btn-circle"><i class="ti-agenda"></i></div>
                                             <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
+                                                <h5>{{$room->owner->last_name.' '.$room->owner->first_name}}</h5> <span class="mail-desc"> طلــــب قبــــول قاعـة</span> <span class="time">{{$room->created_at}}</span> </div>
                                         </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="btn btn-danger btn-circle"><i class="ti-calendar"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="btn btn-danger btn-circle"><i class="ti-calendar"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
+                                        @endforeach
                                         <!-- Message -->
                                     </div>
                                 </li>
                                 <li>
-                                    <a class="nav-link text-center link" href="javascript:void(0);"> <strong>اظهــــار كل الاشعـــــارات</strong> <i class="fa fa-angle-right"></i> </a>
+                                    {{--<a class="nav-link text-center link" href="javascript:void(0);"> <strong>اظهــــار كل الاشعـــــارات</strong> <i class="fa fa-angle-right"></i> </a>--}}
                                 </li>
                             </ul>
                         </div>
@@ -161,7 +145,7 @@
                                     <div class="message-center">
                                         @foreach(\App\Message::all() as $message)
                                         <!-- Message -->
-                                        <a href="javascript:void(0)">
+                                        <a href="{{route('messages.index')}}">
                                             <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>{{$message->name}}</h5> <span class="mail-desc">{{$message->subject}}</span> <span class="time">{{$message->created_at->format('H:i')}}</span> </div>
@@ -191,22 +175,24 @@
             <!-- User Profile-->
             <div class="user-profile">
                 <div class="user-pro-body">
-                    <div><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle"></div>
+                    <div>
+                        @if( ! auth()->user()->image_id)
+                            <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" />
+                        @else
+                            <img src="{{asset('assets/images/avatar/'.auth()->user()->image->path)}}" alt="user-img" class="img-circle" />
+                        @endif
+                    </div>
                     <div class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{auth()->user()->first_name.' '.auth()->user()->last_name}}<span class="caret"></span></a>
                         <div class="dropdown-menu animated flipInY" dir="rtl" >
                             <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
+                            <a href="{{route('admin.profile',auth()->user()->id)}}" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
                             <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-email"></i> رسائلي</a>
-                            <!-- text-->
-                            <div class="dropdown-divider"></div>
-                            <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> اعدادات</a>
+                            <a href="{{route('messages.index')}}" class="dropdown-item"><i class="ti-email"></i> رسائلي</a>
                             <!-- text-->
                             <div class="dropdown-divider"></div>
                             <!-- text-->
-                            <a href="pages-login.html" class="dropdown-item"><i class="fa fa-power-off"></i>تسجيل الخروج</a>
+                            <a href="{{route('logout')}}" class="dropdown-item"><i class="fa fa-power-off"></i>تسجيل الخروج</a>
                             <!-- text-->
                         </div>
                     </div>
@@ -215,13 +201,13 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="{{route('cities.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">اضــافة مناطق</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/admin/rooms" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="{{route('users.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">المستخدميــن</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="{{route('admin.users-roles')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/admin/orders" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">الحجـــوزات </span></a></li>
-                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">اعـــدادات عــامة</span></a>
+                    <li> <a class="waves-effect waves-dark" href="{{route('admin.landing')}}" aria-expanded="false"><i class="ti-stats-up"></i><span class="hide-menu">احصـاءات حول الموقع</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('cities.index')}}" aria-expanded="false"><i class=" ti-map-alt"></i><span class="hide-menu">اضــافة مناطق</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('admin.showRooms')}}" aria-expanded="false"><i class="ti-home"></i><span class="hide-menu">القاعات المسجلــة</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('users.index')}}" aria-expanded="false"><i class="ti-user"></i><span class="hide-menu">المستخدميــن</span></a></li>
+                    {{--<li> <a class="waves-effect waves-dark" href="{{route('admin.users-roles')}}" aria-expanded="false"><i class=" ti-comments-smiley"></i><span class="hide-menu">انواع المستخدميـن </span></a></li>--}}
+                    <li> <a class="waves-effect waves-dark" href="{{route('admin.orders')}}" aria-expanded="false"><i class="ti-pin2"></i><span class="hide-menu">الحجـــوزات </span></a></li>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">اعـــدادات عــامة</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('weddingType.index')}}">انـــواع الافـراح</a></li>
                             <li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>
@@ -274,11 +260,12 @@
 <!-- Popup message jquery -->
 
 <!-- Chart JS -->
-<script src="{{asset('assets/js/dashboard1.js')}}"></script>
+<script src="{{asset('assets/js/dashboard3.js')}}"></script>
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
 <script src='{{asset('assets/js/admin/fullcalendar.min.js')}}'></script>
 <script src="{{asset('assets/js/admin/cal-init.js')}}"></script>
+@yield('script')
 <script>
     $(function() {
         $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');

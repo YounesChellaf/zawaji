@@ -3,7 +3,7 @@
     <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="page-wrapper" style="width: 85% !important;">
+    <div class="page-wrapper" >
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
@@ -44,25 +44,26 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+
                                     <tr>
-                                        <td>facebook</td>
-                                        <td>https://www.facebook.com/alshareef2007</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
+                                        <td>facebook (فيسبـــوك)</td>
+                                        <td><a href="{{\App\Link::first()->facebook}}" target="_blank">{{\App\Link::first()->facebook}}</a></td>
+                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update-{{\App\Link::first()->id}}-facebook">تعــديل</button></td>
                                     </tr>
                                     <tr>
-                                        <td>facebook</td>
-                                        <td>https://www.facebook.com/alshareef2007</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
+                                        <td>Instgram (انسغـــرام)</td>
+                                        <td><a href="{{\App\Link::first()->instgram}}" target="_blank">{{\App\Link::first()->instgram}}</a></td>
+                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update-{{\App\Link::first()->id}}-instgram">تعــديل</button></td>
                                     </tr>
                                     <tr>
-                                        <td>facebook</td>
-                                        <td>https://www.facebook.com/alshareef2007</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
+                                        <td>Youtube (يوتيــوب)</td>
+                                        <td><a href="{{\App\Link::first()->youtube}}" target="_blank">{{\App\Link::first()->youtube}}</a></td>
+                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update-{{\App\Link::first()->id}}-youtube">تعــديل</button></td>
                                     </tr>
                                     <tr>
-                                        <td>facebook</td>
-                                        <td>https://www.facebook.com/alshareef2007</td>
-                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update">تعــديل</button></td>
+                                        <td>Twitter (تويـــتر)</td>
+                                        <td><a href="{{\App\Link::first()->twitter}}" target="_blank">{{\App\Link::first()->twitter}}</a></td>
+                                        <td><button class="btn btn-rounded btn-outline-info" data-toggle="modal" data-target="#model-update-{{\App\Link::first()->id}}-twitter">تعــديل</button></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -78,8 +79,9 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
     </div>
+    @foreach(\App\Link::all() as $link)
     <div class="col-md-4">
-        <div id="model-update" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div id="model-update-{{$link->id}}-facebook" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -87,45 +89,97 @@
                         <h4 class="modal-title">تعـديل الرابـط</h4>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="{{route('link.facebook',$link->id)}}">
                             @csrf
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">الرابــط الجديـد</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <input type="text" name="link" class="form-control" id="recipient-name" value="{{$link->facebook}}">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div id="model-add-role" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div id="model-update-{{$link->id}}-instgram" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">اضافـة صنف المستخدم</h4>
+                        <h4 class="modal-title">تعـديل الرابـط</h4>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="{{route('link.instgram',$link->id)}}">
                             @csrf
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">صنف المستخدم</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <label for="recipient-name" class="control-label">الرابــط الجديـد</label>
+                                <input type="text" class="form-control" name="link" id="recipient-name" value="{{$link->instgram}}">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success waves-effect waves-light">حفــــــظ</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div id="model-update-{{$link->id}}-youtube" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">تعـديل الرابـط</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="{{route('link.youtube',$link->id)}}">
+                            @csrf
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">الرابــط الجديـد</label>
+                                <input type="text" class="form-control" name="link" id="recipient-name" value="{{$link->youtube}}">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="model-update-{{$link->id}}-twitter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">تعـديل الرابـط</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="{{route('link.twitter',$link->id)}}">
+                            @csrf
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">الرابــط الجديـد</label>
+                                <input type="text" class="form-control" name="link" id="recipient-name" value="{{$link->twitter}}">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">تعديـــل</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
+
+
+
 @endsection
 @section('script')
     <script src="{{asset('assets/js/admin/datatables.min.js')}}"></script>

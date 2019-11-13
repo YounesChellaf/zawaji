@@ -43,6 +43,13 @@ class ReservationController extends Controller
             return redirect()->back();
         }
     }
+    public function OwnerReservation(ReservationRequest $request){
+        if ($request->post()){
+            $validated = $request->validated();
+            Reservation::OwnerNew($request);
+            return redirect()->back();
+        }
+    }
 
     /**
      * Display the specified resource.

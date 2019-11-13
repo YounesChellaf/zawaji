@@ -11,6 +11,9 @@ class Image extends Model
     protected $fillable=['path','party_room_id'];
 
     function room_party(){
-        return $this->belongsTo('App\Party_room');
+        return $this->belongsTo(Party_room::class);
+    }
+    function user(){
+        return $this->hasOne(User::class);
     }
 }

@@ -177,6 +177,7 @@ return [
         App\Providers\PermissionsServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -237,5 +238,9 @@ return [
         'Price' => App\Price::class,
         'Reservation' => App\Reservation::class,
         'User' => App\User::class,
+        'City' => App\User::class,
+        'WeedingType' => App\WeedingType::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class
+
     ],
 ];

@@ -16,17 +16,17 @@
     @yield('css')
     <link href="{{asset('assets/css/morris.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{{asset('assets/css/theme-style.min.css')}}" rel="stylesheet">
+    {{--<link href="{{asset('assets/css/theme-style.min.css')}}" rel="stylesheet">--}}
     <!-- Dashboard 1 Page CSS -->
-    <link href="{{asset('assets/css/dashboard1.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/dashboard3.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/fullcalendar.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
-
+    <link href="{{asset('assets/css/admin/steps.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <![endif]-->
     <!--style-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
@@ -39,6 +39,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+
+
+
     <!--endstyle-->
 </head>
 
@@ -119,31 +122,17 @@
                                 <li>
                                     <div class="message-center">
                                         <!-- Message -->
-                                        <a href="javascript:void(0)">
+                                        @foreach( auth()->user()->getReservation()->where('status','draft') as $reservation )
+                                        <a href="{{route('owner.reservation.undelivered')}}">
                                             <div class="btn btn-danger btn-circle"><i class="ti-agenda"></i></div>
                                             <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
+                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">{{$reservation->created_at->format('d/m/Y')}}</span> </div>
                                         </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="btn btn-danger btn-circle"><i class="ti-calendar"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="btn btn-danger btn-circle"><i class="ti-calendar"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <!-- Message -->
+                                        @endforeach
                                     </div>
                                 </li>
                                 <li>
-                                    <a class="nav-link text-center link" href="javascript:void(0);"> <strong>اظهــــار كل الاشعـــــارات</strong> <i class="fa fa-angle-right"></i> </a>
+                                    <a class="nav-link text-center link" href="{{route('owner.reservation.undelivered')}}"> <strong>اظهــــار كل الاشعـــــارات</strong> <i class="fa fa-angle-right"></i> </a>
                                 </li>
                             </ul>
                         </div>
@@ -154,39 +143,6 @@
                     <!-- ============================================================== -->
                     <!-- Messages -->
                     <!-- ============================================================== -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
-                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-                        </a>
-                        <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
-                            <ul>
-                                <li>
-                                    <div class="drop-title">لديك رسائل</div>
-                                </li>
-                                <li>
-                                    <div class="message-center">
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">مضمـــــون الرسالة</span> <span class="time">9:30 AM</span> </div>
-                                        </a>
-                                        <!-- Message -->
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
                     <!-- ============================================================== -->
                     <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class=""></i></a></li>
                 </ul>
@@ -205,7 +161,13 @@
             <!-- User Profile-->
             <div class="user-profile">
                 <div class="user-pro-body">
-                    <div><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle"></div>
+                    <div>
+                        @if( ! auth()->user()->image_id)
+                            <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" />
+                        @else
+                            <img src="{{asset('assets/images/avatar/'.auth()->user()->image->path)}}" alt="user-img" class="img-circle" />
+                        @endif
+                    </div>
                     <div class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{auth()->user()->first_name.''.auth()->user()->last_name}}<span class="caret"></span></a>
                         <div class="dropdown-menu animated flipInY" dir="rtl" >
@@ -230,17 +192,15 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- بخصوص القـاعـة</li>
-                    <li> <a class="waves-effect waves-dark" href="{{route('party_room.index')}}" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
-                    <li> <a class="waves-effect waves-dark" href="/owner/calendar" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">رزنامة الافراح </span></a></li>
-                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                    <li> <a class="waves-effect waves-dark" href="{{route('party_room.addRoom')}}" aria-expanded="false"><i class="ti-home"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('owner.calendar')}}" aria-expanded="false"><i class="ti-agenda"></i><span class="hide-menu">تاريخ المناسبـــــــات </span></a></li>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-pin2"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="/owner/delivered-order">المـؤكدة</a></li>
-                            <li><a href="/owner/undelivered-order">الغير المـؤكدة</a></li>
+                            <li><a href="{{route('owner.reservation.delivered')}}">المـؤكدة</a></li>
+                            <li><a href="{{route('owner.reservation.undelivered')}}">الغير المـؤكدة</a></li>
                         </ul>
                     </li>
-                    <li class="nav-small-cap">--- الاعـدادات</li>
-                    <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="far fa-circle text-success"></i><span class="hide-menu">تسجيل الخروج</span></a></li>
-                </ul>
+                   </ul>
             </nav>
             <!-- End Sidebar navigation -->
         </div>
@@ -286,11 +246,12 @@
 <script src="{{asset('assets/js/jquery.sparkline.min.js')}}"></script>
 <!-- Popup message jquery -->
 <!-- Chart JS -->
-<script src="{{asset('assets/js/dashboard1.js')}}"></script>
+<script src="{{asset('assets/js/dashboard3.js')}}"></script>
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
-<script src='{{asset('assets/js/admin/fullcalendar.min.js')}}'></script>
+<script src='{{asset('assets/js/admin/fullcalendar.js')}}'></script>
 <script src="{{asset('assets/js/admin/cal-init.js')}}"></script>
+@yield('script')
 <script>
     $(function() {
         $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
@@ -334,6 +295,7 @@
     });
 
 </script>
+{{--section js--}}
 </body>
 
 </html>

@@ -13,7 +13,7 @@
             <!-- ============================================================== -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h4 class="text-themecolor">جــــــدول الحجوزات</h4>
+                    <h4 class="text-themecolor">جــــــدول الطلبات</h4>
                 </div>
                 <div class="col-md-7 align-self-center text-right">
                     <div class="d-flex justify-content-end align-items-center">
@@ -21,7 +21,6 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">الطلبات المؤكدة</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#modal-add-order2"><i class="fa fa-plus-circle"></i>اضـافة طلـب</button>
                     </div>
                 </div>
             </div>
@@ -41,6 +40,7 @@
                                     <tr>
                                         <th>اسم الزبون</th>
                                         <th>صورة الزبون</th>
+                                        <th>المناسبــــة</th>
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
                                         <th>تفاصيـل</th>
@@ -48,10 +48,16 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach(\App\Reservation::where('status','approuved')->get() as $reservation )
+                                    @foreach( auth()->user()->getReservation()->where('status','approuved') as $reservation )
                                         <tr>
+                                            @if($reservation->user)
                                             <td>{{$reservation->user->last_name.' '.$reservation->user->first_name }}</td>
-                                            <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                            <td><img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                            @else
+                                                <td>{{$reservation->reserver_name}}</td>
+                                                <td></td>
+                                            @endif
+                                            <td>{{$reservation->weddingType->name}}</td>
                                             <td>{{$reservation->date_from}}</td>
                                             <td>{{$reservation->date_to}}</td>
                                             <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
@@ -100,36 +106,50 @@
                         <h4 class="modal-title">اضـافة طلـب</h4>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="{{route('owner.reservation')}}">
                             @csrf
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">اسم الزبون</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <input type="text" name="reserver_name" class="form-control" id="recipient-name">
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">صورة الزبون (اختياري)</label>
-                                <input type="file" class="form-control" id="recipient-name">
+                                <label for="location1" class="control-label">القاعـــــــــة</label>
+                                <select class="custom-select form-control" id="location1" name="party_room_id">
+                                    <option value=""></option>
+                                    @foreach(\App\Party_room::all() as $room)
+                                        <option value="{{$room->id}}">{{$room->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location1" class="control-label">نـــــــوع المناسبـــة</label>
+                                <select class="custom-select form-control" id="location1" name="wedding_type_id">
+                                    <option value=""></option>
+                                    @foreach(\App\WeedingType::all() as $type)
+                                        <option value="{{$type->id}}">{{$type->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">بداية الحجـز</label>
-                                <input type="date" class="form-control" id="recipient-name">
+                                <input type="date" name="date_from" class="form-control" id="recipient-name">
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="control-label">نهاية الحجـز</label>
-                                <input type="date" class="form-control" id="message-text"/>
+                                <input type="date" name="date_to" class="form-control" id="message-text"/>
                             </div>
-                            <div class="form-group">
-                                <label for="message-text" class="control-label">المبلـغ المدفوع</label>
-                                <textarea class="form-control" id="message-text"></textarea>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">الــغاء</button>
+                                <button type="submit" class="btn btn-outline-success waves-effect waves-light">اضــافة</button>
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">الــغاء</button>
-                        <button type="button" class="btn btn-outline-success waves-effect waves-light">اضــافة</button>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+    <script src="{{asset('assets/js/admin/datatables.min.js')}}"></script>
 @endsection

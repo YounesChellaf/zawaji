@@ -19,6 +19,7 @@ class CreateMessagesTable extends Migration
             $table->string('email');
             $table->string('subject');
             $table->longText('message');
+            $table->enum('status', ['approved', 'disapproved'])->default('disapproved');
             $table->timestamps();
         });
     }

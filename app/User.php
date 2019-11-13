@@ -48,21 +48,32 @@ class User extends Authenticatable
         return $this->hasMany(Reservation::class);
     }
     function party_room(){
-        return $this->hasOne(Party_room::class);
+        return $this->hasOne(Party_room::class,'owner_id');
+    }
+
+    function image(){
+        return $this->belongsTo(Image::class);
     }
 
 
+    public  function getReservation(){
+        return $this->party_room->reservations;
+    }
 
-    public function active(){
-        switch ($this->active) {
-            case true:
-                echo '<label class="label label-success">فعـــــال</label>';
+    public function status(){
+        switch ($this->status) {
+            case 'approved':
+                echo '<label class="label label-success">مفــــعل </label>';
                 break;
-            case false:
-                echo '<label class="label label-danger">محظـــــور</label>';
+
+            case 'disapproved':
+                echo '<label class="label label-warning">غيـر مفــــعل بعد </label>';
                 break;
+            case 'banned':
+                echo '<label class="label label-danger">محظــــــور</label>';
+                break;
+
             default:
-                // code...
                 break;
         }
     }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
@@ -9,20 +10,22 @@ use Illuminate\Support\Facades\Auth;
 class Party_room extends Model
 {
     protected $guarded=[];
-
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
     function prices(){
-        return $this->hasMany('App\Price');
+        return $this->hasMany(Price::class);
     }
 
     function owner(){
-        return $this->belongsTo(User::class,'owner_id');
+        return $this->belongsTo(User::class);
     }
 
     function reservations(){
-        return $this->hasMany('App\Reservation');
+        return $this->hasMany(Reservation::class);
     }
     function  image(){
-        return $this->hasMany('App\Image');
+        return $this->hasMany(Image::class);
     }
 
     public function status(){
@@ -44,22 +47,25 @@ class Party_room extends Model
     }
     public static function new(Request $request){
         if ($request->post()){
+            //dd(array_merge($request->price,$request->fromdate,$request->todate));
             $party_room = Party_room::create([
                 'owner_id' => Auth::user()->id,
                 'name' => $request->name,
-                'city' => $request->city,
+                'city_id' => $request->city_id,
                 'phone_number' => $request->phone_number,
                 'email' => $request->email,
                 'description' => $request->description,
+                'type' => $request->type,
                 'location' => $request->location,
-                'number_room' => $request->number_room,
                 'total_capacity' => $request->total_capacity,
                 'capacity_men_room' => $request->capacity_men_room,
                 'capacity_women_room' => $request->capacity_women_room,
-//                'kitchen' => $request->kitchen,
-//                'theatre' => $request->theatre,
-//                'restaurent' => $request->restaurent,
-//                'parcking' => $request->parcking,
+                'kitchen' => $request->kitchen ? true :false,
+                'theatre' => $request->theatre ? true :false,
+                'jardin' => $request->jardin ? true :false,
+                'auditorium' => $request->auditorium ? true :false,
+                'parcking' => $request->parcking ? true :false,
+                'wifi' => $request->wifi ? true :false,
             ]);
                 $photo = $request->file('image');
                 $destpath = 'assets/images/party_room';
@@ -70,16 +76,42 @@ class Party_room extends Model
                     'path' => $file_name
                 ]);
             }
+            foreach ($request->price as $price ){
+            $i=0;
                 $price = Price::create([
                     'party_room_id' => $party_room->id,
-                    'price' => $request->input('price'),
-                    'date_from' => $request->input('fromdate'),
-                    'date_to' => $request->input('todate'),
+                    'price' => $price,
+                    'date_from' => $request->fromdate[$i],
+                    'date_to' => $request->todate[$i],
                 ]);
+                $i++;
+            }
             return $party_room;
         }
 
+        public function getPrice(){
+        $current_date = Carbon::now();
+        foreach ($this->prices as $price){
+            if ($current_date->between($price->date_from,$price->date_to)){
+                return $price->price;
+            }
+        }
+            return $price->price;
+        }
         public static function getRoom(){
              return Party_room::where('status','approved')->get();
+        }
+
+        public static function room_service($service){
+        if ($service)
+        {
+            echo '<label class="label label-success">متوفـــــر</label>';
+
+        }
+         else {
+             echo '<label class="label label-danger">غيـر متوفـــــر</label>';
+         }
+
+
         }
 }

@@ -1,12 +1,12 @@
 @extends('auth.master')
 @section('content')
     <section id="wrapper">
-        <div class="login-register" style="background-image:url({{asset('assets/images/landing3.jpg')}});">
+        <div class="login-register2" style="background-image:url({{asset('assets/images/landing3.jpg')}});">
             <div class="login-box card">
                 <div class="card-body" dir="rtl">
                     <form method="POST" action="{{ route('register') }}" class="form-horizontal form-material" id="loginform" >
                         @csrf
-                        <h3 class="text-center m-b-20">Sign Up</h3>
+                        <h3 class="text-center m-b-20">تسجيـــــــل الدخــول</h3>
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('name') }}" required autofocus placeholder="الاســــــم">
@@ -51,10 +51,9 @@
                             <div class="col-xs-12">
                                 <label for="type" class="col-form-label text-md-left">{{ __('نــــوع المستخـــدم') }}</label>
                                     <select id="type" name="type" class="form-control">
-                                        <option value="user"></option>
-                                        <option value="user">مستخــــدم عادي</option>
+                                        <option value="client"></option>
+                                        <option value="client">مستخــــدم عادي</option>
                                         <option value="owner">مالك قاعـــة</option>
-                                        <option value="admin">ادمــــــن</option>
                                     </select>
                             </div>
                         </div>
@@ -83,24 +82,17 @@
                                     <input id="password-confirm" placeholder="تاكيـد كلمـــة المـــرور" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">I agree to all <a href="javascript:void(0)">Terms</a></label>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="form-group text-center p-b-20">
                             <div class="col-xs-12">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('تسجيــــــل') }}
                                 </button>
                             </div>
                         </div>
                         <div class="form-group m-b-0">
                             <div class="col-sm-12 text-center">
-                                Already have an account? <a href="pages-login.html" class="text-info m-l-5"><b>Sign In</b></a>
+                                لــــديك حســاب من قبـل ؟ <a href="{{route('login')}}" class="text-info m-l-5"><b>الدخــــول</b></a>
                             </div>
                         </div>
                     </form>

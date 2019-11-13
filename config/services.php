@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -42,6 +43,17 @@ return [
             'secret' => env('STRIPE_WEBHOOK_SECRET'),
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
+    ],
+
+    'facebook' => [
+        'client_id' => '433091597345823',
+        'client_secret' => '90a535a5b6964f4e439630eb5714ed78',
+        'redirect' => 'http://localhost:8000/login/facebook/callback',
+    ],
+    'google' => [
+        'client_id' => '550084446720-l748qart1pqo7igce2s07k2iron3vh6m.apps.googleusercontent.com',
+        'client_secret' => 'oXBxd9c6hmJuwwO_XL3pCjBS',
+        'redirect' => 'http://localhost:8000/login/google/callback',
     ],
 
 ];

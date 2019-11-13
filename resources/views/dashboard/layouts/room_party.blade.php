@@ -7,13 +7,12 @@
     <link href="{{asset('assets/css/admin/form-icheck.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/dropify.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
-    <!-- Page plugins css -->
-    <!-- Color picker plugins css -->
-    <!-- Date picker plugins css -->
     <link href="{{asset('assets/css/admin/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css" />
-    <!-- Daterange picker plugins css -->
     <link href="{{asset('assets/css/admin/bootstrap-timepicker.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/admin/daterangepicker.css')}}" rel="stylesheet">
+    {{--DropZone multiFiles Css--}}
+    <link href="{{asset('assets/css/admin/dropzone.css')}}" rel="stylesheet" type="text/css" />
+    {{--End--}}
 @endsection
 @section('content')
     <div class="page-wrapper">
@@ -34,92 +33,117 @@
             <div class="row" id="validation" >
                  <div class="col-12">
                      <div class="card">
-        <div class="card-body wizard-content">
-            <h4 class="card-title">قـــم باضافة قاعة افراحك ضمن مجموعاتنا</h4>
-            <form action="{{route('party_room.store')}}" method="post"  enctype="multipart/form-data" class="tab-wizard wizard-circle">
-                <!-- Step 1 -->
-                {!! csrf_field()!!}
-                <h6>معلومات عامة</h6>
-                <section>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="firstName1">اســــم القــاعة:</label>
-                                <input type="text" class="form-control" id="firstName1" name="name" value="sfdfs"> </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="location1">المـــــدينة :</label>
-                                <select class="custom-select form-control" id="location1" name="city">
-                                    <option value="مكـــــــة"></option>
-                                    <option value="تبــــوك">تبــــوك</option>
-                                    <option value="جــــدة">جــــدة</option>
-                                    <option value="مكـــــــة">مكـــــــة</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="firstName1">رقم الهاتف:</label>
-                                <input type="text" class="form-control" id="firstName1" name="phone_number" value="234"> </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="firstName1">الايميـــــل:</label>
-                                <input type="text" class="form-control" id="firstName1" name="email" value="younes@gmail.com"> </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-material">
-                                <label for="firstName1">عنـــــوان القاعـــة:</label>
-                                <input type="text" class="form-control" id="firstName1" name="location" value="dsdsadas"> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-material">
-                            <label for="shortDescription1">مقال عن القـــــاعة :</label>
-                            <textarea name="description" id="shortDescription1" rows="6" class="form-control"></textarea>
-                        </div>
-                    </div>
-                </section>
+                         <div class="card-body wizard-content">
+                             <h4 class="card-title">قـــم باضافة قاعة افراحك ضمن مجموعاتنا</h4>
+                             <form action="{{route('owner-party_room.store')}}" method="post"  enctype="multipart/form-data" class="tab-wizard wizard-circle" >
+                <!-- Step 1 -->{!! csrf_field()!!}
+                                 <h6>معلومات عامة</h6>
+                                 <section>
+                                     <div class="row">
+                                         <div class="col-md-6">
+                                             <div class="form-material">
+                                                 <label for="firstName1">اســــم القــاعة:</label>
+                                                 <input type="text" class="form-control" id="firstName1" name="name" value="sfdfs">
+                                             </div>
+                                         </div>
+                                         <div class="col-md-6">
+                                             <div class="form-material">
+                                                 <label for="location1">المـــــدينة :</label>
+                                                 <select class="custom-select form-control" id="location1" name="city_id">
+                                                     <option value=""></option>
+                                                     @foreach(\App\City::all() as $city)
+                                                         <option value="{{$city->id}}">{{$city->name}}</option>
+                                                     @endforeach
+                                                 </select>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="row">
+                                         <div class="col-md-6">
+                                             <div class="form-material">
+                                                 <label for="firstName1">رقم الهاتف:</label>
+                                                 <input type="text" class="form-control" id="firstName1" name="phone_number" value="234">
+                                             </div>
+                                         </div>
+                                         <div class="col-md-6">
+                                             <div class="form-material">
+                                                 <label for="firstName1">الايميـــــل:</label>
+                                                 <input type="text" class="form-control" id="firstName1" name="email" value="younes@gmail.com">
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="row">
+                                         <div class="col-md-12">
+                                             <div class="form-material">
+                                                 <label for="firstName1">عنـــــوان القاعـــة:</label>
+                                                 <input type="text" class="form-control" id="firstName1" name="location" value="dsdsadas">
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-12">
+                                         <div class="form-material">
+                                             <label for="shortDescription1">مقال عن القـــــاعة :</label>
+                                             <textarea name="description" id="shortDescription1" rows="6" class="form-control"></textarea>
+                                         </div>
+                                     </div>
+                                 </section>
                 <!-- Step 2 -->
                 <h6>معلــــومات اضافيـة</h6>
                 <section>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="jobTitle1">السعـــة الكليــة :</label>
-                                <input type="text" class="form-control" id="jobTitle1" name="total_capacity" value="23"> </div>
+                    <div style="margin-top: 5%">
+                        <div class="row" style="margin-bottom: 7%">
+                            <div class="col-md-3">
+                                <div class="form-material">
+                                        <label for="email">نوع القـــــــــاعة</label>
+                                        <select name="type" id="roomType" class="form-control" >
+                                            <option value=""></option>
+                                            <option value="single">عـــــــادية</option>
+                                            <option value="double">مزدوجـــــــة</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div id="single">
+                                <div class="col-md-3">
+                                    <div class="form-material">
+                                        <label for="jobTitle1">الســـــــعة الكليـــة :</label>
+                                        <input type="text" class="form-control" id="jobTitle1" name="total_capacity" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="double" class="row">
+                                <div class="col-md-3">
+                                    <div class="form-material">
+                                        <label for="jobTitle1">سعـــة قاعـة الرجــال :</label>
+                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3" >
+                                    <div class="form-material">
+                                        <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
+                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room" value="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="jobTitle1">عـــدد القاعات :</label>
-                                <input type="text" class="form-control" id="jobTitle1" name="number_room" value="234"> </div>
+                        <div>
+                            <h5>الخصــــــائص </h5>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="jobTitle1">سعـــة قاعـة الرجــال :</label>
-                                <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" value="234"> </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-material">
-                                <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
-                                <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room" value="2321"> </div>
-                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-material">
                                     <div class="col-md-6 input-group" style="flex-direction: row">
                                         <ul style="list-style-type: none;">
                                             <li>
-                                                <input type="checkbox" class="check" name="kitchen">
+                                                <input type="checkbox" class="check" name="kitchen" value="1">
                                                 <label for="square-checkbox-1">مطعـــــــم</label>
                                             </li>
                                             <li>
-                                                <input type="checkbox" class="check" name="theatre">
+                                                <input type="checkbox" class="check" name="theatre" value="1">
                                                 <label for="square-checkbox-1">مســـــرح</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="check" name="jardin" value="1">
+                                                <label for="square-checkbox-1">حديـــــقة مرفقــة</label>
                                             </li>
                                         </ul>
                                     </div>
@@ -130,17 +154,22 @@
                                     <div class="col-md-6 input-group" style="flex-direction: row">
                                         <ul style="list-style-type: none;">
                                             <li>
-                                                <input type="checkbox" class="check" name="restaurent">
-                                                <label for="square-checkbox-1">قاعـــة مطعميـــة</label>
+                                                <input type="checkbox" class="check" name="wifi" value="1">
+                                                <label for="square-checkbox-1">واي فــاي</label>
                                             </li>
                                             <li>
-                                                <input type="checkbox" class="check" name="parcking">
+                                                <input type="checkbox" class="check" name="parcking" value="1">
                                                 <label for="square-checkbox-1">موقف سيــارات</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="check" name="auditorium" value="1">
+                                                <label for="square-checkbox-1">قاعــة محاضــرات</label>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </section>
                 <!-- Step 3 -->
@@ -153,8 +182,11 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">اضف الصورة الرئيسية</h4>
-                                            <input type="file" id="input-file-now" class="dropify" name="image"/>
+                                            <input type="file" name="image" multiple="multiple">
                                             <input type="hidden" name="nb" value="">
+                                                {{--<div class="">--}}
+                                                    {{--<input name="file" type="file" multiple />--}}
+                                                {{--</div>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -164,42 +196,83 @@
                 </section>
                 <!-- Step 4 -->
                 <h6>حـــــــدد سعـــــرك</h6>
-                <section>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-material">
-                                <label for="firstName1">السعـــــــر:</label>
-                                <input type="text" class="form-control" id="firstName1" name="price"> </div>
-                        </div>
-                        <div class="col-md-4">
-                                    <label class="m-t-20">مـــــــن :</label>
-                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="fromdate">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="m-t-20">الـــــــى :</label>
-                            <input type="date" class="form-control" placeholder="2017-06-04" id="mdate1" name="todate">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button class="btn btn-success" type="submit">submit</button>
-                    </div>
-                </section>
-            </form>
-        </div>
-    </div>
+                                 <section>
+                                     <div class="row">
+                                         <fieldset id="buildyourform" style="margin-bottom: 5%">
+                                             <legend></legend>
+                                             <div class="row">
+                                                 <div class="col-md-3">
+                                                     <div class="form-material">
+                                                         <label for="firstName1">السعـــــــر:</label>
+                                                         <input type="text" class="form-control" id="firstName1" name="price[]"> </div>
+                                                 </div>
+                                                 <div class="col-md-3">
+                                                     <label class="m-t-20">مـــــــن :</label>
+                                                     <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="fromdate[]">
+                                                 </div>
+                                                 <div class="col-md-3">
+                                                     <label class="m-t-20">الـــــــى :</label>
+                                                     <input type="date" class="form-control" placeholder="2017-06-04" id="mdate1" name="todate[]">
+                                                 </div>
+                                                 <div class="col-md-3" style="margin-top: 6%">
+                                                     <button  type="button" class="btn btn-success" id="add2">Add field</button>
+                                                 </div>
+                                             </div>
+                                         </fieldset>
+                                     </div>
+                                     {{--<input type="button" value="Add a field" class="add" id="add" />--}}
+                                 </section>
+                             </form>
+                         </div>
+                     </div>
                  </div>
             </div>
         </div>
     </div>
 @endsection
 @section('script')
+    <script>
+        $(document).ready(function() {
+            $("#add2").click(function() {
+                var intId = $("#buildyourform div").length + 1;
+                var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
+                var fName = $("<div class=\"row\">\n" +
+                    "                                         <div class=\"col-md-3\">\n" +
+                    "                                             <div class=\"form-material\">\n" +
+                    "                                                 <label for=\"firstName1\">السعـــــــر:</label>\n" +
+                    "                                                 <input type=\"text\" class=\"form-control\" id=\"firstName1\" name=\"price[]\"> </div>\n" +
+                    "                                         </div>\n" +
+                    "                                         <div class=\"col-md-3\">\n" +
+                    "                                             <label class=\"m-t-20\">مـــــــن :</label>\n" +
+                    "                                             <input type=\"date\" class=\"form-control\" placeholder=\"2017-06-04\" id=\"mdate\" name=\"fromdate[]\">\n" +
+                    "                                         </div>\n" +
+                    "                                         <div class=\"col-md-3\">\n" +
+                    "                                             <label class=\"m-t-20\">الـــــــى :</label>\n" +
+                    "                                             <input type=\"date\" class=\"form-control\" placeholder=\"2017-06-04\" id=\"mdate1\" name=\"todate[]\">\n" +
+                    "                                         </div>\n" +
+                    "                                     </div>");
+                // var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+                var removeButton = $("<button   style='position: relative; margin-left' type=\"button\" class=\"remove btn btn-danger\" value='\-\'>Delete</button>");
+                removeButton.click(function() {
+                    $(this).parent().remove();
+                });
+                fieldWrapper.append(fName);
+
+                fieldWrapper.append(removeButton);
+                $("#buildyourform").append(fieldWrapper);
+            });
+        });
+
+    </script>
     <script src="{{asset('assets/js/admin/jquery.steps.min.js')}}"></script>
     <script src="{{asset('assets/js/admin/jquery.validate.min.js')}}"></script>
     <script src="{{asset('assets/js/admin/sticky-kit.min.js')}}"></script>
     <script src="{{asset('assets/js/admin/sweetalert.min.js')}}"></script>
     <script src="{{asset('assets/js/admin/wysihtml5-0.3.0.js')}}"></script>
     <script src="{{asset('assets/js/admin/bootstrap-wysihtml5.js')}}"></script>
-
+    {{--DropZone multiFiles--}}
+    <script src="{{asset('assets/js/admin/dropzone.js')}}"></script>
+    {{--End--}}
     <script src="{{asset('assets/js/admin/icheck.min.js')}}"></script>
     <script src="{{asset('assets/js/admin/icheck.init.js')}}"></script>
     <script src="{{asset('assets/js/admin/dropify.min.js')}}"></script>
@@ -247,10 +320,7 @@
     </script>
     <script>
         $(document).ready(function() {
-
             $('.textarea_editor').wysihtml5();
-
-
         });
     </script>
     <script>
@@ -261,53 +331,23 @@
             transitionEffect: "fade",
             titleTemplate: '<span class="step">#index#</span> #title#',
             labels: {
-                finish: "Submit"
+                finish: "ارســــــال"
             },
-            onFinished: function (event, currentIndex) {
-                swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
 
+            onFinished: function (event, currentIndex) {
+                // swal({
+                //     title:"ارسال المحتــوى",
+                //     text: "سيتم النظــر في طلب اضــافـة قاعتكـم من طرف الادمــن لجعلهــا ظاهرة للمستخدميــن من اجل الحجــز، نرجــوا منكم الانتظـار من اجـل معالجـة الطلـب",
+                // });
+                setTimeout(function () {
+                    $(".tab-wizard").submit()
+                },swal({
+                    title:"ارسال المحتــوى",
+                    text: "سيتم النظــر في طلب اضــافـة قاعتكـم من طرف الادمــن لجعلهــا ظاهرة للمستخدميــن من اجل الحجــز، نرجــوا منكم الانتظـار من اجـل معالجـة الطلـب",
+                    timer : 5000
+                }));
             }
         });
-
-
-        var form = $(".validation-wizard").show();
-
-        $(".validation-wizard").steps({
-            headerTag: "h6",
-            bodyTag: "section",
-            transitionEffect: "fade",
-            titleTemplate: '<span class="step">#index#</span> #title#',
-            labels: {
-                finish: "Submit"
-            },
-            onStepChanging: function (event, currentIndex, newIndex) {
-                return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
-            },
-            onFinishing: function (event, currentIndex) {
-                return form.validate().settings.ignore = ":disabled", form.valid()
-            },
-            onFinished: function (event, currentIndex) {
-                swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-            }
-        }), $(".validation-wizard").validate({
-            ignore: "input[type=hidden]",
-            errorClass: "text-danger",
-            successClass: "text-success",
-            highlight: function (element, errorClass) {
-                $(element).removeClass(errorClass)
-            },
-            unhighlight: function (element, errorClass) {
-                $(element).removeClass(errorClass)
-            },
-            errorPlacement: function (error, element) {
-                error.insertAfter(element)
-            },
-            rules: {
-                email: {
-                    email: !0
-                }
-            }
-        })
     </script>
     <script src="{{asset('assets/js/admin/bootstrap-datepicker.min.js')}}"></script>
     <!-- Date range Plugin JavaScript -->
@@ -394,5 +434,51 @@
                 days: 6
             }
         });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var i=1;
+            $("input[name=nb]:hidden").val(i);
+            $("#add_row").click(function(){b=i-1;
+                $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
+                $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+                i++;
+                $("input[name=nb]:hidden").val(i);
+            });
+            $("#delete_row").click(function(){
+                if(i>1){
+                    $("#addr"+(i-1)).html('');
+                    i--;
+                    $("input[name=nb]:hidden").val(i);
+                }
+            });
+            i= $('#tab_logic1').children().length;
+            $("#add_row1").click(function(){b=i-1;
+                $('#add'+i).html($('#add'+b).html()).find('td:first-child').html(i+1);
+                $('#tab_logic1').append('<tr id="add'+(i+1)+'"></tr>');
+                i++;
+                $("input[name=nb]:hidden").val(i);
+            });
+            $("#delete_row1").click(function(){
+                if(i>1){
+                    $("#add"+(i-1)).html('');
+                    i--;
+                    $("input[name=nb]:hidden").val(i);
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#single').hide();
+            $('#double').hide();
+            $("#roomType").change(function () {
+                var roomtype = $("#roomType").val()
+                if (roomtype == "double"){
+                    $('#double').show();
+                }
+                else $('#single').show();
+            })
+        })
     </script>
 @endsection

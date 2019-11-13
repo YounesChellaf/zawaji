@@ -21,6 +21,7 @@ class Role extends Model
         if ($request->post()){
             $role =Role::create([
                 'name' => $request->name,
+                'guard_name' => 'fgfg',
             ]);
             return $role;
         }

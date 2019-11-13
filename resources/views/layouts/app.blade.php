@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" >
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +21,7 @@
     <link href="{{asset('assets/css/admin/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/sub-header-style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
+    @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,6 +36,14 @@
         }
     </style>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+
+    {{--//bootstrap studio--}}
+    <link rel="stylesheet" href="{{asset('assets/css/client/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/smoothproducts.css')}}">
+{{--// end bootstrap studio--}}
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 </head>
@@ -51,24 +60,28 @@
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <header class="header fixed-header navbar-expand-lg navbar-dark flex-column flex-md-row bd-navbar">
-        <nav class="navbar" style="color:#ffffff !important; background-color:#c74b6f;">
-            <a class="navbar-brand" href="/"><h3>زواجـــــي</h3></a>
+        <nav class="navbar" style="color:#ffffff !important; background-color:#c74b6f; ">
+            <a class="navbar-brand" href="{{route('zawaji.landing')}}"><h3>زواجـــــي</h3></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <div>
+                <ul class="navbar-nav mr-auto" >
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('zawaji.landing')}}">الرئيـسيــــة<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('zawaji.rooms')}}">قـــاعاتـنا</a>
                     </li>
                 </ul>
+                </div>
                 <div class="row">
+                    @if( auth()->guest())
                 <a class="nav-link" href="#" ><button class="btn btn-outline-light">دخــــــول</button></a>
                 <a class="nav-link " href="#"><button class="btn btn-outline-light">تسجيــل الدخــــــول</button></a>
+                    @endif
                 </div>
             </div>
         </nav>
@@ -126,6 +139,14 @@
 <script src="{{asset('assets/js/dashboard1.js')}}"></script>
 <script src="{{asset('assets/js/admin/jquery-ui.min.js')}}"></script>
 <script src="{{asset('assets/js/admin/moment.js')}}"></script>
+ {{--bootstrap studio--}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+<script src="{{asset('assets/js/smoothproducts.min.js')}}"></script>
+<script src="{{asset('assets/js/theme.js')}}"></script>
+@yield('js')
+{{--bootstrap studio end--}}
 {{--<script>--}}
     {{--$('.slider-for').slick({--}}
         {{--slidesToShow: 1,--}}
