@@ -43,11 +43,11 @@
                                         <th>المناسبــــة</th>
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
-                                        <th>تفاصيـل</th>
                                         <th>حـذف</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @if(auth()->user()->getReservation())
                                     @foreach( auth()->user()->getReservation()->where('status','approuved') as $reservation )
                                         <tr>
                                             @if($reservation->user)
@@ -60,10 +60,10 @@
                                             <td>{{$reservation->weddingType->name}}</td>
                                             <td>{{$reservation->date_from}}</td>
                                             <td>{{$reservation->date_to}}</td>
-                                            <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                             <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>

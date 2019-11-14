@@ -27,6 +27,12 @@ class UserController extends Controller
         return view('dashboard.admin_layouts.profile')->withUser($user);
     }
 
+    public function showOwnerProfile($id){
+        $user = User::find($id);
+        return view('dashboard.layouts.profile')->withUser($user);
+    }
+
+
     public function updateProfile($id,Request $request){
         if ($request->post()){
             $user = User::find($id);

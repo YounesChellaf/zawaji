@@ -43,13 +43,12 @@
                                         <th>المناسبــــة</th>
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
-                                        <th>تفاصيـل</th>
                                         <th>تأكيد الحـجز</th>
                                         <th>الــغاء</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    @if(auth()->user()->getReservation())
                                     @foreach( auth()->user()->getReservation()->where('status','draft') as $reservation )
                                     <tr>
                                         <td>{{$reservation->user->last_name.' '.$reservation->user->first_name }}</td>
@@ -57,11 +56,11 @@
                                         <td>{{$reservation->weddingType->name}}</td>
                                         <td>{{$reservation->date_from}}</td>
                                         <td>{{$reservation->date_to}}</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation-{{$reservation->id}}">تأكيد</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete-{{$reservation->id}}">الــغاء</button></td>
                                     </tr>
                                     @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>

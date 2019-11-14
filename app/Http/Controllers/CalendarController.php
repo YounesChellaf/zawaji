@@ -10,9 +10,8 @@ class CalendarController extends Controller
 
     public function showCalendar(){
         if (Reservation::where('status','approuved')->count()){
-            $Event = Reservation::where('status','approuved')->get();
-            foreach($Event as $event){
-                $events = Calendar::event(
+            foreach(Reservation::where('status','approuved')->get() as $event){
+                $events[] = \Calendar::event(
                     $event->weddingType->name, //event title
                     true, //full day event?
                     $event->date_from, //start time (you can also use Carbon instead of DateTime)

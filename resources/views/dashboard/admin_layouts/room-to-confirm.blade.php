@@ -46,16 +46,11 @@
                                             <div class="col-md-6">
                                                 <div >
                                                     <div class="sp-wrap">
-                                                        <a href="{{asset('assets/images/salle1.jpg')}}">
-                                                            <img class=" img-fluid d-block mx-auto" src="{{asset('assets/images/salle1.jpg')}}">
-                                                        </a>
-                                                        <a href="{{asset('assets/images/salle3.jpg')}}">
-                                                            <img class="img-fluid d-block mx-auto" src="{{asset('assets/images/salle3.jpg')}}">
-                                                        </a>
-                                                        <a href="{{asset('assets/images/salle2.jpg')}}">
-                                                            <img class="img-fluid d-block mx-auto" src="{{asset('assets/images/salle2.jpg')}}">
-                                                        </a>
-                                                        </a>
+                                                        @foreach( $room->image as $image)
+                                                            <a href="{{asset('assets/images/party_room/'.$image->path)}}">
+                                                                <img class=" img-fluid d-block mx-auto" src="{{asset('assets/images/party_room/'.$image->path)}}">
+                                                            </a>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>

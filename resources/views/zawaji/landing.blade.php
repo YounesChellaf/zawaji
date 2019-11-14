@@ -21,7 +21,9 @@
                             @else
                                 @if(auth()->user()->getRoleNames()[0] == 'owner')
                                 {{--<li><a href="{{route('invitations.index')}}">ارسل دعوة</a></li>--}}
-                                <li><a href="{{route('owner-party_room.index')}}"> أضف شركتك</a></li>
+                                <li><a href="{{route('owner-party_room.index')}}"> لوحــة تحكـــم شركتك</a></li>
+                                @elseif(auth()->user()->getRoleNames()[0] == 'admin')
+                                    <li><a href="{{route('admin.landing')}}">لوحــة تحكـــم الموقـع</a></li>
                                 @else
                                     <li><a href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
                                 @endif
@@ -149,10 +151,11 @@
                         </div>
                     </div>
                 @endforeach
-                    <div class="gallery-content row" style="margin-left: -10%">
-                        <a href="{{route('zawaji.rooms')}}" class="btn btn-default">اظهار المزيد</a>
-                    </div>
+
             </div> <!-- end of gallery-content -->
+            <div class="gallery-content row" style="margin-left: -10%">
+                <a href="{{route('zawaji.rooms')}}" class="btn btn-default">اظهار المزيد</a>
+            </div>
         </div> <!-- end of container -->
     </section> <!-- end of gallery -->
     @if(App\Message::where('status','approuved')->count())

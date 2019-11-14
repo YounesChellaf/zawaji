@@ -12,8 +12,8 @@ Route::post('/search-room','Party_roomController@search')->name('room.search');
 Route::get('/rooms', 'Party_roomController@ShowRooms')->name('zawaji.rooms');
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebookProvider')->name('auth.facebook');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookProviderCallback');
-Route::get('login/google', 'Auth\LoginController@redirectToGoogleProvider')->name('auth.google');
-Route::get('login/google/callback', 'Auth\LoginController@handleGoogleProviderCallback');
+Route::get('auth/google', 'Auth\LoginController@redirectToGoogleProvider')->name('auth.google');
+Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleProviderCallback');
 Route::resource('/reserve','ReservationController');
 
 Route::resource('invitations','InvitationController');
@@ -29,7 +29,8 @@ Route::group(['prefix'=>'/owner','middleware' => ['auth','role:owner']],function
     Route::resource('reservation','ReservationController');
     Route::get('reservation/confirm/{id}','ReservationController@confirm')->name('reservation.confirmation');
     Route::get('reservation/disapprouv/{id}','ReservationController@disapprouve')->name('reservation.disapprouv');
-
+    Route::get('/profile/{id}','UserController@showOwnerProfile')->name('owner.profile');
+    Route::post('/profile/{id}','UserController@updateProfile')->name('owner.profile.update');
     Route::get('/delivered-order',function (){
         return view('dashboard.layouts.delivered-order');
     })->name('owner.reservation.delivered');
@@ -72,6 +73,7 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','role:admin']],function
     Route::post('user/activate/{id}','UserController@activate')->name('admin.user.activate');
 });
 Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 

@@ -57,22 +57,22 @@
                                 <button class="btn btn-block btn-lg btn-danger btn-rounded" type="submit">دخــــول</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                <div class="social">
-                                    <button class="btn  btn-facebook" data-toggle="tooltip" title="الدخــــول باستعمال facebook"> <i aria-hidden="true" class="fab fa-facebook-f"></i> <a href="{{route('auth.facebook')}}"></a></button>
-                                    <button class="btn btn-googleplus" data-toggle="tooltip" title="Google الدخــــول باستعمال"> <i aria-hidden="true" class="fab fa-google-plus-g"></i> </button>
-                                    <a href="{{route('auth.google')}}">google</a>
-                                    <a href="{{route('auth.facebook')}}">facebook</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group m-b-0">
-                            <div class="col-sm-12 text-center">
-                                غـير مسجـــل بعــد ؟<a href="{{route('register')}}" class="text-info m-l-5"><b>تسجيـــل الدخــــول</b></a>
-                            </div>
-                        </div>
                     </form>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                            <div class="social">
+                                <a href="{{route('auth.facebook')}}"><button class="btn btn-facebook" data-toggle="tooltip" title="الدخــــول باستعمال facebook"> <i class="fab fa-facebook-f"></i></button></a>
+                                <a href="{{route('auth.google')}}"><button class="btn btn-googleplus" data-toggle="tooltip" title="Google الدخــــول باستعمال"> <i class="fab fa-google-plus-g"></i></button></a>
+                                {{--<a href="{{route('auth.google')}}">google</a>--}}
+                                {{--<a href="{{route('auth.facebook')}}">facebook</a>--}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            غـير مسجـــل بعــد ؟<a href="{{route('register')}}" class="text-info m-l-5"><b>تسجيـــل الدخــــول</b></a>
+                        </div>
+                    </div>
                     <form class="form-horizontal" id="recoverform" action="index.html">
                         <div class="form-group ">
                             <div class="col-xs-12">

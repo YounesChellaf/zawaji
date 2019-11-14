@@ -43,7 +43,7 @@
                                          <div class="col-md-6">
                                              <div class="form-material">
                                                  <label for="firstName1">اســــم القــاعة:</label>
-                                                 <input type="text" class="form-control" id="firstName1" name="name" value="sfdfs">
+                                                 <input type="text" class="form-control" id="firstName1" name="name" >
                                              </div>
                                          </div>
                                          <div class="col-md-6">
@@ -62,13 +62,13 @@
                                          <div class="col-md-6">
                                              <div class="form-material">
                                                  <label for="firstName1">رقم الهاتف:</label>
-                                                 <input type="text" class="form-control" id="firstName1" name="phone_number" value="234">
+                                                 <input type="text" class="form-control" id="firstName1" name="phone_number" >
                                              </div>
                                          </div>
                                          <div class="col-md-6">
                                              <div class="form-material">
                                                  <label for="firstName1">الايميـــــل:</label>
-                                                 <input type="text" class="form-control" id="firstName1" name="email" value="younes@gmail.com">
+                                                 <input type="text" class="form-control" id="firstName1" name="email" >
                                              </div>
                                          </div>
                                      </div>
@@ -76,7 +76,7 @@
                                          <div class="col-md-12">
                                              <div class="form-material">
                                                  <label for="firstName1">عنـــــوان القاعـــة:</label>
-                                                 <input type="text" class="form-control" id="firstName1" name="location" value="dsdsadas">
+                                                 <input type="text" class="form-control" id="firstName1" name="location" >
                                              </div>
                                          </div>
                                      </div>
@@ -106,7 +106,7 @@
                                 <div class="col-md-3">
                                     <div class="form-material">
                                         <label for="jobTitle1">الســـــــعة الكليـــة :</label>
-                                        <input type="text" class="form-control" id="jobTitle1" name="total_capacity" value="">
+                                        <input type="text" class="form-control" id="jobTitle1" name="total_capacity" >
                                     </div>
                                 </div>
                             </div>
@@ -114,13 +114,13 @@
                                 <div class="col-md-3">
                                     <div class="form-material">
                                         <label for="jobTitle1">سعـــة قاعـة الرجــال :</label>
-                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" value="">
+                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" >
                                     </div>
                                 </div>
                                 <div class="col-md-3" >
                                     <div class="form-material">
                                         <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
-                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room" value="">
+                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room">
                                     </div>
                                 </div>
                             </div>
@@ -182,11 +182,47 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">اضف الصورة الرئيسية</h4>
-                                            <input type="file" name="image" multiple="multiple">
+                                            <input class="dropify" type="file" name="image[]">
                                             <input type="hidden" name="nb" value="">
                                                 {{--<div class="">--}}
                                                     {{--<input name="file" type="file" multiple />--}}
                                                 {{--</div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-10">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">اضف الصورة الفرعية الاولى</h4>
+                                            <input class="dropify" type="file" name="image[]">
+                                            <input type="hidden" name="nb" value="">
+                                            {{--<div class="">--}}
+                                            {{--<input name="file" type="file" multiple />--}}
+                                            {{--</div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-10">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">اضف الصورة الفرعية الثانية</h4>
+                                            <input class="dropify" type="file" name="image[]">
+                                            <input type="hidden" name="nb" value="">
+                                            {{--<div class="">--}}
+                                            {{--<input name="file" type="file" multiple />--}}
+                                            {{--</div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-10">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">اضف الصورة الفرعية الثـالثـة</h4>
+                                            <input class="dropify" type="file" name="image[]">
+                                            <input type="hidden" name="nb" value="">
+                                            {{--<div class="">--}}
+                                            {{--<input name="file" type="file" multiple />--}}
+                                            {{--</div>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +251,7 @@
                                                      <input type="date" class="form-control" placeholder="2017-06-04" id="mdate1" name="todate[]">
                                                  </div>
                                                  <div class="col-md-3" style="margin-top: 6%">
-                                                     <button  type="button" class="btn btn-success" id="add2">Add field</button>
+                                                     <button  type="button" class="btn btn-success" id="add2">اضـــافة سعــر آخـــر</button>
                                                  </div>
                                              </div>
                                          </fieldset>
@@ -252,7 +288,7 @@
                     "                                         </div>\n" +
                     "                                     </div>");
                 // var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
-                var removeButton = $("<button   style='position: relative; margin-left' type=\"button\" class=\"remove btn btn-danger\" value='\-\'>Delete</button>");
+                var removeButton = $("<button   style='position: relative; margin-left' type=\"button\" class=\"remove btn btn-danger\" value='\-\'>حــــذف الخانـة</button>");
                 removeButton.click(function() {
                     $(this).parent().remove();
                 });

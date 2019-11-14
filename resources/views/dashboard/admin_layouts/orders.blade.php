@@ -62,7 +62,7 @@
                                             @endif
                                         </td>
                                         <td>{{$reservation->party_room->location}}</td>
-                                        <td>{{$reservation->user->first_name.''.$reservation->user->last_name}}</td>
+                                        <td>{{$reservation->user->first_name.' '.$reservation->user->last_name}}</td>
                                         <td>
                                             @if( ! $reservation->user->image_id)
                                                 <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />

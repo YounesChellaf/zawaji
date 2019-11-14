@@ -57,6 +57,7 @@ class User extends Authenticatable
 
 
     public  function getReservation(){
+        if ($this->party_room)
         return $this->party_room->reservations;
     }
 

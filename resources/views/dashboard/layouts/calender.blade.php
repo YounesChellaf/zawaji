@@ -48,7 +48,7 @@
                                         @if($calendar)
                                         {!! $calendar->calendar() !!}
                                         {!! $calendar->script() !!}
-                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +246,6 @@
             }
         });
     </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
     <script src='{{asset('assets/js/lang/ar-sa.js')}}'></script>
     <script>
         $(function() {

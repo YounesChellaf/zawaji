@@ -23,16 +23,11 @@
                                     <div class="col-md-6">
                                         <div >
                                             <div class="sp-wrap">
-                                                <a href="{{asset('assets/images/salle1.jpg')}}">
-                                                    <img class=" img-fluid d-block mx-auto" src="{{asset('assets/images/salle1.jpg')}}">
+                                                @foreach( $room->image as $image)
+                                                <a href="{{asset('assets/images/party_room/'.$image->path)}}">
+                                                    <img class=" img-fluid d-block mx-auto" src="{{asset('assets/images/party_room/'.$image->path)}}">
                                                 </a>
-                                                <a href="{{asset('assets/images/salle3.jpg')}}">
-                                                    <img class="img-fluid d-block mx-auto" src="{{asset('assets/images/salle3.jpg')}}">
-                                                </a>
-                                                <a href="{{asset('assets/images/salle2.jpg')}}">
-                                                    <img class="img-fluid d-block mx-auto" src="{{asset('assets/images/salle2.jpg')}}">
-                                                </a>
-                                                </a>
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -57,24 +52,24 @@
                                                 <i class="ti-user" style="margin-left: 3%"></i><h5>اســـم صـاحب القــاعــة : </h5><p style="padding-right: 3%"> {{$room->owner->first_name}}</p>
                                             </div>
                                             <div class="row">
-                                                <i class="ti-location-pin" style="margin-left: 3%"></i><h5>العنــــــوان : </h5><p style="padding-right: 3%"> {{$room->location}}</p>
+                                                <i class="ti-map-alt" style="margin-left: 3%"></i><h5>العنــــــوان : </h5><p style="padding-right: 3%"> {{$room->location}}</p>
                                             </div>
                                             @if($room->type == 'double')
                                                 <div class="row">
-                                                    <i class="ti-location-pin" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> مـزدوجـــــة </p>
+                                                    <i class="ti-face-smile" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> مـزدوجـــــة </p>
                                                 </div>
                                                 <div class="row">
-                                                    <i class="ti-location-pin" style="margin-left: 3%"></i><h5>سعـــــة قاعـــة الرجـــال : </h5><p style="padding-right: 3%"> {{$room->capacity_men_room}} شخـــص </p>
+                                                    <i class="ti-face-smile" style="margin-left: 3%"></i><h5>سعـــــة قاعـــة الرجـــال : </h5><p style="padding-right: 3%"> {{$room->capacity_men_room}} شخـــص </p>
                                                 </div>
                                                 <div class="row">
-                                                    <i class="ti-location-pin" style="margin-left: 3%"></i><h5>سعـــــة قاعـــة النســــاء : </h5><p style="padding-right: 3%">  {{$room->capacity_women_room}}  شخـــص</p>
+                                                    <i class="ti-face-smile" style="margin-left: 3%"></i><h5>سعـــــة قاعـــة النســــاء : </h5><p style="padding-right: 3%">  {{$room->capacity_women_room}}  شخـــص</p>
                                                 </div>
                                                 @else
                                                 <div class="row">
-                                                    <i class="ti-location-pin" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> احــــــادية </p>
+                                                    <i class="ti-home" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> احــــــادية </p>
                                                 </div>
                                                 <div class="row">
-                                                    <i class="ti-location-pin" style="margin-left: 3%"></i><h5>سعـــــة القاعـــة الكليــــة : </h5><p style="padding-right: 3%">  {{$room->total_capacity}} شخـــص</p>
+                                                    <i class="ti-face-smile" style="margin-left: 3%"></i><h5>سعـــــة القاعـــة الكليــــة : </h5><p style="padding-right: 3%">  {{$room->total_capacity}} شخـــص</p>
                                                 </div>
                                                 @endif
                                             <div class="row">

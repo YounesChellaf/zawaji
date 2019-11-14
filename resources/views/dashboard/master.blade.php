@@ -69,19 +69,20 @@
             <!-- ============================================================== -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
-                    <!-- Logo icon --><b>
-                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                        <!-- Dark Logo icon -->
-                        <img src="{{asset('assets/images/admin/logo-icon.png')}}" alt="homepage" class="dark-logo" />
-                        <!-- Light Logo icon -->
-                        <img src="{{asset('assets/images/admin/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
-                    </b>
-                    <!--End Logo icon -->
-                    <!-- Logo text --><span>
-                         <!-- dark Logo text -->
-                         <img src="{{asset('assets/images/admin/logo-text.png')}}" alt="homepage" class="dark-logo" />
-                        <!-- Light Logo text -->
-                         <img src="{{asset('assets/images/admin/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
+                    {{--<!-- Logo icon --><b>--}}
+                        {{--<!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->--}}
+                        {{--<!-- Dark Logo icon -->--}}
+                        {{--<img src="{{asset('assets/images/admin/logo-icon.png')}}" alt="homepage" class="dark-logo" />--}}
+                        {{--<!-- Light Logo icon -->--}}
+                        {{--<img src="{{asset('assets/images/admin/logo-light-icon.png')}}" alt="homepage" class="light-logo" />--}}
+                    {{--</b>--}}
+                    {{--<!--End Logo icon -->--}}
+                    {{--<!-- Logo text --><span>--}}
+                         {{--<!-- dark Logo text -->--}}
+                         {{--<img src="{{asset('assets/images/admin/logo-text.png')}}" alt="homepage" class="dark-logo" />--}}
+                        {{--<!-- Light Logo text -->--}}
+                         {{--<img src="{{asset('assets/images/admin/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> --}}
+                </a>
             </div>
             <!-- ============================================================== -->
             <!-- End Logo -->
@@ -122,6 +123,7 @@
                                 <li>
                                     <div class="message-center">
                                         <!-- Message -->
+                                        @if(auth()->user()->getReservation())
                                         @foreach( auth()->user()->getReservation()->where('status','draft') as $reservation )
                                         <a href="{{route('owner.reservation.undelivered')}}">
                                             <div class="btn btn-danger btn-circle"><i class="ti-agenda"></i></div>
@@ -129,6 +131,7 @@
                                                 <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">{{$reservation->created_at->format('d/m/Y')}}</span> </div>
                                         </a>
                                         @endforeach
+                                        @endif
                                     </div>
                                 </li>
                                 <li>
@@ -172,17 +175,11 @@
                         <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{auth()->user()->first_name.''.auth()->user()->last_name}}<span class="caret"></span></a>
                         <div class="dropdown-menu animated flipInY" dir="rtl" >
                             <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
-                            <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-email"></i> رسائلي</a>
+                            <a href="{{route('owner.profile',auth()->user()->id)}}" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
                             <!-- text-->
                             <div class="dropdown-divider"></div>
                             <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> اعدادات</a>
-                            <!-- text-->
-                            <div class="dropdown-divider"></div>
-                            <!-- text-->
-                            <a href="pages-login.html" class="dropdown-item"><i class="fa fa-power-off"></i>تسجيل الخروج</a>
+                            <a href="{{route('logout')}}" class="dropdown-item"><i class="fa fa-power-off"></i>تسجيل الخروج</a>
                             <!-- text-->
                         </div>
                     </div>

@@ -41,6 +41,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
+
+
 
     public function redirectToFacebookProvider()
     {
@@ -55,13 +62,17 @@ class LoginController extends Controller
     public function handleFacebookProviderCallback()
     {
         $facebookUser = Socialite::driver('facebook')->user();
-        if (! $user = User::where('email',$facebookUser->getEmail())->get()){
+        if (! User::where('email',$facebookUser->getEmail())->first()){
             $user = User::create([
                 'last_name' => $facebookUser->getName(),
                 'email' => $facebookUser->getEmail()
             ]);
             $user->assignRole(Role::where('name','client')->get());
         }
+        else {
+            $user = User::where('email',$facebookUser->getEmail())->first();
+        }
+
         Auth::login($user,true);
         return view('zawaji.landing');
     }
@@ -78,7 +89,18 @@ class LoginController extends Controller
      */
     public function handleGoogleProviderCallback()
     {
-        $user = Socialite::driver('google')->user();
+        $googleUser = Socialite::driver('google')->user();
+        if (! User::where('email',$googleUser->getEmail())->first()){
+            $user = User::create([
+                'last_name' => $googleUser->getName(),
+                'email' => $googleUser->getEmail()
+            ]);
+            $user->assignRole(Role::where('name','client')->get());
+        }
+        else {
+            $user = User::where('email',$googleUser->getEmail())->first();
+        }
+        Auth::login($user,true);
         return view('zawaji.landing');
     }
 }

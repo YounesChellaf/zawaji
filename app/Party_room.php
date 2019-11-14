@@ -67,14 +67,15 @@ class Party_room extends Model
                 'parcking' => $request->parcking ? true :false,
                 'wifi' => $request->wifi ? true :false,
             ]);
-                $photo = $request->file('image');
+            foreach ($request->file('image') as $photo){
                 $destpath = 'assets/images/party_room';
-                $file_name = $photo->getClientOriginalName();
+                $file_name = str_replace(' ', '', $photo->getClientOriginalName());
                 $photo->move($destpath,$file_name);
                 $image = Image::create([
                     'party_room_id' => $party_room->id,
                     'path' => $file_name
                 ]);
+            }
             }
             foreach ($request->price as $price ){
             $i=0;
