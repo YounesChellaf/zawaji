@@ -3,7 +3,7 @@
     <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="page-wrapper" style="width: 85% !important;">
+    <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
@@ -98,7 +98,7 @@
     </div>
     @foreach(\App\WeedingType::all() as $weddingType)
     <div class="col-md-4">
-        <div id="model-update-{{$wedding_type->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div id="model-update-{{$weddingType->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -128,7 +128,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div id="model-delete-{{$wedding_type->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div id="model-delete-{{$weddingType->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

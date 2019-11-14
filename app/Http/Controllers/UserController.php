@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -20,6 +22,39 @@ class UserController extends Controller
         return view('dashboard.admin_layouts.user-role');
     }
 
+    public function showProfile($id){
+        $user = User::find($id);
+        return view('dashboard.admin_layouts.profile')->withUser($user);
+    }
+
+    public function showOwnerProfile($id){
+        $user = User::find($id);
+        return view('dashboard.layouts.profile')->withUser($user);
+    }
+
+
+    public function updateProfile($id,Request $request){
+        if ($request->post()){
+            $user = User::find($id);
+            $user->first_name = $request->first_name;
+            $user->last_name = $request->last_name;
+            $user->address = $request->address;
+            $user->phone_number = $request->phone_number;
+
+            if ($request->file('photo')){
+                $photo = $request->file('photo');
+                $destpath = 'assets/images/avatar';
+                $file_name = $photo->getClientOriginalName();
+                $photo->move($destpath,$file_name);
+                $image = Image::create([
+                    'path' => $file_name
+                ]);
+                $user->image_id = $image->id;
+            }
+            $user->save();
+            return redirect()->back();
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -75,9 +110,18 @@ class UserController extends Controller
         //
     }
 
+
     public function bann($id){
         $user = User::find($id);
+        $user->status = 'banned';
         $user->active = false;
+        $user->save();
+        return view('dashboard.admin_layouts.user');
+    }
+    public function activate($id){
+        $user = User::find($id);
+        $user->status = 'approved';
+        $user->active = true;
         $user->save();
         return view('dashboard.admin_layouts.user');
     }

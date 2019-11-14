@@ -13,4 +13,17 @@ class Message extends Model
         return Message::create($request->all());
     }
 
+    public function status(){
+        switch ($this->status) {
+            case 'approved':
+                echo '<label class="label label-success">مؤكـــــد</label>';
+                break;
+
+            case 'disapproved':
+                echo '<label class="label label-warning">غيـر مؤكـد </label>';
+                break;
+            default:
+                break;
+        }
+    }
 }

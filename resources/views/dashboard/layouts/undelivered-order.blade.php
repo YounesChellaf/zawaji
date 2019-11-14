@@ -13,7 +13,7 @@
             <!-- ============================================================== -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h4 class="text-themecolor">جــــــدول الحجوزات</h4>
+                    <h4 class="text-themecolor">جــــــدول الطلبات</h4>
                 </div>
                 <div class="col-md-7 align-self-center text-right">
                     <div class="d-flex justify-content-end align-items-center">
@@ -21,7 +21,6 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">الطلبات المؤكدة</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#modal-add-order"><i class="fa fa-plus-circle"></i>اضافة طلب</button>
                     </div>
                 </div>
             </div>
@@ -41,25 +40,27 @@
                                     <tr>
                                         <th>اسم الزبون</th>
                                         <th>صورة الزبون</th>
+                                        <th>المناسبــــة</th>
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
-                                        <th>تفاصيـل</th>
                                         <th>تأكيد الحـجز</th>
                                         <th>الــغاء</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach(\App\Reservation::where('status','draft')->get() as $reservation )
+                                    @if(auth()->user()->getReservation())
+                                    @foreach( auth()->user()->getReservation()->where('status','draft') as $reservation )
                                     <tr>
                                         <td>{{$reservation->user->last_name.' '.$reservation->user->first_name }}</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td><img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td>{{$reservation->weddingType->name}}</td>
                                         <td>{{$reservation->date_from}}</td>
                                         <td>{{$reservation->date_to}}</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-confirmation-{{$reservation->id}}">تأكيد</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete-{{$reservation->id}}">الــغاء</button></td>
                                     </tr>
                                     @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>

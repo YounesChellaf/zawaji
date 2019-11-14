@@ -28,7 +28,6 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">رزنامة الافراح</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#model-add-reservation"><i class="fa fa-plus-circle"></i> اضف حدث جديد</button>
                     </div>
                 </div>
             </div>
@@ -43,11 +42,13 @@
                     <div class="card">
                         <div class="">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="card-body b-l calender-sidebar">
+                                <div class="col-lg-8">
+                                    <div class="card-body b-l ">
                                         {{--<div id="calendar"></div>--}}
+                                        @if($calendar)
                                         {!! $calendar->calendar() !!}
                                         {!! $calendar->script() !!}
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -163,6 +164,7 @@
     <script src="{{asset('assets/js/admin/bootstrap-timepicker.min.js')}}"></script>
     <script src="{{asset('assets/js/admin/daterangepicker.js')}}"></script>
     <script src="{{asset('assets/js/admin/bootstrap-material-datetimepicker.js')}}"></script>
+
     <!-- Clock Plugin JavaScript -->
     <script>
         // MAterial Date picker
@@ -242,6 +244,14 @@
             dateLimit: {
                 days: 6
             }
+        });
+    </script>
+    <script src='{{asset('assets/js/lang/ar-sa.js')}}'></script>
+    <script>
+        $(function() {
+            $('#calendar').fullCalendar({
+                lang: 'arSa'
+            });
         });
     </script>
 @endsection

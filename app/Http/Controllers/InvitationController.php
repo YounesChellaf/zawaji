@@ -19,7 +19,7 @@ class InvitationController extends Controller
      */
     public function index()
     {
-        //
+        return view('zawaji.invitation');
     }
 
     /**

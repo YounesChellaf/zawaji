@@ -3,7 +3,7 @@
     <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="page-wrapper" style="width: 85% !important;">
+    <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
@@ -54,10 +54,22 @@
                                     @foreach(\App\Reservation::all() as $reservation)
                                     <tr>
                                         <td>{{$reservation->party_room->owner->first_name.''.$reservation->party_room->owner->last_name}}</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td>
+                                            @if( ! $reservation->party_room->owner->image_id)
+                                                <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
+                                            @else
+                                                <img src="{{asset('assets/images/avatar/'.$reservation->party_room->owner->image->path)}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
+                                            @endif
+                                        </td>
                                         <td>{{$reservation->party_room->location}}</td>
-                                        <td>{{$reservation->user->first_name.''.$reservation->user->last_name}}</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td>{{$reservation->user->first_name.' '.$reservation->user->last_name}}</td>
+                                        <td>
+                                            @if( ! $reservation->user->image_id)
+                                                <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
+                                            @else
+                                                <img src="{{asset('assets/images/avatar/'.$reservation->user->image->path)}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
+                                            @endif
+                                        </td>
                                         <td>{{$reservation->date_from}}</td>
                                         <td>{{$reservation->date_to}}</td>
                                         <td>{{$reservation->status()}}</td>

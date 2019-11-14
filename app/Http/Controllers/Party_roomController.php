@@ -23,10 +23,53 @@ class Party_roomController extends Controller
         return view('dashboard.admin_layouts.rooms');
     }
 
+    public function complete(Request $request)
+    {
+        $search = $request->get('term');
+
+        $result = Party_room::where('status','approved')->where('name', 'LIKE', '%'. $search. '%')->get();
+        return response()->json($result);
+    }
+
+    public function search(Request $request){
+        if ($request->post()){
+            $room = Party_room::where('status','approved')->where('name',$request->room)->first();
+            return redirect()->route('zawaji.room-details',$room->id);
+        }
+    }
+
     public function roomDetails($id){
         $room = Party_room::find($id);
         return view('zawaji.room-details')->with('room',$room);
     }
+
+    public function ShowRooms(Party_room $room){
+        $rooms = Party_room::getRoom();
+        return view('zawaji.party_rooms')->withRooms($rooms);
+    }
+
+    public function filter(Request $request){
+
+        $city_id = $request->city_id;
+        $type = $request->type;
+        if ($city_id and !$type){
+            $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->get();
+            return view('zawaji.room-section')->withRooms($rooms);
+        }
+        else if (!$city_id and $type){
+            $rooms = Party_room::where('status','approved')->where('type',$type)->get();
+            return view('zawaji.room-section')->withRooms($rooms);
+        }
+        else if (!$city_id and !$type){
+            $rooms = Party_room::getRoom();
+            return view('zawaji.room-section')->withRooms($rooms);
+        }
+        $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->where('type',$type)->get();
+        return view('zawaji.room-section')->withRooms($rooms);
+
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -47,9 +90,10 @@ class Party_roomController extends Controller
     public function store(Request $request)
     {
         if ($request->post()){
+            //dd($request->kitchen);
                 //$validated = $request->validated();
-                Party_room::new($request);
-            return redirect('/');
+            Party_room::new($request);
+            return redirect()->route('zawaji.landing');
         }
     }
 
@@ -103,7 +147,7 @@ class Party_roomController extends Controller
         $party_room = Party_room::find($id);
         $party_room->status = 'approved';
         $party_room->save();
-        return redirect()->back();
+        return redirect()->route('admin.showRooms');
 
     }
     public function bann($id){

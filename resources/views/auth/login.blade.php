@@ -9,7 +9,7 @@
                         <h3 class="text-center m-b-20">الدخــــــــول</h3>
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input  id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -57,20 +57,22 @@
                                 <button class="btn btn-block btn-lg btn-danger btn-rounded" type="submit">دخــــول</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                <div class="social">
-                                    <button class="btn  btn-facebook" data-toggle="tooltip" title="الدخــــول باستعمال facebook"> <i aria-hidden="true" class="fab fa-facebook-f"></i> </button>
-                                    <button class="btn btn-googleplus" data-toggle="tooltip" title="Google الدخــــول باستعمال"> <i aria-hidden="true" class="fab fa-google-plus-g"></i> </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group m-b-0">
-                            <div class="col-sm-12 text-center">
-                                غـير مسجـــل بعــد ؟<a href="pages-register.html" class="text-info m-l-5"><b>تسجيـــل الدخــــول</b></a>
-                            </div>
-                        </div>
                     </form>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                            <div class="social">
+                                <a href="{{route('auth.facebook')}}"><button class="btn btn-facebook" data-toggle="tooltip" title="الدخــــول باستعمال facebook"> <i class="fab fa-facebook-f"></i></button></a>
+                                <a href="{{route('auth.google')}}"><button class="btn btn-googleplus" data-toggle="tooltip" title="Google الدخــــول باستعمال"> <i class="fab fa-google-plus-g"></i></button></a>
+                                {{--<a href="{{route('auth.google')}}">google</a>--}}
+                                {{--<a href="{{route('auth.facebook')}}">facebook</a>--}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            غـير مسجـــل بعــد ؟<a href="{{route('register')}}" class="text-info m-l-5"><b>تسجيـــل الدخــــول</b></a>
+                        </div>
+                    </div>
                     <form class="form-horizontal" id="recoverform" action="index.html">
                         <div class="form-group ">
                             <div class="col-xs-12">

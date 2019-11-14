@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Spatie\Permission\Models\Role;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/landing';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -66,14 +67,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        $user = User::create([
             'last_name' => $data['last_name'],
             'first_name' => $data['first_name'],
             'phone_number' => $data['phone_number'],
             'address' => $data['address'],
-            'type' => $data['type'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        if ($data['type']=='client'){
+            $role = Role::where('name','client')->get();
+            $user->assignRole($role);
+        }
+        else{
+            $role = Role::where('name','owner')->get();
+            $user->status = 'disapproved';
+            $user->active = false;
+            $user->save();
+            $user->assignRole($role);
+        }
+        return $user;
     }
 }

@@ -13,4 +13,8 @@ class City extends Model
            'name' => $request->name
         ]);
     }
+
+    public function room(){
+        return $this->hasMany(Party_room::class);
+    }
 }

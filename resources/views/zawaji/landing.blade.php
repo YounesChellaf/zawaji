@@ -15,24 +15,22 @@
                 <div class="navbar-wrapper">
                     <div id="navbar" class="collapse navbar-collapse pull-right" dir="rtl">
                         <ul class="nav navbar-nav" dir="rtl">
-                            @if( ! auth()->user())
-                                <li><a href="#">التسجيل</a></li>
-                                <li><a href="#">تسجيل الدخول</a></li>
+                            @if( ! auth()->user() )
+                                <li><a href="{{route('register')}}">التسجيل</a></li>
+                                <li><a href="{{route('login')}}">تسجيل الدخول</a></li>
                             @else
-                                <li><a href="#coming">ارسل دعوة</a></li>
-                                <li><a href="/owner/add_party_room"> أضف شركتك</a></li>
+                                @if(auth()->user()->getRoleNames()[0] == 'owner')
+                                {{--<li><a href="{{route('invitations.index')}}">ارسل دعوة</a></li>--}}
+                                <li><a href="{{route('owner-party_room.index')}}"> لوحــة تحكـــم شركتك</a></li>
+                                @elseif(auth()->user()->getRoleNames()[0] == 'admin')
+                                    <li><a href="{{route('admin.landing')}}">لوحــة تحكـــم الموقـع</a></li>
+                                @else
+                                    <li><a href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
+                                @endif
                             @endif
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >المدينــــة<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" >
-                                    <li><a href="/reserve">تبــــوك</a></li>
-                                    <li><a href="/reserve">جــــدة</a></li>
-                                    <li><a href="/reserve">الريــــاض</a></li>
-                                    <li><a href="/reserve">مكـــــــة</a></li>
-                                    <li><a href="/reserve">المدينـــــة</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/">الرئيــسية</a></li>
+                            <li><a href="#rsvp">تواصل معنـــا</a></li>
+                            <li><a href="#gallery">قــــاعاتنــا</a></li>
+                            <li><a href="{{route('zawaji.landing')}}">الرئيــسية</a></li>
                         </ul>
                     </div>
                     <button class="tog-nav btn btn-default">
@@ -64,14 +62,15 @@
             <div class="row">
                 <div class="col col-md-9">
                     <div class="button-group pull-left">
-                        <a href="#coming"><i class="fa fa-paper-plane"></i></a>
-                        <a href="/reserve" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
+                        <a href="#rsvp"><i class="fa fa-paper-plane"></i></a>
+                        <a href="{{route('zawaji.rooms')}}" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
                         <a href="#gallery"><i class="fa fa-heart"></i></a>
                     </div>
                     <div class="search pull-left">
-                        <form dir="rtl" action="/reserve">
+                        <form dir="rtl" method="post" action="{{route('room.search')}}">
+                            @csrf
                             <div class="form-group" dir="rtl" >
-                                <input type="text" class="form-control" placeholder="اختر قـــــاعتك" style="background-color: #393939;opacity:0.5;color: white; ::placeholder:{color: #1b1e21 !important;} ">
+                                <input id="search" name="room" type="text" class="form-control" placeholder="ابحــــث عن قـــــاعتك" style="background-color: #393939;opacity:0.5;color: white; ::placeholder:{color: #1b1e21 !important;} ">
                             </div>
                             <button type="submit" class="btn btn-default"><span> ابحث الان&nbsp;&nbsp; </span> <i class="fa fa-search"></i></button>
                         </form>
@@ -136,27 +135,30 @@
                 @foreach(\App\Party_room::getRoom() as $room)
                     <div class="col col-sm-6 col-md-4">
                         <div>
+
                             <img src="{{asset('assets/images/frame.png')}}" alt class="frame img img-responsive">
+                            <label dir="rtl" class="label label-warning" id="landing-price-btn"> ريال {{$room->getPrice()}}  </label>
                             <img src="{{asset('assets/images/party_room/'.$room->image[0]->path)}}"  style="border-radius: 50%;" alt class="thumb img img-responsive">
                             <button class="btn btn-default" dir="rtl">{{$room->name}}</button>
 
                             <div class="hover-content">
                                 <div>
                                     <h4>{{$room->name}}</h4>
-                                    <p>متواجدة في {{$room->city}}</p>
-                                    <a  href="/details" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                                    <p>متواجدة في {{$room->city->name}}</p>
+                                    <a  href="{{route('zawaji.room-details',$room->id)}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                    <div class="gallery-content row" style="margin-left: -10%">
-                        <a href="#" class="btn btn-default">اظهار المزيد</a>
-                    </div>
+
             </div> <!-- end of gallery-content -->
+            <div class="gallery-content row" style="margin-left: -10%">
+                <a href="{{route('zawaji.rooms')}}" class="btn btn-default">اظهار المزيد</a>
+            </div>
         </div> <!-- end of container -->
     </section> <!-- end of gallery -->
-
+    @if(App\Message::where('status','approuved')->count())
     <section class="our-story">
         <div class="container">
             <div class="section-title row">
@@ -169,7 +171,7 @@
             <div class="meet col">
                 <div class="col col-md-8 col-md-offset-2">
                     <div class="meet-slider">
-                        @foreach(\App\Message::all() as $message)
+                        @foreach(\App\Message::where('status','approuved')->get() as $message)
                             <div>
                                 <div class="title">
                                     <span>{{$message->name}}</span>
@@ -185,93 +187,94 @@
         </div> <!-- end of content -->
         </div> <!-- end of container -->
     </section> <!-- end of our-story -->
-
-    @if( auth()->user())
-        <section class="coming-soon" id="coming">
-            <div class="container">
-                <div class="section-title row">
-                    <div class="col col-md-4 col-md-offset-5" dir="rtl" style="text-align: center">
-                        <span></span>
-                        <h2>انت مدعو !</h2>
-                        <p>يتشرف زوارنا بتقديم دعوة زفاف لك</p>
-                    </div>
-                </div> <!-- end of section-title -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="evnt_card_container">
-                                <div class="containers">
-                                    <div class="cards" dir="rtl">
-                                        <div class="card front evnt_prt evnt_prt_1" dir="rtl">
-                                            <h2>موعد 1</h2>
-                                            <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
-                                            <p>منطقــة</p>
-                                            <button class="btn btn-primary btn_evnt">ســــــــاعة 1</button>
-                                        </div><!--.card .front .evnt_prt .evnt_prt_1-->
-                                        <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
-                                            <h2>انت مدعـو من طرف</h2>
-                                            <div class="evnt_addres">
-                                                <p>قاعــة الافراح 1</p>
-                                                <p>العنـــوان 1</p>
-                                                <p>يوم/شهر</p>
-                                                <p>ســــــــاعة</p>
-                                            </div>
-                                        </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
-                                    </div><!-- .cards-->
-                                </div><!--.containers-->
-                            </div><!-- .evnt_card_container-->
-                        </div>
-                        <div class="col-md-4">
-                            <div class="evnt_card_container">
-                                <div class="containers">
-                                    <div class="cards" dir="rtl">
-                                        <div class="card front evnt_prt evnt_prt_1" dir="rtl">
-                                            <h2>موعد 2</h2>
-                                            <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
-                                            <p>منطقــة</p>
-                                            <button class="btn btn-primary btn_evnt">ســــــــاعة 2</button>
-                                        </div><!--.card .front .evnt_prt .evnt_prt_1-->
-                                        <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
-                                            <h2>انت مدعـو من طرف</h2>
-                                            <div class="evnt_addres">
-                                                <p>قاعــة الافراح 2</p>
-                                                <p>العنـــوان 2</p>
-                                                <p>يوم/شهر</p>
-                                                <p>ســــــــاعة</p>
-                                            </div>
-                                        </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
-                                    </div><!-- .cards-->
-                                </div><!--.containers-->
-                            </div><!-- .evnt_card_container-->
-                        </div>
-                        <div class="col-md-4">
-                            <div class="evnt_card_container">
-                                <div class="containers">
-                                    <div class="cards" dir="rtl">
-                                        <div class="card front evnt_prt evnt_prt_1" dir="rtl">
-                                            <h2>موعد 3</h2>
-                                            <img src="{{asset('assets/images/event_icon1.png')}}" alt="" />
-                                            <p>منطقــة</p>
-                                            <button class="btn btn-primary btn_evnt">ســــــــاعة 3</button>
-                                        </div><!--.card .front .evnt_prt .evnt_prt_1-->
-                                        <div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">
-                                            <h2>انت مدعـو من طرف</h2>
-                                            <div class="evnt_addres">
-                                                <p>قاعــة الافراح3</p>
-                                                <p>العنـــوان 3</p>
-                                                <p>يوم/شهر</p>
-                                                <p>ســــــــاعة</p>
-                                            </div>
-                                        </div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->
-                                    </div><!-- .cards-->
-                                </div><!--.containers-->
-                            </div><!-- .evnt_card_container-->
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end of container -->
-        </section> <!-- end of coming-soon -->
     @endif
+    {{--Invitation Section--}}
+    {{--@if( auth()->user())--}}
+        {{--<section class="coming-soon" id="coming">--}}
+            {{--<div class="container">--}}
+                {{--<div class="section-title row">--}}
+                    {{--<div class="col col-md-4 col-md-offset-5" dir="rtl" style="text-align: center">--}}
+                        {{--<span></span>--}}
+                        {{--<h2>انت مدعو !</h2>--}}
+                        {{--<p>يتشرف زوارنا بتقديم دعوة زفاف لك</p>--}}
+                    {{--</div>--}}
+                {{--</div> <!-- end of section-title -->--}}
+                {{--<div class="container">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-4">--}}
+                            {{--<div class="evnt_card_container">--}}
+                                {{--<div class="containers">--}}
+                                    {{--<div class="cards" dir="rtl">--}}
+                                        {{--<div class="card front evnt_prt evnt_prt_1" dir="rtl">--}}
+                                            {{--<h2>موعد 1</h2>--}}
+                                            {{--<img src="{{asset('assets/images/event_icon1.png')}}" alt="" />--}}
+                                            {{--<p>منطقــة</p>--}}
+                                            {{--<button class="btn btn-primary btn_evnt">ســــــــاعة 1</button>--}}
+                                        {{--</div><!--.card .front .evnt_prt .evnt_prt_1-->--}}
+                                        {{--<div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">--}}
+                                            {{--<h2>انت مدعـو من طرف</h2>--}}
+                                            {{--<div class="evnt_addres">--}}
+                                                {{--<p>قاعــة الافراح 1</p>--}}
+                                                {{--<p>العنـــوان 1</p>--}}
+                                                {{--<p>يوم/شهر</p>--}}
+                                                {{--<p>ســــــــاعة</p>--}}
+                                            {{--</div>--}}
+                                        {{--</div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->--}}
+                                    {{--</div><!-- .cards-->--}}
+                                {{--</div><!--.containers-->--}}
+                            {{--</div><!-- .evnt_card_container-->--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-4">--}}
+                            {{--<div class="evnt_card_container">--}}
+                                {{--<div class="containers">--}}
+                                    {{--<div class="cards" dir="rtl">--}}
+                                        {{--<div class="card front evnt_prt evnt_prt_1" dir="rtl">--}}
+                                            {{--<h2>موعد 2</h2>--}}
+                                            {{--<img src="{{asset('assets/images/event_icon1.png')}}" alt="" />--}}
+                                            {{--<p>منطقــة</p>--}}
+                                            {{--<button class="btn btn-primary btn_evnt">ســــــــاعة 2</button>--}}
+                                        {{--</div><!--.card .front .evnt_prt .evnt_prt_1-->--}}
+                                        {{--<div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">--}}
+                                            {{--<h2>انت مدعـو من طرف</h2>--}}
+                                            {{--<div class="evnt_addres">--}}
+                                                {{--<p>قاعــة الافراح 2</p>--}}
+                                                {{--<p>العنـــوان 2</p>--}}
+                                                {{--<p>يوم/شهر</p>--}}
+                                                {{--<p>ســــــــاعة</p>--}}
+                                            {{--</div>--}}
+                                        {{--</div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->--}}
+                                    {{--</div><!-- .cards-->--}}
+                                {{--</div><!--.containers-->--}}
+                            {{--</div><!-- .evnt_card_container-->--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-4">--}}
+                            {{--<div class="evnt_card_container">--}}
+                                {{--<div class="containers">--}}
+                                    {{--<div class="cards" dir="rtl">--}}
+                                        {{--<div class="card front evnt_prt evnt_prt_1" dir="rtl">--}}
+                                            {{--<h2>موعد 3</h2>--}}
+                                            {{--<img src="{{asset('assets/images/event_icon1.png')}}" alt="" />--}}
+                                            {{--<p>منطقــة</p>--}}
+                                            {{--<button class="btn btn-primary btn_evnt">ســــــــاعة 3</button>--}}
+                                        {{--</div><!--.card .front .evnt_prt .evnt_prt_1-->--}}
+                                        {{--<div class="card back evnt_prt_back evnt_prt_back_1" dir="rtl">--}}
+                                            {{--<h2>انت مدعـو من طرف</h2>--}}
+                                            {{--<div class="evnt_addres">--}}
+                                                {{--<p>قاعــة الافراح3</p>--}}
+                                                {{--<p>العنـــوان 3</p>--}}
+                                                {{--<p>يوم/شهر</p>--}}
+                                                {{--<p>ســــــــاعة</p>--}}
+                                            {{--</div>--}}
+                                        {{--</div><!--.card .back .evnt_prt_back .evnt_prt_back_1-->--}}
+                                    {{--</div><!-- .cards-->--}}
+                                {{--</div><!--.containers-->--}}
+                            {{--</div><!-- .evnt_card_container-->--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div> <!-- end of container -->--}}
+        {{--</section> <!-- end of coming-soon -->--}}
+    {{--@endif--}}
     <section class="rsvp" id="rsvp">
         <div class="container">
             <div class="title row">
@@ -294,7 +297,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="post" action="/messages" id="rsvp-form">
+                    <form method="post" action="{{route('messages.store')}}" id="rsvp-form">
                         @csrf
                         <div class="form-group col col-sm-6">
                             <label for="email">العنوان البريدي</label>
@@ -332,10 +335,12 @@
                 </div>
                 <div class="social-links">
                     <ul class="nav">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        @foreach(\App\Link::all() as $link)
+                        <li><a href="{{$link->facebook}}"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="{{$link->instgram}}"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="{{$link->youtube}}"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="{{$link->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

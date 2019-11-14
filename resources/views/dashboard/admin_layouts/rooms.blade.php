@@ -1,4 +1,7 @@
 @extends('dashboard.master-admin')
+@section('css')
+    <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
+@endsection
 @section('content')
     <div class="page-wrapper">
         <!-- ============================================================== -->
@@ -44,20 +47,22 @@
                                         <th>تاريخ الاشتراك</th>
                                         <th>الحـــالـة</th>
                                         <th>تفاصيـل</th>
+                                        <th>تاكيـــد</th>
                                         <th>حـذف</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach(App\Party_room::all() as $room)
                                     <tr>
-                                        <td>Zorita Serrano</td>
+                                        <td>{{$room->owner->first_name.' '.$room->owner->last_name}}</td>
                                         <td>{{$room->name}}</td>
                                         <td>{{$room->location}}</td>
-                                        <td>{{$room->city}}</td>
+                                        <td>{{$room->city->name}}</td>
                                         <td>{{$room->phone_number}}</td>
                                         <td>{{$room->email}}</td>
                                         <td>{{$room->created_at->format('Y-m-d')}}</td>
                                         <td>{{$room->status()}}</td>
+                                        <td><a href="{{route('room-to-confirm',$room->id)}}"><button class="btn btn-rounded btn-outline-dark">تفاصيـل</button></a></td>
                                         <td><a href="/admin/rooms/approuv/{{$room->id}}"><button class="btn btn-rounded btn-outline-info">تاكيـــد</button></a></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حظـــــر</button></td>
                                     </tr>

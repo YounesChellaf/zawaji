@@ -1,4 +1,7 @@
 @extends('dashboard.master-admin')
+@section('css')
+    <link href="{{asset('assets/css/admin/dataTables.bootstrap.css')}}" rel="stylesheet">
+@endsection
 @section('content')
     <div class="page-wrapper">
         <!-- ============================================================== -->
@@ -18,7 +21,6 @@
                             <li class="breadcrumb-item"><a href="javascript:void(0)">الرئيسية</a></li>
                             <li class="breadcrumb-item active">المستخدمين</li>
                         </ol>
-                        <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#modal-add-user"><i class="fa fa-plus-circle"></i>اضـــافة عضـو</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +44,9 @@
                                         <th>الصورة</th>
                                         <th>نوع العضو</th>
                                         <th>العنـوان</th>
+                                        <th>رقم الهـاتف</th>
                                         <th>حالة المستخـدم</th>
+                                        <th>تفعيــــل</th>
                                         <th>حــظر</th>
                                     </tr>
                                     </thead>
@@ -52,10 +56,18 @@
                                         <td>{{$user->first_name}}</td>
                                         <td>{{$user->last_name}}</td>
                                         <td>{{$user->email}}</td>
-                                        <td><img src="{{asset('assets/images/admin/2.jpg')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px"></td>
+                                        <td>
+                                            @if( ! $user->image_id)
+                                                <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
+                                            @else
+                                                <img src="{{asset('assets/images/avatar/'.$user->image->path)}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
+                                            @endif
+                                        </td>
+                                        <td>{{$user->getRoleNames()[0]}}</td>
+                                        <td>{{$user->address}}</td>
                                         <td>{{$user->phone_number}}</td>
-                                        <td>{{$user->type}}</td>
-                                        <td>{{$user->active()}}</td>
+                                        <td>{{$user->status()}}</td>
+                                        <td><button class="btn btn-rounded btn-outline-success" data-toggle="modal" data-target="#model-activate-{{$user->id}}">تفعيـــل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete-{{$user->id}}">حــظر</button></td>
                                     </tr>
                                     @endforeach
@@ -91,6 +103,28 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
                         <button type="submit" class="btn btn-outline-danger">حــظر</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-activate-{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">تحذيــــــر</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    هل تريد تفعيل هذا العضو من جديــد
+                </div>
+                <form action="{{route('admin.user.activate',$user->id)}}" method="post">
+                    @csrf
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">الــغاء</button>
+                        <button type="submit" class="btn btn-outline-success">تفعيـــل</button>
                     </div>
                 </form>
             </div>
