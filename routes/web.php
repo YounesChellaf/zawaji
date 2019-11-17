@@ -2,9 +2,6 @@
 Route::get('/', function () {
     return view('zawaji.landing');
 })->name('zawaji.landing');
-Route::get('/reserve', function () {
-    return view('client.search_parties');
-});
 Route::get('/room-details/{id}','Party_roomController@roomDetails')->name('zawaji.room-details');
 Route::get('/autocomplete','Party_roomController@complete')->name('autocomplete');
 Route::get('/filtered-room','Party_roomController@filter')->name('filter');
@@ -15,7 +12,7 @@ Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookProvid
 Route::get('auth/google', 'Auth\LoginController@redirectToGoogleProvider')->name('auth.google');
 Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleProviderCallback');
 Route::resource('/reserve','ReservationController');
-
+Route::post('messages/send','MessageController@store')->name('message.send');
 Route::resource('invitations','InvitationController');
 
 Route::get('/room-to-confirm/{id}','MessageController@showRoom')->name('room-to-confirm');
@@ -43,13 +40,13 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','role:admin']],function
     //Test routes
     Route::get('/profile/{id}','UserController@showProfile')->name('admin.profile');
     Route::post('/profile/{id}','UserController@updateProfile')->name('profile.update');
-    Route::resource('messages','MessageController');
     Route::get('message/{id}','MessageController@approuve')->name('message.approuve');
     Route::get('/assign', 'Controller@assignRole');
 
     Route::resource('/weddingType','WeedingTypeController');
     Route::resource('users','UserController');
     Route::resource('cities','CityController');
+    Route::resource('messages','MessageController');
 
     Route::get('user-roles','UserController@show_users_role')->name('admin.users-roles');
     Route::get('/rooms/approuv/{id}','Party_roomController@approuv');
@@ -74,6 +71,8 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','role:admin']],function
 });
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return view('zawaji.landing');
+})->name('home');
 
 
