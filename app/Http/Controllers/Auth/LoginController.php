@@ -74,7 +74,7 @@ class LoginController extends Controller
         }
 
         Auth::login($user,true);
-        return view('zawaji.landing');
+        return redirect()->route('zawaji.landing');
     }
 
     public function redirectToGoogleProvider()
@@ -101,6 +101,6 @@ class LoginController extends Controller
             $user = User::where('email',$googleUser->getEmail())->first();
         }
         Auth::login($user,true);
-        return view('zawaji.landing');
+        return redirect()->route('zawaji.landing');
     }
 }

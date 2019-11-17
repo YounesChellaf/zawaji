@@ -158,7 +158,7 @@
             </div>
         </div> <!-- end of container -->
     </section> <!-- end of gallery -->
-    @if(App\Message::where('status','approuved')->count())
+    @if(App\Message::where('status','approved')->count())
     <section class="our-story">
         <div class="container">
             <div class="section-title row">
@@ -171,7 +171,7 @@
             <div class="meet col">
                 <div class="col col-md-8 col-md-offset-2">
                     <div class="meet-slider">
-                        @foreach(\App\Message::where('status','approuved')->get() as $message)
+                        @foreach(\App\Message::where('status','approved')->get() as $message)
                             <div>
                                 <div class="title">
                                     <span>{{$message->name}}</span>
@@ -297,7 +297,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="post" action="{{route('messages.store')}}" id="rsvp-form">
+                    <form method="post" action="{{route('message.send')}}" id="rsvp-form">
                         @csrf
                         <div class="form-group col col-sm-6">
                             <label for="email">العنوان البريدي</label>

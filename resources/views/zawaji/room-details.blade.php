@@ -139,7 +139,7 @@
     </section> <!-- end of rsvp -->
     <div class="col-md-8">
         <div id="model-reserve" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            @if(auth())
+            @if(auth()->user())
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
