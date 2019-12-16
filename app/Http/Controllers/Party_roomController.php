@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use App\Http\Requests\PartyRoomRequest;
 use App\Image;
 use App\Party_room;
@@ -27,14 +28,17 @@ class Party_roomController extends Controller
     {
         $search = $request->get('term');
 
-        $result = Party_room::where('status','approved')->where('name', 'LIKE', '%'. $search. '%')->get();
+        $result = City::where('name', 'LIKE', '%'. $search. '%')->get();
         return response()->json($result);
     }
 
     public function search(Request $request){
         if ($request->post()){
-            $room = Party_room::where('status','approved')->where('name',$request->room)->first();
-            return redirect()->route('zawaji.room-details',$room->id);
+            $city = City::where('name',$request->city)->first();
+            $rooms = $city->room->where('status','approved');
+            //$room = Party_room::where('status','approved')->where('name',$request->room)->first();
+//            return redirect()->route('zawaji.party_rooms',$rooms);
+            return view('zawaji.party_rooms')->withRooms($rooms)->withParty($rooms);
         }
     }
 
@@ -50,22 +54,29 @@ class Party_roomController extends Controller
 
     public function filter(Request $request){
 
-        $city_id = $request->city_id;
-        $type = $request->type;
-        if ($city_id and !$type){
-            $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->get();
-            return view('zawaji.room-section')->withRooms($rooms);
+//        dd(json_decode($request->rooms));
+        $collection = collect();
+        //dd(json_decode($request->rooms));
+        foreach (json_decode($request->rooms) as $room){
+            $city_id = $request->city_id;
+            $type = $request->type;
+            if ($city_id and !$type){
+//                $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->get();
+//                return view('zawaji.room-section')->withRooms($rooms);
+            }
+            else if (!$city_id and $type){
+                if ($room->type == $type)
+                    $collection->push($room);
+            }
+            else if (!$city_id and !$type){
+//                $rooms = Party_room::getRoom();
+//                return view('zawaji.room-section')->withRooms($rooms);
+            }
+//            $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->where('type',$type)->get();
+//            return view('zawaji.room-section')->withRooms($rooms);
         }
-        else if (!$city_id and $type){
-            $rooms = Party_room::where('status','approved')->where('type',$type)->get();
-            return view('zawaji.room-section')->withRooms($rooms);
-        }
-        else if (!$city_id and !$type){
-            $rooms = Party_room::getRoom();
-            return view('zawaji.room-section')->withRooms($rooms);
-        }
-        $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->where('type',$type)->get();
-        return view('zawaji.room-section')->withRooms($rooms);
+        return view('zawaji.room-section')->withRooms($collection);
+
 
 
     }
