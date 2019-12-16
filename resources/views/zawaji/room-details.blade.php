@@ -1,10 +1,4 @@
 @extends('layouts.app')
-@section('css')
-    <link href="{{asset('assets/css/admin/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/admin/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/css/admin/bootstrap-timepicker.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/admin/daterangepicker.css')}}" rel="stylesheet">
-@endsection
 @section('content')
     <section class="rsvp" id="rsvp">
         <div class="container">

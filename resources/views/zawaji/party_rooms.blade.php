@@ -1,26 +1,34 @@
 @extends('layouts.app')
+@section('css')
+    <link href="{{asset('assets/css/admin/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/admin/bootstrap-timepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin/daterangepicker.css')}}" rel="stylesheet">
+@endsection
 @section('content')
     <section class="rsvp" id="rsvp">
         <div class="container">
-            <div class="title row">
-                <div class="col col-md-12">
-                    <h1>اختـــــر قاعتـــــك</h1>
-                    <h3 class="para-with-bg"> مبارك عليك اخي و اختي الكريمين لاجل زواجكما، الان مهمتنا لتوفير حجز قاعة لعرسكما</h3>
-                </div>
-            </div>
+            {{--<div class="title row">--}}
+                {{--<div class="col col-md-12">--}}
+                    {{--<h1>اختـــــر قاعتـــــك</h1>--}}
+                    {{--<h3 class="para-with-bg"> مبارك عليك اخي و اختي الكريمين لاجل زواجكما، الان مهمتنا لتوفير حجز قاعة لعرسكما</h3>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="form row" dir="rtl">
                 <div class="col col-md-12">
                     <form method="post" action="/messages" >
                         @csrf
                         <div class="row">
-                            <div dir="rtl" class="col-md-6 col-sm-6 col-xs-12">
+                            <div dir="rtl" class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group" >
-                                    <label for="email">المدينــــة</label>
+                                    <label for="email">نوع الخدمــة</label>
                                     <select name="" id="cityID" class="form-control" style="background: #f2f2f2">
-                                        <option value=""></option>
-                                        @foreach(\App\City::all() as $city)
-                                            <option value="{{$city->id}}">{{$city->name}}</option>
-                                        @endforeach
+                                        <option value="">قــاعـة افراح</option>
+                                        <option value="">كوافيــــر </option>
+                                        <option value="">حلويـــات </option>
+                                        {{--@foreach(\App\City::all() as $city)--}}
+                                            {{--<option value="{{$city->id}}">{{$city->name}}</option>--}}
+                                        {{--@endforeach--}}
                                     </select>
                                 </div>
                             </div>
@@ -35,7 +43,7 @@
                                     {{--</select>--}}
                                 {{--</div>--}}
                             {{--</div>--}}
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label for="email">نوع القـــــــــاعة</label>
                                     <select name="" id="roomType" class="form-control" style="background: #f2f2f2">
@@ -44,6 +52,19 @@
                                         <option value="double">مزدوجـــــــة</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="email">التاريـــخ من</label>
+                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="date_from" style="background: #f2f2f2">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="email"> التاريـــخ الـى</label>
+                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="date_from" style="background: #f2f2f2">
+                                </div>
+                                <input type="hidden"  id="rooms" value="{{$party}}">
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -80,8 +101,13 @@
     </section>
 @endsection
 @section('js')
+    <script src="{{asset('assets/js/admin/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{asset('assets/js/admin/bootstrap-timepicker.min.js')}}"></script>
+    <script src="{{asset('assets/js/admin/daterangepicker.js')}}"></script>
+    <script src="{{asset('assets/js/admin/bootstrap-material-datetimepicker.js')}}"></script>
     <script>
         $(document).ready(function () {
+            var party_rooms = $("#rooms").val();
             $("#cityID,#roomType").change(function () {
                 var city = $("#cityID").val();
                 var type = $("#roomType").val();
@@ -91,13 +117,93 @@
                     type : 'get',
                     dataType : 'html',
                     url: '{{url('/filtered-room')}}',
-                    data : 'city_id=' + city+'&type='+ type,
+                    data : 'city_id=' + city+'&type='+ type+'&rooms='+ party_rooms,
                     success:function (response) {
                         // console.log(response);
                         $("#rooms-filtered").html(response);
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        // MAterial Date picker
+        $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate1').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate2').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate3').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate4').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate5').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+        $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+        $('#min-date').bootstrapMaterialDatePicker({ format: 'rerw/MM/YYYY HH:mm', minDate: new Date() });
+        // Clock pickers
+        $('#single-input').clockpicker({
+            placement: 'bottom',
+            align: 'left',
+            autoclose: true,
+            'default': 'now'
+        });
+        $('.clockpicker').clockpicker({
+            donetext: 'Done',
+        }).find('input').change(function() {
+            console.log(this.value);
+        });
+        $('#check-minutes').click(function(e) {
+            // Have to stop propagation here
+            e.stopPropagation();
+            input.clockpicker('show').clockpicker('toggleView', 'minutes');
+        });
+        if (/mobile/i.test(navigator.userAgent)) {
+            $('input').prop('readOnly', true);
+        }
+        // Colorpicker
+        $(".colorpicker").asColorPicker();
+        $(".complex-colorpicker").asColorPicker({
+            mode: 'complex'
+        });
+        $(".gradient-colorpicker").asColorPicker({
+            mode: 'gradient'
+        });
+        // Date Picker
+        jQuery('.mydatepicker, #datepicker').datepicker();
+        jQuery('#datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+        jQuery('#date-range').datepicker({
+            toggleActive: true
+        });
+        jQuery('#datepicker-inline').datepicker({
+            todayHighlight: true
+        });
+        // Daterange picker
+        $('.input-daterange-datepicker').daterangepicker({
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-danger',
+            cancelClass: 'btn-inverse'
+        });
+        $('.input-daterange-timepicker').daterangepicker({
+            timePicker: true,
+            format: 'MM/DD/YYYY h:mm A',
+            timePickerIncrement: 30,
+            timePicker12Hour: true,
+            timePickerSeconds: false,
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-danger',
+            cancelClass: 'btn-inverse'
+        });
+        $('.input-limit-datepicker').daterangepicker({
+            format: 'MM/DD/YYYY',
+            minDate: '06/01/2015',
+            maxDate: '06/30/2015',
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-danger',
+            cancelClass: 'btn-inverse',
+            dateLimit: {
+                days: 6
+            }
         });
     </script>
 @endsection

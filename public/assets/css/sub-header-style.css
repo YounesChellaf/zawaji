@@ -1121,8 +1121,8 @@ Version: 1.0
 
 .rsvp .form > .col,
 #blog-details .form > .col {
-    padding: 80px 80px;
-    margin-top: 30px;
+    padding: 20px 100px;
+    margin-top: -20px;
     position: relative;
     z-index: 10;
 }
