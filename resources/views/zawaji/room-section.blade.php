@@ -1,7 +1,6 @@
 <div class="container">
     <div class="gallery-content row">
-        @if( $rooms->count())
-            @foreach($rooms as $room)
+            @foreach($rooms->all() as $room)
                 <div class="col col-sm-6 col-md-4">
                     <div>
                         <label class="label label-warning" id="price-btn">{{$room->getPrice()}} ريال</label>
@@ -17,7 +16,5 @@
                     </div>
                 </div>
             @endforeach
-
-        @endif
     </div> <!-- end of gallery-content -->
 </div>

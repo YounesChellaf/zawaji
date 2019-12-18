@@ -28,8 +28,8 @@
                                     <li><a href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
                                 @endif
                             @endif
-                            <li><a href="#rsvp">تواصل معنـــا</a></li>
-                            <li><a href="#gallery">قــــاعاتنــا</a></li>
+                            {{--<li><a href="#rsvp">تواصل معنـــا</a></li>--}}
+                            {{--<li><a href="#gallery">قــــاعاتنــا</a></li>--}}
                             <li><a href="{{route('zawaji.landing')}}">الرئيــسية</a></li>
                         </ul>
                     </div>

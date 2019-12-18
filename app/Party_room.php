@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Party_room extends Model
 {
+   // protected $appends=['isReserved'];
     protected $guarded=[];
     public function city(){
         return $this->belongsTo(City::class);
@@ -112,7 +113,16 @@ class Party_room extends Model
          else {
              echo '<label class="label label-danger">غيـر متوفـــــر</label>';
          }
-
-
         }
+
+       public static function getIsReserved($id,$from = null,$to =null){
+        $room = Party_room::find($id);
+        $date_from =  new Carbon($from);
+        $date_to =  new Carbon($to);
+        foreach ($room->reservations as $reservation){
+            if ($reservation->date_from->between($date_from,$date_to))
+                return false;
+        }
+        return true;
+       }
 }

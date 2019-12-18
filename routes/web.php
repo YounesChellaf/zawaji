@@ -3,6 +3,7 @@ Route::get('/', function () {
     return view('zawaji.landing');
 })->name('zawaji.landing');
 Route::get('/room-details/{id}','Party_roomController@roomDetails')->name('zawaji.room-details');
+Route::get('/reservation-billing/{id}','Party_roomController@reservationBilling')->name('zawaji.reservation-billing');
 Route::get('/autocomplete','Party_roomController@complete')->name('autocomplete');
 Route::get('/filtered-room','Party_roomController@filter')->name('filter');
 Route::post('/search-room','Party_roomController@search')->name('room.search');
