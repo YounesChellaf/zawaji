@@ -35,7 +35,7 @@
                                                 {{--<h3>$300.00</h3>--}}
                                                 {{--</div>--}}
                                                 <div class="col-md-6">
-                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#model-reserve" > احجـــــــــــز الآن</button>
+                                                    <a href="{{route('zawaji.reservation-billing',$room->id)}}"><button class="btn btn-danger"> احجـــــــــــز الآن</button></a>
                                                 </div>
                                         </div>
                                         <div class="summary" dir="rtl" style="padding-right: 10%">

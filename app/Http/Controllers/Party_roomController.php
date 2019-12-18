@@ -52,6 +52,9 @@ class Party_roomController extends Controller
         return view('zawaji.party_rooms')->withRooms($rooms);
     }
 
+    public function reservationBilling($id){
+        return view('zawaji.billing')->withRoom(Party_room::find($id));
+    }
     public function filter(Request $request){
 
 //        dd(json_decode($request->rooms));
@@ -60,25 +63,29 @@ class Party_roomController extends Controller
         foreach (json_decode($request->rooms) as $room){
             $city_id = $request->city_id;
             $type = $request->type;
+            $date_from = $request->date_from;
+            $date_to = $request->date_to;
             if ($city_id and !$type){
 //                $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->get();
 //                return view('zawaji.room-section')->withRooms($rooms);
             }
             else if (!$city_id and $type){
                 if ($room->type == $type)
-                    $collection->push($room);
+                    $collection->push(Party_room::find($room->id));
             }
-            else if (!$city_id and !$type){
-//                $rooms = Party_room::getRoom();
+            else if (!$city_id and !$type and $date_from and $date_to ){
+
+                if (Party_room::find($room->id)->getIsReserved($room->id,$date_from,$date_to) )
+                    $collection->push(Party_room::find($room->id));
 //                return view('zawaji.room-section')->withRooms($rooms);
             }
 //            $rooms = Party_room::where('status','approved')->where('city_id',$city_id)->where('type',$type)->get();
 //            return view('zawaji.room-section')->withRooms($rooms);
         }
-        return view('zawaji.room-section')->withRooms($collection);
-
-
-
+        $rooms = $collection;
+//      $collection->forget([]);
+        //dd($rooms);
+        return view('zawaji.room-section')->withRooms($rooms);
     }
 
 

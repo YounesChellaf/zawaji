@@ -56,13 +56,13 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label for="email">التاريـــخ من</label>
-                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="date_from" style="background: #f2f2f2">
+                                    <input type="date" class="form-control from" placeholder="2017-06-04" id="mdate from" name="date_from" style="background: #f2f2f2">
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label for="email"> التاريـــخ الـى</label>
-                                    <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="date_from" style="background: #f2f2f2">
+                                    <input type="date" class="form-control to" placeholder="2017-06-04" id="to" name="date_to" style="background: #f2f2f2">
                                 </div>
                                 <input type="hidden"  id="rooms" value="{{$party}}">
                             </div>
@@ -74,7 +74,7 @@
             </div>
         </div> <!-- end of container -->
     </section> <!-- end of rsvp -->
-    <section class="gallery" id="rooms-filtered">
+    <section class="gallery rooms-filtered">
         <div class="container">
             <div class="gallery-content row">
                 @if( $rooms->count())
@@ -108,19 +108,22 @@
     <script>
         $(document).ready(function () {
             var party_rooms = $("#rooms").val();
-            $("#cityID,#roomType").change(function () {
+            $("#cityID,#roomType,#from,#to").change(function () {
                 var city = $("#cityID").val();
                 var type = $("#roomType").val();
+                var date_from = $("#from").val();
+                var date_to = $("#to").val();
                 $("#cityID").val(city);
                 $("#roomType").val(type);
                 $.ajax({
                     type : 'get',
                     dataType : 'html',
                     url: '{{url('/filtered-room')}}',
-                    data : 'city_id=' + city+'&type='+ type+'&rooms='+ party_rooms,
+                    data : 'city_id=' + city+'&type='+ type+'&date_from='+ date_from+'&date_to='+ date_to+'&rooms='+ party_rooms,
                     success:function (response) {
-                        // console.log(response);
-                        $("#rooms-filtered").html(response);
+                        //console.log(party_rooms);
+                         console.log(response);
+                        $(".rooms-filtered").html(response);
                     }
                 });
             });

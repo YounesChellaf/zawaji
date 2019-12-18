@@ -73,15 +73,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <div class="col-md-8">
                 <ul class="navbar-nav mr-auto" >
-                    <li class="nav-item active" style="margin-left: 3%">
-                        <a class="nav-link" href="{{route('zawaji.landing')}}">الرئيـسيــــة<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active" style="margin-left: 3%">
-                        <a class="nav-link" href="{{route('zawaji.rooms')}}">قـــاعاتـنا</a>
-                    </li>
-                    <li class="nav-item active" style="margin-left: 3%">
-                        <a class="nav-link" href="{{route('zawaji.landing')}}">تواصـــل معنا</a>
-                    </li>
+                    {{--<li class="nav-item active" style="margin-left: 3%">--}}
+                        {{--<a class="nav-link" href="{{route('zawaji.landing')}}">الرئيـسيــــة<span class="sr-only">(current)</span></a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item active" style="margin-left: 3%">--}}
+                        {{--<a class="nav-link" href="{{route('zawaji.rooms')}}">قـــاعاتـنا</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item active" style="margin-left: 3%">--}}
+                        {{--<a class="nav-link" href="{{route('zawaji.landing')}}">تواصـــل معنا</a>--}}
+                    {{--</li>--}}
                 </ul>
                 </div>
                 <div class="row col-md-4">
