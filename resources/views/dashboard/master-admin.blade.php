@@ -213,6 +213,7 @@
                     <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">اعـــدادات عــامة</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('weddingType.index')}}">انـــواع الافـراح</a></li>
+                            <li><a href="{{route('priceCategory.index')}}">فلتـــر الاسعـــار</a></li>
                             <li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>
                         </ul>
                 </ul>

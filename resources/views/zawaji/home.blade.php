@@ -70,14 +70,14 @@
 <script src="{{asset('assets/js/jquery-1.11.3.min.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 
-<!--  Plugins for this template -->
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.lwtCountdown-1.0.js')}}"></script>
-<script src="{{asset('assets/js/nivo-lightbox.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.nicescroll.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.appear.js')}}"></script>
-<script src="{{asset('assets/js/classie.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/validate.js')}}"></script>
+{{--<!--  Plugins for this template -->--}}
+{{--<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/jquery.lwtCountdown-1.0.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/nivo-lightbox.min.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/jquery.nicescroll.min.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/jquery.appear.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/classie.js')}}"></script>--}}
+{{--<script type="text/javascript" src="{{asset('assets/js/validate.js')}}"></script>--}}
 
 <!-- Custom script for this pages -->
 <script src="{{asset('assets/js/index-script.js')}}"></script>

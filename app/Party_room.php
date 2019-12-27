@@ -46,6 +46,10 @@ class Party_room extends Model
                 break;
         }
     }
+    public function type(){
+        if ($this->type == 'double') return 'مزدوجـــة';
+        return 'احــــاديـة';
+    }
     public static function new(Request $request){
         if ($request->post()){
             //dd(array_merge($request->price,$request->fromdate,$request->todate));
@@ -124,5 +128,9 @@ class Party_room extends Model
                 return false;
         }
         return true;
+       }
+
+       public function getName(){
+        return str_replace(' ','-',$this->name);
        }
 }

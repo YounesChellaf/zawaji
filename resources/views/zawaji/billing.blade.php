@@ -16,7 +16,7 @@
                                 <div class="row" >
                                     <div class="col-md-6 container">
                                         <div class="center">
-                                            <h3>اصدقائك حجزوا في {{$room->name}}  </h3>
+                                            <h3>اصدقائك ايضــا حجزوا في {{$room->name}}  </h3>
                                         </div>
                                         <table class="table table-striped"  dir="rtl">
                                             <thead>
@@ -60,7 +60,27 @@
                                                 <label for="recipient-name" class="control-label">تاريخ  الحجــــــز</label>
                                                 <input type="date" class="form-control" placeholder="2017-06-04" id="mdate" name="date_from">
                                             </div>
-                                            <input type="hidden" name="party_room_id" value="{{$room->id}}">
+                                            <div class="form-group" dir="rtl">
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="recipient-name" class="control-label">طريقــة الدفـــع</label>
+                                                    <select class="custom-select form-control" id="payment_method" name="payment_method">
+                                                        <option value=""></option>
+                                                        <option value="partial"> دفـــع عربــــون</option>
+                                                        <option value="cash"> دفـــع المبلغ كاملا</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6" id="partial">
+                                                    <label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>
+                                                    <input name="price" type="text" class="form-control">
+                                                </div>
+                                                <div class="col-md-6" id="cash">
+                                                     <label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>
+                                                     <input name="price" type="text" value="{{$room->getPrice()}} ريــــال" class="form-control" disabled>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" id="party_room_id" name="party_room_id" value="{{$room->id}}">
                                         </form>
                                     </div>
 
@@ -136,22 +156,45 @@
 @section('js')
     <script>
         $(document).ready(function () {
+            $('#cash').hide();
             $('#mdate').change(function () {
                 var date = $('#mdate').val();
-                $("#reserver_user").html(
-                    '                @foreach($room->reservations as $reservation)\n' +
-                    '                <tr>\n' +
-                    '                @if( ! $reservation->user->image_id)\n' +
-                    '                <td style="width: 20%"><img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80%;height: 15%"/></td>\n' +
-                    '                @else\n' +
-                    '                <td><img src="{{asset('assets/images/avatar/'.auth()->user()->image->path)}}" alt="user-img" class="img-circle" /></td>\n' +
-                    '                @endif\n' +
-                    '                <td >{{$reservation->user->last_name.' '.$reservation->user->first_name}}</td>\n' +
-                    '                <td>{{$reservation->date_from->format('d-m-Y')}}</td>\n' +
-                    '                </tr>\n' +
-                    '                @endforeach\n'
-                );
+                var room_id = $('#party_room_id').val();
+                $.ajax({
+                   type: 'get',
+                   dataType : 'html',
+                   url : '{{url('/friend-reservation')}}',
+                    data: 'date='+ date+'&room_id='+ room_id,
+                    success:function (response) {
+                        $("#reserver_user").html(response)
+                    }
+                });
 
+                {{--$("#reserver_user").html(--}}
+                    {{--'                @foreach($room->reservations as $reservation)\n' +--}}
+                    {{--'                <tr>\n' +--}}
+                    {{--'                @if( ! $reservation->user->image_id)\n' +--}}
+                    {{--'                <td style="width: 20%"><img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80%;height: 15%"/></td>\n' +--}}
+                    {{--'                @else\n' +--}}
+                    {{--'                <td><img src="{{asset('assets/images/avatar/'.auth()->user()->image->path)}}" alt="user-img" class="img-circle" /></td>\n' +--}}
+                    {{--'                @endif\n' +--}}
+                    {{--'                <td >{{$reservation->user->last_name.' '.$reservation->user->first_name}}</td>\n' +--}}
+                    {{--'                <td>{{$reservation->date_from->format('d-m-Y')}}</td>\n' +--}}
+                    {{--'                </tr>\n' +--}}
+                    {{--'                @endforeach\n'--}}
+                {{--);--}}
+
+            })
+            $('#payment_method').change(()=>{
+                var method = $('#payment_method').val();
+                if ( method == 'cash'){
+                    $('#cash').show();
+                    $('#partial').hide();
+                }
+                else {
+                    $('#cash').hide();
+                    $('#partial').show();
+                }
             })
         })
     </script>

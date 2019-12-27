@@ -48,7 +48,7 @@ class User extends Authenticatable
         return $this->hasMany(Reservation::class);
     }
     function party_room(){
-        return $this->hasOne(Party_room::class,'owner_id');
+        return $this->hasMany(Party_room::class,'owner_id');
     }
 
     function image(){
@@ -57,8 +57,12 @@ class User extends Authenticatable
 
 
     public  function getReservation(){
+        $reservations = collect();
         if ($this->party_room)
-        return $this->party_room->reservations;
+            foreach ($this->party_room as $room){
+            $reservations->push($room->reservations);
+            }
+        return $reservations;
     }
 
     public function status(){

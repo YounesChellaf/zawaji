@@ -86,8 +86,10 @@
                 </div>
                 <div class="row col-md-4">
                     @if( auth()->guest())
-                <a class="nav-link" href="#" ><button class="btn btn-outline-light">دخــــــول</button></a>
-                <a class="nav-link " href="#"><button class="btn btn-outline-light">تسجيــل الدخــــــول</button></a>
+                <a class="nav-link" href="{{route('register')}}" ><button class="btn btn-outline-light">دخــــــول</button></a>
+                <a class="nav-link " href="{{route('login')}}"><button class="btn btn-outline-light">تسجيــل الدخــــــول</button></a>
+                        @else
+                        <a class="nav-link" href="{{route('logout')}}" ><button class="btn btn-outline-light">الخــــروج</button></a>
                     @endif
                 </div>
             </div>
@@ -114,6 +116,9 @@
     <!-- ============================================================== -->
     <!-- ============================================================== -->
 </div>
+
+<!-- end of footer -->
+
 <!-- ============================================================== -->
 <!-- End Wrapper -->
 <!-- ============================================================== -->

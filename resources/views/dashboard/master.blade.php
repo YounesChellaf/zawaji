@@ -123,15 +123,15 @@
                                 <li>
                                     <div class="message-center">
                                         <!-- Message -->
-                                        @if(auth()->user()->getReservation())
-                                        @foreach( auth()->user()->getReservation()->where('status','draft') as $reservation )
-                                        <a href="{{route('owner.reservation.undelivered')}}">
-                                            <div class="btn btn-danger btn-circle"><i class="ti-agenda"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">{{$reservation->created_at->format('d/m/Y')}}</span> </div>
-                                        </a>
-                                        @endforeach
-                                        @endif
+                                        {{--@if(auth()->user()->getReservation())--}}
+                                        {{--@foreach( auth()->user()->getReservation()->where('status','draft') as $reservation )--}}
+                                        {{--<a href="{{route('owner.reservation.undelivered')}}">--}}
+                                            {{--<div class="btn btn-danger btn-circle"><i class="ti-agenda"></i></div>--}}
+                                            {{--<div class="mail-contnet">--}}
+                                                {{--<h5>شخـــص آ</h5> <span class="mail-desc">لديك طلــــب حجز قاعـة</span> <span class="time">{{$reservation->created_at->format('d/m/Y')}}</span> </div>--}}
+                                        {{--</a>--}}
+                                        {{--@endforeach--}}
+                                        {{--@endif--}}
                                     </div>
                                 </li>
                                 <li>
@@ -189,7 +189,8 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- بخصوص القـاعـة</li>
-                    <li> <a class="waves-effect waves-dark" href="{{route('party_room.addRoom')}}" aria-expanded="false"><i class="ti-home"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="{{route('party_room.showRoom')}}" aria-expanded="false"><i class="ti-home"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
+                    <li> <a class="waves-effect" href="#" aria-expanded="false"><i class="ti-money"></i><span class="hide-menu">الدفع الالكتروني </span></a></li>
                     <li> <a class="waves-effect waves-dark" href="{{route('owner.calendar')}}" aria-expanded="false"><i class="ti-agenda"></i><span class="hide-menu">تاريخ المناسبـــــــات </span></a></li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-pin2"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
@@ -265,7 +266,6 @@
                     }
             }
         ],
-
         "language": {
             "sProcessing": "جارٍ التحميل...",
             "sLengthMenu": "أظهر MENU مدخلات",
