@@ -10,7 +10,7 @@
                             <div>
                                 <h4>{{$room->name}}</h4>
                                 <p>متواجدة في {{$room->city->name}}</p>
-                                <a  href="{{route('zawaji.room-details',$room->id)}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                                <a  href="{{route('zawaji.room-details',[$room->id,$room->getName()])}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                             </div>
                         </div>
                     </div>

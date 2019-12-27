@@ -2,11 +2,12 @@
 Route::get('/', function () {
     return view('zawaji.landing');
 })->name('zawaji.landing');
-Route::get('/room-details/{id}','Party_roomController@roomDetails')->name('zawaji.room-details');
-Route::get('/reservation-billing/{id}','Party_roomController@reservationBilling')->name('zawaji.reservation-billing');
+Route::get('/{id}/{name}/قاعات-زفاف-المملكة-العربية-السعودية','Party_roomController@roomDetails')->name('zawaji.room-details');
+Route::get('/{id}/حجــز-قاعة-زفاف','Party_roomController@reservationBilling')->name('zawaji.reservation-billing');
 Route::get('/autocomplete','Party_roomController@complete')->name('autocomplete');
 Route::get('/filtered-room','Party_roomController@filter')->name('filter');
-Route::post('/search-room','Party_roomController@search')->name('room.search');
+Route::get('/friend-reservation','Party_roomController@friendReservation')->name('friend_reservation');
+Route::post('قاعات-زفاف-المملكة-العربية-السعودية/','Party_roomController@search')->name('room.search');
 Route::get('/rooms', 'Party_roomController@ShowRooms')->name('zawaji.rooms');
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebookProvider')->name('auth.facebook');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookProviderCallback');
@@ -16,12 +17,17 @@ Route::resource('/reserve','ReservationController');
 Route::post('messages/send','MessageController@store')->name('message.send');
 Route::resource('invitations','InvitationController');
 
+
+
 Route::get('/room-to-confirm/{id}','MessageController@showRoom')->name('room-to-confirm');
 
 Route::group(['prefix'=>'/owner','middleware' => ['auth','role:owner']],function (){
     Route::resource('owner-party_room','Party_roomController');
     Route::get('/calendar','CalendarController@showCalendar')->name('owner.calendar');
-    Route::get('/add-party_room','Party_roomController@index')->name('party_room.addRoom');
+    Route::get('/add-party_room','Party_roomController@create')->name('party_room.addRoom');
+    Route::get('/party_room','Party_roomController@index')->name('party_room.showRoom');
+    Route::get('/party_room/{id}','Party_roomController@edit')->name('party_room.edit');
+    Route::get('/delete_party_room/{id}','Party_roomController@destroy')->name('party_room.deleteRoom');
     Route::post('/calendar','CalendarController@CreateEvent');
     Route::post('/reserve','ReservationController@OwnerReservation')->name('owner.reservation');
     Route::resource('reservation','ReservationController');
@@ -45,6 +51,7 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','role:admin']],function
     Route::get('/assign', 'Controller@assignRole');
 
     Route::resource('/weddingType','WeedingTypeController');
+    Route::resource('/priceCategory','PriceCategoryController');
     Route::resource('users','UserController');
     Route::resource('cities','CityController');
     Route::resource('messages','MessageController');

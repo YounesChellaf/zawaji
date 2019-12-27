@@ -19,6 +19,11 @@
                                 <li><a href="{{route('register')}}">التسجيل</a></li>
                                 <li><a href="{{route('login')}}">تسجيل الدخول</a></li>
                             @else
+                                @if( ! auth()->user()->image_id)
+                                    <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle"  style="width: 10%" />
+                                @else
+                                    <img src="{{asset('assets/images/avatar/'.auth()->user()->image->path)}}" alt="user-img" class="img-circle" style="width: 10%"/>
+                                @endif
                                 @if(auth()->user()->getRoleNames()[0] == 'owner')
                                 {{--<li><a href="{{route('invitations.index')}}">ارسل دعوة</a></li>--}}
                                 <li><a href="{{route('owner-party_room.index')}}"> لوحــة تحكـــم شركتك</a></li>

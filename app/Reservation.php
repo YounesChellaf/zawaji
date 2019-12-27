@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
@@ -71,6 +72,15 @@ class Reservation extends Model
 
             default:
                 break;
+        }
+    }
+
+    public function ApproximateDateReservation($test_date){
+        $date = new Carbon($test_date);
+        $inf_limit = $date->subDays(10);
+        $max_limit = $date->addDays(10);
+        if ($this->date_from->between($inf_limit,$max_limit)){
+            return true;
         }
     }
 }

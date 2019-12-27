@@ -19,19 +19,6 @@
                     <form method="post" action="/messages" >
                         @csrf
                         <div class="row">
-                            <div dir="rtl" class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="form-group" >
-                                    <label for="email">نوع الخدمــة</label>
-                                    <select name="" id="cityID" class="form-control" style="background: #f2f2f2">
-                                        <option value="">قــاعـة افراح</option>
-                                        <option value="">كوافيــــر </option>
-                                        <option value="">حلويـــات </option>
-                                        {{--@foreach(\App\City::all() as $city)--}}
-                                            {{--<option value="{{$city->id}}">{{$city->name}}</option>--}}
-                                        {{--@endforeach--}}
-                                    </select>
-                                </div>
-                            </div>
                             {{--<div class="col-md-4 col-sm-6 col-xs-12">--}}
                                 {{--<div class="form-group">--}}
                                     {{--<label for="email">السعـــــــــر</label>--}}
@@ -53,10 +40,26 @@
                                     </select>
                                 </div>
                             </div>
+                            <div dir="rtl" class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group" >
+                                    <label for="email">الفئـة السعريـة</label>
+                                    <select name="" id="price" class="form-control" style="background: #f2f2f2">
+                                        <option value=""></option>
+                                        @if(\App\PriceCategory::all()->count())
+                                            @foreach(\App\PriceCategory::all() as $priceCategory)
+                                                <option value="{{$priceCategory->id}}">{{$priceCategory->from .' - '.$priceCategory->to .'ريــال'}} </option>
+                                            @endforeach
+                                        @else
+                                            <option value="">لا يــوجـد</option>
+                                        @endif
+
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label for="email">التاريـــخ من</label>
-                                    <input type="date" class="form-control from" placeholder="2017-06-04" id="mdate from" name="date_from" style="background: #f2f2f2">
+                                    <input type="date" class="form-control from" placeholder="2017-06-04" id="from" name="date_from" style="background: #f2f2f2">
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -88,7 +91,7 @@
                                     <div>
                                         <h4>{{$room->name}}</h4>
                                         <p>متواجدة في {{$room->city->name}}</p>
-                                        <a  href="{{route('zawaji.room-details',$room->id)}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
+                                        <a  href="{{route('zawaji.room-details',[$room->id,$room->getName()])}}" class="btn btn-default" data-lightbox-gallery="gallery2">تفاصيل</a>
                                     </div>
                                 </div>
                             </div>
@@ -108,18 +111,19 @@
     <script>
         $(document).ready(function () {
             var party_rooms = $("#rooms").val();
-            $("#cityID,#roomType,#from,#to").change(function () {
-                var city = $("#cityID").val();
+            $("#price,#roomType,#from,#to").change(function () {
+                var price = $("#price").val();
                 var type = $("#roomType").val();
                 var date_from = $("#from").val();
                 var date_to = $("#to").val();
-                $("#cityID").val(city);
+                $("#price").val(price);
                 $("#roomType").val(type);
                 $.ajax({
                     type : 'get',
                     dataType : 'html',
                     url: '{{url('/filtered-room')}}',
-                    data : 'city_id=' + city+'&type='+ type+'&date_from='+ date_from+'&date_to='+ date_to+'&rooms='+ party_rooms,
+
+                    data : 'price=' + price+'&type='+ type+'&date_from='+ date_from+'&date_to='+ date_to+'&rooms='+ party_rooms,
                     success:function (response) {
                         //console.log(party_rooms);
                          console.log(response);
