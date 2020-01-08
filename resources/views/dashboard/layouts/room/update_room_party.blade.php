@@ -96,17 +96,17 @@
                                                 <div class="form-material">
                                                     <label for="email">نوع القـــــــــاعة</label>
                                                     <select name="type" id="roomType" class="form-control" >
-                                                        <option value=""></option>
+                                                        <option id="first_option" value=""></option>
                                                         <option value="single">عـــــــادية</option>
                                                         <option value="double">مزدوجـــــــة</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div id="single">
-                                                <div class="col-md-3">
+                                                <div class="col-md-6">
                                                     <div class="form-material">
                                                         <label for="jobTitle1">الســـــــعة الكليـــة :</label>
-                                                        <input type="text" class="form-control" id="jobTitle1" name="total_capacity" >
+                                                        <input type="text" class="form-control" id="jobTitle1" name="total_capacity" value="{{$room->total_capacity}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,13 +114,13 @@
                                                 <div class="col-md-3">
                                                     <div class="form-material">
                                                         <label for="jobTitle1">سعـــة قاعـة الرجــال :</label>
-                                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" >
+                                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_men_room" value="{{$room->capacity_men_room}}" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3" >
                                                     <div class="form-material">
                                                         <label for="jobTitle1">سعـــة قاعـة النســــاء :</label>
-                                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room">
+                                                        <input type="text" class="form-control" id="jobTitle1" name="capacity_women_room" value="{{$room->capacity_women_room}}" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -134,7 +134,7 @@
                                                     <div class="col-md-6 input-group" style="flex-direction: row">
                                                         <ul style="list-style-type: none;">
                                                             <li>
-                                                                <input type="checkbox" class="check" name="kitchen" value="1">
+                                                                <input type="checkbox" class="check"   name="kitchen" value="1">
                                                                 <label for="square-checkbox-1">مطعـــــــم</label>
                                                             </li>
                                                             <li>
@@ -178,6 +178,20 @@
                                     <div class="form-group">
                                         <div class="col-md-12">
                                             <div class="row">
+                                                @foreach( $room->image as $image)
+                                                    <div class="col-lg-6 col-md-10">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">اضف الصورة الرئيسية</h4>
+                                                                <input class="dropify" type="image" name="image[]" src="{{asset('assets/images/party_room/'.$image->path)}}">
+                                                                <input type="hidden" name="nb" value="">
+                                                                {{--<div class="">--}}
+                                                                {{--<input name="file" type="file" multiple />--}}
+                                                                {{--</div>--}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
                                                 <div class="col-lg-6 col-md-10">
                                                     <div class="card">
                                                         <div class="card-body">
@@ -508,12 +522,29 @@
         $(document).ready(function () {
             $('#single').hide();
             $('#double').hide();
+                @if($room->type == "double")
+                    $('#double').show();
+                    $('#first_option').val('double');
+                    $('#first_option').html('مزدوجـــــــة');
+                @else
+                    $('#single').show();
+                    $('#first_option').val('single');
+                    $('#first_option').html('عـــــــادية');
+                @endif
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
             $("#roomType").change(function () {
                 var roomtype = $("#roomType").val()
                 if (roomtype == "double"){
                     $('#double').show();
+                    $('#single').hide();
                 }
-                else $('#single').show();
+                else {
+                    $('#single').show();
+                    $('#double').hide();
+                }
             })
         })
     </script>

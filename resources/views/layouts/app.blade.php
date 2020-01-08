@@ -125,6 +125,7 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
+
 <script src="{{asset('assets/js/admin/jquery-3.2.1.min.js')}}"></script>
 <!-- Bootstrap popper Core JavaScript -->
 <script src="{{asset('assets/js/popper.min.js')}}"></script>
@@ -185,5 +186,6 @@
     {{--$('.single-item').slick();--}}
 
 {{--</script>--}}
+
 </body>
 </html>

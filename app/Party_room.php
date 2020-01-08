@@ -105,7 +105,7 @@ class Party_room extends Model
             return $price->price;
         }
         public static function getRoom(){
-             return Party_room::where('status','approved')->get();
+             return Party_room::where('status','approved')->paginate(2);
         }
 
         public static function room_service($service){

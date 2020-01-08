@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                             <div id="single">
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-material">
                                         <label for="jobTitle1">الســـــــعة الكليـــة :</label>
                                         <input type="text" class="form-control" id="jobTitle1" name="total_capacity" >
@@ -512,8 +512,12 @@
                 var roomtype = $("#roomType").val()
                 if (roomtype == "double"){
                     $('#double').show();
+                    $('#single').hide();
                 }
-                else $('#single').show();
+                else {
+                    $('#single').show();
+                    $('#double').hide();
+                }
             })
         })
     </script>
