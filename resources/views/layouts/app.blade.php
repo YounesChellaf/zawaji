@@ -73,22 +73,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <div class="col-md-8">
                 <ul class="navbar-nav mr-auto" >
-                    {{--<li class="nav-item active" style="margin-left: 3%">--}}
-                        {{--<a class="nav-link" href="{{route('zawaji.landing')}}">الرئيـسيــــة<span class="sr-only">(current)</span></a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item active" style="margin-left: 3%">--}}
-                        {{--<a class="nav-link" href="{{route('zawaji.rooms')}}">قـــاعاتـنا</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item active" style="margin-left: 3%">--}}
-                        {{--<a class="nav-link" href="{{route('zawaji.landing')}}">تواصـــل معنا</a>--}}
-                    {{--</li>--}}
+                    <li class="nav-item active" style="margin-left: 3%">
+                        <a class="nav-link" href="{{route('zawaji.landing')}}">الرئيـسيــــة<span class="sr-only">(current)</span></a>
+                    </li>
+                    @if(auth()->user())
+                        @if(auth()->user()->getRoleNames()[0] == 'owner')
+                            {{--<li><a href="{{route('invitations.index')}}">ارسل دعوة</a></li>--}}
+                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('owner-party_room.index')}}"> لوحــة تحكـــم شركتك</a></li>
+                        @elseif(auth()->user()->getRoleNames()[0] == 'admin')
+                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('admin.landing')}}">لوحــة تحكـــم الموقـع</a></li>
+                        @else
+                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
+                        @endif
+                    @endif
                 </ul>
                 </div>
                 <div class="row col-md-4">
                     @if( auth()->guest())
-                <a class="nav-link" href="{{route('register')}}" ><button class="btn btn-outline-light">دخــــــول</button></a>
-                <a class="nav-link " href="{{route('login')}}"><button class="btn btn-outline-light">تسجيــل الدخــــــول</button></a>
-                        @else
+                        <a class="nav-link" href="{{route('register')}}" ><button class="btn btn-outline-light">دخــــــول</button></a>
+                        <a class="nav-link " href="{{route('login')}}"><button class="btn btn-outline-light">تسجيــل الدخــــــول</button></a>
+                    @else
                         <a class="nav-link" href="{{route('logout')}}" ><button class="btn btn-outline-light">الخــــروج</button></a>
                     @endif
                 </div>
@@ -125,6 +129,7 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
+
 <script src="{{asset('assets/js/admin/jquery-3.2.1.min.js')}}"></script>
 <!-- Bootstrap popper Core JavaScript -->
 <script src="{{asset('assets/js/popper.min.js')}}"></script>
@@ -185,5 +190,6 @@
     {{--$('.single-item').slick();--}}
 
 {{--</script>--}}
+
 </body>
 </html>

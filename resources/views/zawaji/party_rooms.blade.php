@@ -14,7 +14,7 @@
                     {{--<h3 class="para-with-bg"> مبارك عليك اخي و اختي الكريمين لاجل زواجكما، الان مهمتنا لتوفير حجز قاعة لعرسكما</h3>--}}
                 {{--</div>--}}
             {{--</div>--}}
-            <div class="form row" dir="rtl">
+            <div class="form row" style="text-align: right">
                 <div class="col col-md-12">
                     <form method="post" action="/messages" >
                         @csrf

@@ -9,6 +9,7 @@ use App\Party_room;
 use App\PriceCategory;
 use Carbon\CarbonImmutable;
 use Illuminate\Http\Request;
+use Rap2hpoutre\LaravelStripeConnect\Stripe;
 
 class Party_roomController extends Controller
 {
@@ -49,10 +50,10 @@ class Party_roomController extends Controller
         return view('zawaji.room-details')->with('room',$room);
     }
 
-    public function ShowRooms(Party_room $room){
-        $rooms = Party_room::getRoom();
-        return view('zawaji.party_rooms')->withRooms($rooms);
-    }
+//    public function ShowRooms(Party_room $room){
+//        $rooms = Party_room::getRoom();
+//        return view('zawaji.party_rooms')->withRooms($rooms);
+//    }
 
     public function reservationBilling($id){
         return view('zawaji.billing')->withRoom(Party_room::find($id));

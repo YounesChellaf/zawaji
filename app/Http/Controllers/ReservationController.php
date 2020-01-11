@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ReservationRequest;
+use App\Party_room;
 use App\Reservation;
 use Illuminate\Http\Request;
+use Rap2hpoutre\LaravelStripeConnect\StripeConnect;
 
 class ReservationController extends Controller
 {
@@ -35,11 +37,34 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ReservationRequest $request)
+    public function store(Request $request)
     {
         if ($request->post()){
-            $validated = $request->validated();
-            Reservation::new($request);
+            \Stripe\Stripe::setApiKey('sk_test_w0jUpurkqWgWxi9D7qSLtIxk00G6f3e5CL');
+            $customer = \Stripe\Account::create([
+                'type' => 'custom',
+                'country' => 'US',
+                'email' => auth()->user()->email,
+                'requested_capabilities' => [
+                    'transfers',
+                ],
+            ]);
+            $vendor = \Stripe\Account::create([
+                'type' => 'custom',
+                'country' => 'US',
+                'email' => Party_room::find($request->party_room_id)->owner->email,
+                'requested_capabilities' => [
+                    'transfers',
+                ],
+            ]);
+                StripeConnect::transaction($request->token)
+                    ->amount($request->price, 'usd')
+                    ->fee(50)
+                    ->from($customer)
+                    ->to($vendor)
+                    ->create();
+
+            //Reservation::new($request);
             return redirect()->back();
         }
     }
