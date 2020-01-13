@@ -16,7 +16,7 @@ Route::resource('/reserve','ReservationController');
 //Route::resource('invitations','InvitationController');
 Route::get('/room-to-confirm/{id}','MessageController@showRoom')->name('room-to-confirm');
 
-Route::group(['middlware' => ['auth','verified']],function (){
+Route::group(['middleware' => ['auth','verified']],function (){
     Route::get('/{id}/حجــز-قاعة-زفاف','Party_roomController@reservationBilling')->name('zawaji.reservation-billing');
     Route::get('/friend-reservation','Party_roomController@friendReservation')->name('friend_reservation');
     Route::get('حجـــــوزاتي/','ReservationController@index')->name('client_reservations');
@@ -24,30 +24,30 @@ Route::group(['middlware' => ['auth','verified']],function (){
 
 Route::group(['prefix'=>'/owner','middleware' => ['auth','verified','role:owner']],function (){
     Route::resource('owner-party_room','Party_roomController');
-    Route::get('/calendar','CalendarController@showCalendar')->name('owner.calendar');
-    Route::get('/add-party_room','Party_roomController@create')->name('party_room.addRoom');
-    Route::get('/party_room','Party_roomController@index')->name('party_room.showRoom');
-    Route::get('/party_room/{id}','Party_roomController@edit')->name('party_room.edit');
-    Route::get('/delete_party_room/{id}','Party_roomController@destroy')->name('party_room.deleteRoom');
+    Route::get('رزنامة-الافراح/','CalendarController@showCalendar')->name('owner.calendar');
+    Route::get('اضافة-قـاعة-جديدة/','Party_roomController@create')->name('party_room.addRoom');
+    Route::get('قاعـة-الافـراح/','Party_roomController@index')->name('party_room.showRoom');
+    Route::get('/تعديـل-قاعـة-الافـراح/{id}','Party_roomController@edit')->name('party_room.edit');
+    Route::get('/حذف-قاعـة-الافـراح/{id}','Party_roomController@destroy')->name('party_room.deleteRoom');
     Route::post('/calendar','CalendarController@CreateEvent');
     Route::post('/reserve','ReservationController@OwnerReservation')->name('owner.reservation');
     Route::resource('reservation','ReservationController');
-    Route::get('reservation/confirm/{id}','ReservationController@confirm')->name('reservation.confirmation');
-    Route::get('reservation/disapprouv/{id}','ReservationController@disapprouve')->name('reservation.disapprouv');
-    Route::get('/profile/{id}','UserController@showOwnerProfile')->name('owner.profile');
-    Route::post('/profile/{id}','UserController@updateProfile')->name('owner.profile.update');
-    Route::get('/delivered-order',function (){
+    Route::get('تأكيد-حجــز/{id}','ReservationController@confirm')->name('reservation.confirmation');
+    Route::get('إلغــاء-حجـز/{id}','ReservationController@disapprouve')->name('reservation.disapprouv');
+    Route::get('/حســــابي/{id}','UserController@showOwnerProfile')->name('owner.profile');
+    Route::post('/حســــابي/{id}','UserController@updateProfile')->name('owner.profile.update');
+    Route::get('الحجوزات-المقبولــة/',function (){
         return view('dashboard.layouts.delivered-order');
     })->name('owner.reservation.delivered');
-    Route::get('/undelivered-order',function (){
+    Route::get('الحجوزات-المرفــوضة/',function (){
         return view('dashboard.layouts.undelivered-order');
     })->name('owner.reservation.undelivered');
 });
 Route::group(['prefix'=>'/admin','middleware' => ['auth','verified','role:admin']],function (){
     Route::resource('role','RoleController');
     //Test routes
-    Route::get('/profile/{id}','UserController@showProfile')->name('admin.profile');
-    Route::post('/profile/{id}','UserController@updateProfile')->name('profile.update');
+    Route::get('/حســــابي/{id}','UserController@showProfile')->name('admin.profile');
+    Route::post('/حســــابي/{id}','UserController@updateProfile')->name('profile.update');
     Route::get('message/{id}','MessageController@approuve')->name('message.approuve');
     Route::get('/assign', 'Controller@assignRole');
 
@@ -58,15 +58,17 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','verified','role:admin'
     Route::resource('messages','MessageController');
 
     Route::get('user-roles','UserController@show_users_role')->name('admin.users-roles');
-    Route::get('/rooms/approuv/{id}','Party_roomController@approuv');
-    Route::get('/rooms/bann/{id}','Party_roomController@bann');
-    Route::get('/rooms','Party_roomController@showAll')->name('admin.showRooms');
+    Route::get('/تأكيد-اضافة-قاعة-زفاف/{id}','Party_roomController@approuv');
+    Route::get('/حظر-قاعة-زفاف/{id}','Party_roomController@bann');
+    Route::get('قاعــات-الزفاف/','Party_roomController@showAll')->name('admin.showRooms');
     Route::get('/',function (){
         return view('dashboard.admin_layouts.home');
     })->name('admin.landing');
-    Route::get('/orders',function (){
+    Route::get('طلــبات-الحجــز/',function (){
         return view('dashboard.admin_layouts.orders');
     })->name('admin.orders');
+
+//    Disabled For Now
     Route::get('/social-links',function (){
         return view('dashboard.admin_layouts.social-links');
     });
@@ -77,7 +79,10 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','verified','role:admin'
     Route::resource('admin-party_room','Party_roomController');
     Route::post('user/{id}','UserController@bann')->name('admin.user.bann');
     Route::post('user/activate/{id}','UserController@activate')->name('admin.user.activate');
+//    ====================
 });
+
+
 Auth::routes(['verify' => true]);
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', function () {

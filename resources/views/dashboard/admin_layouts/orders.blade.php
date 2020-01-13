@@ -46,14 +46,13 @@
                                         <th>بداية الحجز</th>
                                         <th>نهاية الحجز</th>
                                         <th>الحــالة</th>
-                                        <th>تفاصيـل</th>
                                         <th>حـذف</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach(\App\Reservation::all() as $reservation)
                                     <tr>
-                                        <td>{{$reservation->party_room->owner->first_name.''.$reservation->party_room->owner->last_name}}</td>
+                                        <td>{{$reservation->party_room->owner->first_name.' '.$reservation->party_room->owner->last_name}}</td>
                                         <td>
                                             @if( ! $reservation->party_room->owner->image_id)
                                                 <img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80px; height: 80px" />
@@ -73,7 +72,6 @@
                                         <td>{{$reservation->date_from}}</td>
                                         <td>{{$reservation->date_to}}</td>
                                         <td>{{$reservation->status()}}</td>
-                                        <td><button class="btn btn-rounded btn-outline-info">تفـاصيل</button></td>
                                         <td><button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#model-delete">حـذف</button></td>
                                     </tr>
                                     @endforeach

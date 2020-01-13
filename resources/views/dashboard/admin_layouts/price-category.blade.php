@@ -130,7 +130,7 @@
                         <h4 class="modal-title">اضافـة الفئــــة السعريــــة</h4>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="{{route('priceCategory.store')}}">
+                        <form method="post" action="{{route('priceCategory.store')}}" class="filter-price">
                             @csrf
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">السعــــر ( مــن )</label>
