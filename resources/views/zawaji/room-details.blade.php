@@ -46,11 +46,11 @@
                                                 <i class="ti-user" style="margin-left: 3%"></i><h5>اســـم صـاحب القــاعــة : </h5><p style="padding-right: 3%"> {{$room->owner->first_name}}</p>
                                             </div>
                                             <div class="row">
-                                                <i class="ti-map-alt" style="margin-left: 3%"></i><h5>العنــــــوان : </h5><p style="padding-right: 3%"> {{$room->location}}</p>
+                                                <i class="ti-location-pin" style="margin-left: 3%"></i><h5>العنــــــوان : </h5><p style="padding-right: 3%"> {{$room->location}}</p>
                                             </div>
                                             @if($room->type == 'double')
                                                 <div class="row">
-                                                    <i class="ti-face-smile" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> مـزدوجـــــة </p>
+                                                    <i class="ti-view-list" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> مـزدوجـــــة </p>
                                                 </div>
                                                 <div class="row">
                                                     <i class="ti-face-smile" style="margin-left: 3%"></i><h5>سعـــــة قاعـــة الرجـــال : </h5><p style="padding-right: 3%"> {{$room->capacity_men_room}} شخـــص </p>
@@ -60,7 +60,7 @@
                                                 </div>
                                                 @else
                                                 <div class="row">
-                                                    <i class="ti-home" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> احــــــادية </p>
+                                                    <i class="ti-view-list" style="margin-left: 3%"></i><h5>نـــوع القـــاعـة : </h5><p style="padding-right: 3%"> احــــــادية </p>
                                                 </div>
                                                 <div class="row">
                                                     <i class="ti-face-smile" style="margin-left: 3%"></i><h5>سعـــــة القاعـــة الكليــــة : </h5><p style="padding-right: 3%">  {{$room->total_capacity}} شخـــص</p>
@@ -103,19 +103,19 @@
                                                         <td>{{$room->room_service($room->parcking)}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><i class="ti-home" style="margin-left: 3%"></i> المــــسرح  </td>
+                                                        <td><i class="ti-medall" style="margin-left: 3%"></i> المــــسرح  </td>
                                                         <td>{{$room->room_service($room->theatre)}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><i class="ti-home" style="margin-left: 3%"></i> قــــاعة محاضـــرات</td>
+                                                        <td><i class="ti-video-camera" style="margin-left: 3%"></i> قــــاعة محاضـــرات</td>
                                                         <td>{{$room->room_service($room->auditorium)}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><i class="ti-home" style="margin-left: 3%"></i> الواي فــاي  </td>
+                                                        <td><i class="ti-rss-alt" style="margin-left: 3%"></i> الواي فــاي  </td>
                                                         <td>{{$room->room_service($room->wifi)}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><i class="ti-home" style="margin-left: 3%"></i> الحديــــــقة المرفقــة  </td>
+                                                        <td><i class="ti-shine" style="margin-left: 3%"></i> الحديــــــقة المرفقــة  </td>
                                                         <td>{{$room->room_service($room->jardin)}}</td>
                                                     </tr>
                                                     </tbody>

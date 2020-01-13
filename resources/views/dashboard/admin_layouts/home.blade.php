@@ -246,7 +246,7 @@
         var chart = new Chart(stat, {
             type: 'pie',
             data: {
-                labels: ['غير مؤكدة', 'مؤكدة', 'مرفـــوضـة'],
+                labels: ['حجز غير مؤكد', 'حجز مؤكد', 'حجز مرفـوض'],
                 datasets: [{
                     label: 'احصائيات القاعات المسجـلة',
                     backgroundColor: ['rgb(30,144,255)','rgb(60,179,113)','rgb(255, 99, 132)'],

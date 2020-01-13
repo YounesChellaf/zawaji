@@ -190,7 +190,6 @@
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">--- بخصوص القـاعـة</li>
                     <li> <a class="waves-effect waves-dark" href="{{route('party_room.showRoom')}}" aria-expanded="false"><i class="ti-home"></i><span class="hide-menu">قـاعة الافراح</span></a></li>
-                    <li> <a class="waves-effect" href="#" aria-expanded="false"><i class="ti-money"></i><span class="hide-menu">الدفع الالكتروني </span></a></li>
                     <li> <a class="waves-effect waves-dark" href="{{route('owner.calendar')}}" aria-expanded="false"><i class="ti-agenda"></i><span class="hide-menu">تاريخ المناسبـــــــات </span></a></li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-pin2"></i><span class="hide-menu">الطلبات<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
