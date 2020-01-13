@@ -7,6 +7,7 @@ use App\Http\Requests\PartyRoomRequest;
 use App\Image;
 use App\Party_room;
 use App\PriceCategory;
+use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 use Illuminate\Http\Request;
 use Rap2hpoutre\LaravelStripeConnect\Stripe;
@@ -207,5 +208,13 @@ class Party_roomController extends Controller
         $party_room->status = 'banned';
         $party_room->save();
         return redirect()->back();
+    }
+
+    public static function room_static(){
+        $statistics = collect();
+        for ($i=0;$i<12;$i++){
+            $statistics->push(Party_room::whereMonth('created_at',$i+1)->count());
+        }
+        return $statistics;
     }
 }

@@ -11,7 +11,7 @@ class Reservation extends Model
     protected $dates=['date_from','date_to'];
 
     function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
     function party_room(){
         return $this->belongsTo(Party_room::class);
@@ -53,9 +53,9 @@ class Reservation extends Model
     }
 
     public static function accepted_invitation_rate(){
-        if (Reservation::where('status','accepted')->count() == 0 )
+        if (Reservation::where('status','approuved')->count() == 0 )
             return 0;
-        return (Reservation::where('status','accepted')->count())/Reservation::all()->count()*100;
+        return (Reservation::where('status','approuved')->count())/Reservation::all()->count()*100;
     }
 
     public function status(){

@@ -3,10 +3,8 @@ Route::get('/', function () {
     return view('zawaji.landing');
 })->name('zawaji.landing');
 Route::get('/{id}/{name}/قاعات-زفاف-المملكة-العربية-السعودية','Party_roomController@roomDetails')->name('zawaji.room-details');
-Route::get('/{id}/حجــز-قاعة-زفاف','Party_roomController@reservationBilling')->name('zawaji.reservation-billing');
 Route::get('/autocomplete','Party_roomController@complete')->name('autocomplete');
 Route::get('/filtered-room','Party_roomController@filter')->name('filter');
-Route::get('/friend-reservation','Party_roomController@friendReservation')->name('friend_reservation');
 Route::post('قاعات-زفاف-المملكة-العربية-السعودية/','Party_roomController@search')->name('room.search');
 Route::get('/rooms', 'Party_roomController@ShowRooms')->name('zawaji.rooms');
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebookProvider')->name('auth.facebook');
@@ -14,14 +12,17 @@ Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookProvid
 Route::get('auth/google', 'Auth\LoginController@redirectToGoogleProvider')->name('auth.google');
 Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleProviderCallback');
 Route::resource('/reserve','ReservationController');
-Route::post('messages/send','MessageController@store')->name('message.send');
-Route::resource('invitations','InvitationController');
-
-
-
+//Route::post('messages/send','MessageController@store')->name('message.send');
+//Route::resource('invitations','InvitationController');
 Route::get('/room-to-confirm/{id}','MessageController@showRoom')->name('room-to-confirm');
 
-Route::group(['prefix'=>'/owner','middleware' => ['auth','role:owner']],function (){
+Route::group(['middlware' => ['auth','verified']],function (){
+    Route::get('/{id}/حجــز-قاعة-زفاف','Party_roomController@reservationBilling')->name('zawaji.reservation-billing');
+    Route::get('/friend-reservation','Party_roomController@friendReservation')->name('friend_reservation');
+    Route::get('حجـــــوزاتي/','ReservationController@index')->name('client_reservations');
+});
+
+Route::group(['prefix'=>'/owner','middleware' => ['auth','verified','role:owner']],function (){
     Route::resource('owner-party_room','Party_roomController');
     Route::get('/calendar','CalendarController@showCalendar')->name('owner.calendar');
     Route::get('/add-party_room','Party_roomController@create')->name('party_room.addRoom');
@@ -42,7 +43,7 @@ Route::group(['prefix'=>'/owner','middleware' => ['auth','role:owner']],function
         return view('dashboard.layouts.undelivered-order');
     })->name('owner.reservation.undelivered');
 });
-Route::group(['prefix'=>'/admin','middleware' => ['auth','role:admin']],function (){
+Route::group(['prefix'=>'/admin','middleware' => ['auth','verified','role:admin']],function (){
     Route::resource('role','RoleController');
     //Test routes
     Route::get('/profile/{id}','UserController@showProfile')->name('admin.profile');
@@ -77,7 +78,7 @@ Route::group(['prefix'=>'/admin','middleware' => ['auth','role:admin']],function
     Route::post('user/{id}','UserController@bann')->name('admin.user.bann');
     Route::post('user/activate/{id}','UserController@activate')->name('admin.user.activate');
 });
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', function () {
     return view('zawaji.landing');

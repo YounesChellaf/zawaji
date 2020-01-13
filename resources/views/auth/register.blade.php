@@ -1,7 +1,7 @@
 @extends('auth.master')
 @section('content')
     <section id="wrapper">
-        <div class="login-register2" style="background-image:url({{asset('assets/images/landing3.jpg')}});">
+        <div class="login-register2" style="background-image:url({{asset('assets/images/landing-room.jpg')}});">
             <div class="login-box card">
                 <div class="card-body" dir="rtl">
                     <form method="POST" action="{{ route('register') }}" class="form-horizontal form-material" id="loginform" >

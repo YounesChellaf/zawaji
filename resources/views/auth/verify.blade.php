@@ -1,24 +1,27 @@
-@extends('layouts.app')
-
+@extends('auth.master')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+
+    <section id="wrapper">
+        <div class="login-register" style="background-image:url({{asset('assets/images/landing-room.jpg')}});">
+        <div class="row justify-content-center">
+        <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+                <div class="card-header">{{ __('تحقق من عنوان بريدك الإلكتروني') }}</div>
 
                 <div class="card-body">
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
-                            {{ __('A fresh verification link has been sent to your email address.') }}
+                            {{ __('تم إرسال رابط تحقق جديد إلى عنوان بريدك الإلكتروني') }}
                         </div>
                     @endif
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }}, <a href="{{ route('verification.resend') }}">{{ __('click here to request another') }}</a>.
+                    {{ __('قبل المتابعة ، يرجى التحقق من بريدك الإلكتروني لمعرفة رابط التحقق.') }}
+                    {{ __('إذا لم تتلقى البريد الإلكتروني') }}, <a href="{{ route('verification.resend') }}">{{ __('انقر هنا لطلب آخر') }}</a>.
                 </div>
             </div>
         </div>
     </div>
-</div>
+        </div>
+    </section>
+
 @endsection

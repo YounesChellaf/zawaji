@@ -209,33 +209,19 @@
                                                      <input name="price" type="text" value="{{$room->getPrice()}} ريــــال" class="form-control" disabled>
                                                 </div>
                                                 </div>
-                                            </div>
-                                                <input type="hidden" name="token" />
-                                            <div class="form-group" dir="rtl">
-                                                <label class="row">
-                                                    <span>رقـــــم البطاقـــة</span>
-                                                    <div id="card-number-element" style="width: 300px" class="field"></div>
-                                                    <span class="brand"><i class="pf pf-credit-card" id="brand-icon"></i></span>
-                                                </label>
-                                                <label class="row">
-                                                    <span>انتهاء الصلاحيـة</span>
-                                                    <div id="card-expiry-element" class="field"></div>
-                                                </label>
-                                                <label class="row">
-                                                    <span>الرمز الامنــي</span>
-                                                    <div id="card-cvc-element" class="field"></div>
-                                                </label>
-                                                <label>
-                                                    <span>الرمــز البريدي</span>
-                                                    <input id="postal-code" name="postal_code" class="field" placeholder="90210" />
-                                                </label>
-                                            </div>
-                                                <div class="outcome">
-                                                    <div class="error"></div>
-                                                    <div class="success">
-                                                        Success! Your Stripe token is <span class="token"></span>
+                                                <div class="row" style="margin-top: 5%">
+                                                    <div class="alert alert-info" role="alert">
+                                                        <span>يمكنـك دفــع المستحـقات الى الحســاب البنكي المرفــق في الاسفل من اجــل الحجـز و من ثم التواصل مع صاحب القاعـة بوصل الدفع لتاكيــد حجـــزك</span>
                                                     </div>
                                                 </div>
+                                                <div class="row form-group" style="margin-top: 3%" >
+                                                    <label >الحسـاب البنكي IBAN  </label>
+                                                    <div class="col-md-8">
+                                                        <input class="form-control" value="{{$room->iban}}" disabled>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                             <button class="card-btn" type="submit">احجــــــز الآن</button>
                                             <input type="hidden" id="party_room_id" name="party_room_id" value="{{$room->id}}">
                                         </form>

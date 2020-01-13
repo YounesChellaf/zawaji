@@ -135,31 +135,31 @@
                     <!-- ============================================================== -->
                     <!-- Messages -->
                     <!-- ============================================================== -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
-                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-                        </a>
-                        <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
-                            <ul>
-                                <li>
-                                    <div class="drop-title">لديك رسائل</div>
-                                </li>
-                                <li>
-                                    <div class="message-center">
-                                        @foreach(\App\Message::all() as $message)
-                                        <!-- Message -->
-                                        <a href="{{route('messages.index')}}">
-                                            <div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>{{$message->name}}</h5> <span class="mail-desc">{{$message->subject}}</span> <span class="time">{{$message->created_at->format('H:i')}}</span> </div>
-                                        </a>
-                                        @endforeach
-                                        <!-- Message -->
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    {{--<li class="nav-item dropdown">--}}
+                        {{--<a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>--}}
+                            {{--<div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>--}}
+                        {{--</a>--}}
+                        {{--<div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">--}}
+                            {{--<ul>--}}
+                                {{--<li>--}}
+                                    {{--<div class="drop-title">لديك رسائل</div>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<div class="message-center">--}}
+                                        {{--@foreach(\App\Message::all() as $message)--}}
+                                        {{--<!-- Message -->--}}
+                                        {{--<a href="{{route('messages.index')}}">--}}
+                                            {{--<div class="user-img"> <img src="{{asset('assets/images/admin/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>--}}
+                                            {{--<div class="mail-contnet">--}}
+                                                {{--<h5>{{$message->name}}</h5> <span class="mail-desc">{{$message->subject}}</span> <span class="time">{{$message->created_at->format('H:i')}}</span> </div>--}}
+                                        {{--</a>--}}
+                                        {{--@endforeach--}}
+                                        {{--<!-- Message -->--}}
+                                    {{--</div>--}}
+                                {{--</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+                    {{--</li>--}}
                     <!-- ============================================================== -->
                     <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class=""></i></a></li>
                 </ul>
@@ -191,7 +191,7 @@
                             <!-- text-->
                             <a href="{{route('admin.profile',auth()->user()->id)}}" class="dropdown-item"><i class="ti-user"></i> حسابي</a>
                             <!-- text-->
-                            <a href="{{route('messages.index')}}" class="dropdown-item"><i class="ti-email"></i> رسائلي</a>
+                            {{--<a href="{{route('messages.index')}}" class="dropdown-item"><i class="ti-email"></i> رسائلي</a>--}}
                             <!-- text-->
                             <div class="dropdown-divider"></div>
                             <!-- text-->
@@ -214,7 +214,7 @@
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('weddingType.index')}}">انـــواع الافـراح</a></li>
                             <li><a href="{{route('priceCategory.index')}}">فلتـــر الاسعـــار</a></li>
-                            <li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>
+                            {{--<li><a href="/admin/social-links">روابط التواصل بالموقع</a></li>--}}
                         </ul>
                 </ul>
             </nav>
@@ -311,7 +311,6 @@
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
     });
-
 </script>
 </body>
 </html>

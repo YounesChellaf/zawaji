@@ -26,7 +26,7 @@
                                 @elseif(auth()->user()->getRoleNames()[0] == 'admin')
                                     <li><a href="{{route('admin.landing')}}">لوحــة تحكـــم الموقـع</a></li>
                                 @else
-                                    <li><a href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
+                                    <li><a href="{{route('client_reservations')}}">حجـــوزاتـي</a></li>
                                 @endif
                             @endif
                             {{--<li><a href="#rsvp">تواصل معنـــا</a></li>--}}
@@ -63,9 +63,9 @@
             <div class="row">
                 <div class="col col-md-9">
                     <div class="button-group pull-left">
-                        <a href="#rsvp"><i class="fa fa-paper-plane"></i></a>
-                        <a href="{{route('zawaji.rooms')}}" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
-                        <a href="#gallery"><i class="fa fa-heart"></i></a>
+                        <a href="#"><i class="fa fa-paper-plane"></i></a>
+                        <a href="#" class="millde"><i class="fa fa-map-marker" style="width: 50%"></i></a>
+                        <a href="#"><i class="fa fa-heart"></i></a>
                     </div>
                     <div class="search pull-left">
                         <form dir="rtl" method="post" action="{{route('room.search')}}">
