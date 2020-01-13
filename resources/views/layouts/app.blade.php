@@ -65,7 +65,7 @@
     <!-- ============================================================== -->
     <header class="header fixed-header navbar-expand-lg navbar-dark flex-column flex-md-row bd-navbar">
         <nav class="navbar" style="color:#ffffff !important; background-color:#c74b6f; ">
-            <a class="navbar-brand" href="{{route('zawaji.landing')}}" style="margin-left: 7%"><h3>زواجـــــي</h3></a>
+            <a class="navbar-brand" href="{{route('zawaji.landing')}}" style="margin-left: 7%"><h3>حفـــــلتي</h3></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -83,7 +83,7 @@
                         @elseif(auth()->user()->getRoleNames()[0] == 'admin')
                             <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('admin.landing')}}">لوحــة تحكـــم الموقـع</a></li>
                         @else
-                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
+                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('client_reservations')}}">حجـــوزاتـي</a></li>
                         @endif
                     @endif
                 </ul>

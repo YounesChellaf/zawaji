@@ -59,6 +59,7 @@ class Party_room extends Model
                 'city_id' => $request->city_id,
                 'phone_number' => $request->phone_number,
                 'email' => $request->email,
+                'iban' => $request->iban,
                 'description' => $request->description,
                 'type' => $request->type,
                 'location' => $request->location,

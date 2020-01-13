@@ -75,6 +75,14 @@
                                      <div class="row">
                                          <div class="col-md-12">
                                              <div class="form-material">
+                                                 <label for="firstName1">الحســاب البنكــي ( رقـم IBAN ):</label>
+                                                 <input type="text" class="form-control" id="firstName1" name="iban" >
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="row">
+                                         <div class="col-md-12">
+                                             <div class="form-material">
                                                  <label for="firstName1">عنـــــوان القاعـــة:</label>
                                                  <input type="text" class="form-control" id="firstName1" name="location" >
                                              </div>

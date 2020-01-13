@@ -98,7 +98,7 @@ a:hover {
 }
 
 .overlay {
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.75);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -463,7 +463,7 @@ header.fixed-header {
 }
 
 .hero .slider-1 {
-	background: url(../images/landing.jpg) no-repeat 50% 50%;
+	background: url(../images/landing-room.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 

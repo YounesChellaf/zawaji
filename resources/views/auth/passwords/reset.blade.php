@@ -1,11 +1,11 @@
-@extends('layouts.app')
-
+@extends('auth.master')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+    <section id="wrapper">
+        <div class="login-register" style="background-image:url({{asset('assets/images/landing-room.jpg')}});">
+        <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header">{{ __('إعادة تعيين كلمة المرور') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">
@@ -14,7 +14,7 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('العنــوان الالكتروني (الايميــل)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
@@ -61,5 +61,7 @@
             </div>
         </div>
     </div>
-</div>
+        </div>
+    </section>
+
 @endsection
