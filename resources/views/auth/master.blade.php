@@ -54,7 +54,7 @@
                         @elseif(auth()->user()->getRoleNames()[0] == 'admin')
                             <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('admin.landing')}}">لوحــة تحكـــم الموقـع</a></li>
                         @else
-                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('zawaji.rooms')}}">احجـــــز قاعتك الآن</a></li>
+                            <li class="nav-item active" style="margin-left: 3%"><a class="nav-link" href="{{route('client_reservations')}}">حجـــوزاتـي</a></li>
                         @endif
                     @endif
                 </ul>
@@ -64,7 +64,7 @@
                     <a class="nav-link" href="{{route('register')}}" ><button class="btn btn-outline-light">دخــــــول</button></a>
                     <a class="nav-link " href="{{route('login')}}"><button class="btn btn-outline-light">تسجيــل الدخــــــول</button></a>
                 @else
-                    <a class="nav-link" href="{{route('logout')}}" ><button class="btn btn-outline-light">الخــــروج</button></a>
+                    <a style="margin-right: 60%" class="nav-link" href="{{route('logout')}}" ><button class="btn btn-outline-light">الخــــروج</button></a>
                 @endif
             </div>
         </div>
