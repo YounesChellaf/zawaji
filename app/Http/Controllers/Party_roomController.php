@@ -31,7 +31,6 @@ class Party_roomController extends Controller
     public function complete(Request $request)
     {
         $search = $request->get('term');
-
         $result = City::where('name', 'LIKE', '%'. $search. '%')->get();
         return response()->json($result);
     }
