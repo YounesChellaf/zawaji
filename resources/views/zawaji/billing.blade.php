@@ -196,17 +196,17 @@
                                                     <label for="recipient-name" class="control-label">طريقــة الدفـــع</label>
                                                     <select class="custom-select form-control" id="payment_method" name="payment_method">
                                                         <option value=""></option>
-                                                        <option value="partial"> دفـــع عربــــون</option>
-                                                        <option value="cash"> دفـــع المبلغ كاملا</option>
+                                                        <option value="دفع جزئي"> دفـــع عربــــون</option>
+                                                        <option value="كاش"> دفـــع المبلغ كاملا</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6" id="partial">
                                                     <label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>
-                                                    <input name="price" type="text" class="form-control">
+                                                    <input name="price_partial" type="text" class="form-control">
                                                 </div>
                                                 <div class="col-md-6" id="cash">
                                                      <label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>
-                                                     <input name="price" type="text" value="{{$room->getPrice()}} ريــــال" class="form-control" disabled>
+                                                     <input name="price_cash" type="text" value="{{$room->getPrice()}}" class="form-control" disabled>
                                                 </div>
                                                 </div>
                                                 <div class="row" style="margin-top: 5%">
@@ -367,7 +367,7 @@
             })
             $('#payment_method').change(()=>{
                 var method = $('#payment_method').val();
-                if ( method == 'cash'){
+                if ( method == 'كاش'){
                     $('#cash').show();
                     $('#partial').hide();
                 }
