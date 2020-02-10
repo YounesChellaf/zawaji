@@ -21,12 +21,23 @@ class Reservation extends Model
     }
 
     public static function new($request){
+        dd($request);
+        if ($request->payment_method == 'كاش')
+        {
+            $price = $request->price_cash;
+        }
+        else
+        {
+            $price = $request->price_partial;
+        }
         $reservation = Reservation::create([
             'user_id' => auth()->user()->id,
+            'reserver_name' => auth()->user()->first_name.' '.auth()->user()->last_name,
             'party_room_id' => $request->party_room_id,
             'wedding_type_id' => $request->wedding_type_id,
             'date_from' => $request->date_from,
-            'date_to' => $request->date_to,
+            'payment_method' => $request->payment_method,
+            'price' => $price,
         ]);
         return $reservation;
     }

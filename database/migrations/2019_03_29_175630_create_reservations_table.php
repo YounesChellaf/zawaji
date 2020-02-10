@@ -19,10 +19,10 @@ class CreateReservationsTable extends Migration
             $table->integer('party_room_id');
             $table->string('reserver_name')->nullable();
             $table->integer('wedding_type_id');
-            $table->float('payment')->nullable();
+            $table->float('price')->nullable();
             $table->enum('status', ['draft', 'approuved', 'disapproved'])->default('draft');
             $table->date('date_from');
-            $table->date('date_to');
+            $table->string('payment_method');
             $table->timestamps();
         });
     }
