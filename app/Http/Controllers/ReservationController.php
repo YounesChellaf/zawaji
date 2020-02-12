@@ -63,7 +63,9 @@ class ReservationController extends Controller
 //                    ->create();
 
             Reservation::new($request);
-            return redirect()->back();
+            $message = 'يمكنـك دفــع المستحـقات الى الحســاب البنكي المرفــق في الاسفل من اجــل الحجـز و من ثم التواصل مع صاحب القاعـة بوصل الدفع لتاكيــد حجـــزك';
+
+            return view('zawaji.billing')->withRoom(Party_room::find($request->party_room_id))->withMessage($message);
         }
     }
     public function OwnerReservation(ReservationRequest $request){
