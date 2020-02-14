@@ -175,6 +175,13 @@
                                         </table>
                                     </div>
                                     <div class="col-md-6" >
+                                        @if(isset($message))
+                                            <div class="row" style="margin-top: 5%">
+                                                <div class="alert alert-danger" role="alert">
+                                                    <span>{{$message}}</span>
+                                                </div>
+                                            </div>
+                                        @endif
                                         <form method="post" action="{{route('reserve.store')}}" class="reserve-form" id="payment-form">
                                             @csrf
                                             <div class="form-group">
@@ -202,12 +209,12 @@
                                                 </div>
                                                 <div class="col-md-6" id="partial">
                                                     <label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>
-                                                    <input name="price_partial" type="text" class="form-control">
+                                                    <input name="price" id="price" type="text" class="form-control">
                                                 </div>
-                                                <div class="col-md-6" id="cash">
-                                                     <label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>
-                                                     <input name="price_cash" type="text" value="{{$room->getPrice()}}" class="form-control" disabled>
-                                                </div>
+                                                {{--<div class="col-md-6" id="cash">--}}
+                                                     {{--<label for="recipient-name" class="control-label">القيــــمة المدفوعــة</label>--}}
+                                                     {{--<input name="price" type="text" value="{{$room->getPrice()}}" class="form-control" disabled>--}}
+                                                {{--</div>--}}
                                                 </div>
                                                 <div class="row" style="margin-top: 5%">
                                                     <div class="alert alert-info" role="alert">
@@ -238,103 +245,6 @@
 @endsection
 @section('js')
     <script>
-
-            // Create a Stripe client
-            var stripe =  Stripe('pk_test_MDjRGhc6o0BLPvYjMJBkOK5r00OUbo3VgE');
-            // Create an instance of Elements
-            var elements = stripe.elements();
-            var style = {
-                base: {
-                    iconColor: '#666EE8',
-                    color: '#31325F',
-                    lineHeight: '40px',
-                    fontWeight: 300,
-                    fontFamily: 'Helvetica Neue',
-                    fontSize: '15px',
-
-                    '::placeholder': {
-                        color: '#CFD7E0',
-                    },
-                },
-            };
-
-            var cardNumberElement = elements.create('cardNumber', {
-                style: style
-            });
-            cardNumberElement.mount('#card-number-element');
-
-            var cardExpiryElement = elements.create('cardExpiry', {
-                style: style
-            });
-            cardExpiryElement.mount('#card-expiry-element');
-
-            var cardCvcElement = elements.create('cardCvc', {
-                style: style
-            });
-            cardCvcElement.mount('#card-cvc-element');
-
-
-            function setOutcome(result) {
-                var successElement = document.querySelector('.success');
-                var errorElement = document.querySelector('.error');
-                successElement.classList.remove('visible');
-                errorElement.classList.remove('visible');
-
-                if (result.token) {
-                    // In this example, we're simply displaying the token
-                    successElement.querySelector('.token').textContent = result.token.id;
-                    successElement.classList.add('visible');
-
-                    // In a real integration, you'd submit the form with the token to your backend server
-                    var form = document.querySelector('form');
-                    form.querySelector('input[name="token"]').setAttribute('value', result.token.id);
-                    form.submit();
-
-                } else if (result.error) {
-                    errorElement.textContent = result.error.message;
-                    errorElement.classList.add('visible');
-                }
-            }
-
-            // var cardBrandToPfClass = {
-            //     'visa': 'pf-visa',
-            //     'mastercard': 'pf-mastercard',
-            //     'amex': 'pf-american-express',
-            //     'discover': 'pf-discover',
-            //     'diners': 'pf-diners',
-            //     'jcb': 'pf-jcb',
-            //     'unknown': 'pf-credit-card',
-            // }
-            // function setBrandIcon(brand) {
-            //     var brandIconElement = document.getElementById('brand-icon');
-            //     var pfClass = 'pf-credit-card';
-            //     if (brand in cardBrandToPfClass) {
-            //         pfClass = cardBrandToPfClass[brand];
-            //     }
-            //     for (var i = brandIconElement.classList.length - 1; i >= 0; i--) {
-            //         brandIconElement.classList.remove(brandIconElement.classList[i]);
-            //     }
-            //     brandIconElement.classList.add('pf');
-            //     brandIconElement.classList.add(pfClass);
-            // }
-
-            cardNumberElement.on('change', function(event) {
-                // Switch brand logo
-                if (event.brand) {
-                    setBrandIcon(event.brand);
-                }
-                setOutcome(event);
-            });
-
-            document.querySelector('form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                var options = {
-                    address_zip: document.getElementById('postal-code').value,
-                };
-                stripe.createToken(cardNumberElement, options).then(setOutcome);
-            });
-    </script>
-    <script>
         $(document).ready(function () {
             $('#cash').hide();
             $('#mdate').change(function () {
@@ -349,31 +259,17 @@
                         $("#reserver_user").html(response)
                     }
                 });
-
-                {{--$("#reserver_user").html(--}}
-                    {{--'                @foreach($room->reservations as $reservation)\n' +--}}
-                    {{--'                <tr>\n' +--}}
-                    {{--'                @if( ! $reservation->user->image_id)\n' +--}}
-                    {{--'                <td style="width: 20%"><img src="{{asset('assets/images/admin/avatar.png')}}" alt="user-img" class="img-circle" style="width: 80%;height: 15%"/></td>\n' +--}}
-                    {{--'                @else\n' +--}}
-                    {{--'                <td><img src="{{asset('assets/images/avatar/'.auth()->user()->image->path)}}" alt="user-img" class="img-circle" /></td>\n' +--}}
-                    {{--'                @endif\n' +--}}
-                    {{--'                <td >{{$reservation->user->last_name.' '.$reservation->user->first_name}}</td>\n' +--}}
-                    {{--'                <td>{{$reservation->date_from->format('d-m-Y')}}</td>\n' +--}}
-                    {{--'                </tr>\n' +--}}
-                    {{--'                @endforeach\n'--}}
-                {{--);--}}
-
             })
             $('#payment_method').change(()=>{
                 var method = $('#payment_method').val();
                 if ( method == 'كاش'){
-                    $('#cash').show();
-                    $('#partial').hide();
+                    //$('#cash').show();
+                    $('#price').val({{$room->getPrice()}});
+                    $('#price').prop('disabled',true);
                 }
                 else {
-                    $('#cash').hide();
-                    $('#partial').show();
+                    $('#price').prop('disabled',false);
+                    $('#price').val(null);
                 }
             })
         })
